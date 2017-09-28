@@ -1,0 +1,160 @@
+/* Default Buttons
+============================*/
+@mixin btn {
+    @each $color in $colors {
+        &--#{nth($color, 1)} {
+            background-color: nth($color, 2);
+
+            &:focus {
+                background-color: darken(nth($color, 2), 3%);
+            }
+
+            &:hover {
+                background-color: darken(nth($color, 2), 5%);
+            }
+
+            &:active {
+                background-color: darken(nth($color, 2), 7%);
+            }
+
+            @if (lightness(nth($color, 2)) > 65) {
+                color: $black;
+            } @else {
+                color: $white;
+            }
+        }
+    }
+}
+
+
+
+/* Outline Buttons
+============================*/
+
+@mixin btn-o {
+    @each $color in $colors {
+        &--o-#{nth($color, 1)} {
+            background-color: transparent;
+            border: 1px solid nth($color, 2);
+            color: nth($color, 2);
+
+            &:focus {
+                background-color: transparent;
+                color: nth($color, 2);
+                border-color: darken(nth($color, 2), 2%);
+            }
+
+            &:hover {
+                border-color: nth($color, 2);
+                background-color: nth($color, 2);
+                color: $white;
+            }
+
+            &:active {
+                border-color: darken(nth($color, 2), 3%);
+                background-color: darken(nth($color, 2), 3%);
+            }
+        }
+    }
+}
+
+
+
+
+/* Inverted Buttons
+============================*/
+
+@mixin btn-i {
+    @each $color in $colors {
+        &--i-#{nth($color, 1)} {
+            background-color: transparent;
+            border: $btn-inverted-border;
+            color: $btn-inverted-color;
+
+            &:focus {
+                background-color: transparent;
+                color: nth($color, 2);
+                border-color: darken(nth($color, 2), 2%);
+            }
+
+            &:hover {
+                border-color: nth($color, 2);
+                background-color: transparent;
+                color: nth($color, 2);
+            }
+
+            &:active {
+                border-color: darken(nth($color, 2), 3%);
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+
+
+/* Gradient Buttons
+============================*/
+
+@mixin btn-gradient($direction) {
+    @each $color in $colors {
+
+        $start: lighten(nth($color, 2), 5%);
+        $end: darken(nth($color, 2), 15%);
+
+        /* Vertical Gradient */
+        @if($direction == vertical) {
+            &--vg-#{nth($color, 1)} {
+                @include gradient($start, $end, bottom);
+
+                @if (lightness(nth($color, 2)) > 65) {
+                    color: $black;
+                } @else {
+                    color: $white;
+                }
+
+                &:focus,
+                &:hover {
+                    opacity: .9;
+                }
+
+                &:active {
+                    opacity: .8;
+                }
+
+                transition: opacity .2s linear;
+            }
+        }
+
+        @if($direction == horizontal) {
+            &--hg-#{nth($color, 1)} {
+                @include gradient($start, $end, right);
+
+                @if (lightness(nth($color, 2)) > 65) {
+                    color: $black;
+                } @else {
+                    color: $white;
+                }
+
+                &:focus,
+                &:hover {
+                    opacity: .9;
+                }
+
+                &:active {
+                    opacity: .8;
+                }
+
+                transition: opacity .2s linear;
+            }
+        }
+    }
+}
+
+
+@mixin gradient($start, $end, $to) {
+    background: $start;
+    background: linear-gradient(to $to,  $start 0%, $end 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start}', endColorstr='#{$end}', GradientType=0 );
+}
+

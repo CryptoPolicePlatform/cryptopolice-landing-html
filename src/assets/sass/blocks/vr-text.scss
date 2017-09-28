@@ -1,0 +1,31 @@
+.vr-text {
+    font-size: $vr-font-size;
+    line-height: $vr-line-height;
+
+    h1 {
+        @include vertical-rhythm(3);
+    }
+
+    h2 {
+        @include vertical-rhythm(2.5);
+    }
+
+    h3 {
+        @include vertical-rhythm(2);
+    }
+
+    h4, h5, h6 {
+        @include vertical-rhythm(1.5);
+    }
+
+    p, ul, ol, table {
+        font-size: $vr-font-size;
+        line-height: $vr-line-height;
+        margin: 0 0 $vr-line-height 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+}

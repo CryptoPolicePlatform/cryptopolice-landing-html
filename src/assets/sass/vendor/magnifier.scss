@@ -1,0 +1,61 @@
+.magnifier-thumb-wrapper {
+    position: relative;
+    display: block;
+}
+
+.magnifier-lens {
+    position: absolute;
+    border: solid 1px $gray;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.magnifier-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: solid 1px #ccc;
+    color: #fff;
+    text-align: center;
+    background: rgba(50, 50, 50, 0.5);
+    z-index: 1000;
+}
+
+.magnifier-loader-text {
+    font-szie: 1em;
+    margin-top: 10px;
+}
+
+.magnifier-large {
+    position: absolute;
+    z-index: 100;
+}
+
+.magnifier-preview {
+    width: 300px;
+    height: 300px;
+
+    position: absolute;
+    left: 320px;
+    top: 0;
+    z-index: 1;
+
+    overflow: hidden;
+}
+
+.magnifier-preview img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.opaque {
+    opacity: .5;
+}
+
+.hidden {
+    display: none;
+}

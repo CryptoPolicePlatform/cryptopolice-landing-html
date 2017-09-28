@@ -1,0 +1,19 @@
+$socials: (fb $indigo) (vk $blue) (gp $red) (be $light-blue) (db $pink) (git $black) (insta $pink) (in $light-blue) (ok $orange) (pin $red) (skype $light-blue) (slack $teal) (snap $yellow) (steam $black) (teleg $blue) (trip $green) (tumblr $indigo) (twitch $deep-purple) (tw $light-blue) (vine $teal) (vimeo $light-blue) (yt $red);
+
+@mixin social {
+
+    @each $social in $socials {
+
+        &--#{nth($social, 1)} {
+            background-color: nth($social, 2);
+
+            &:hover {
+                background-color: darken(nth($social, 2), 5%);
+            }
+
+            &:active {
+                background-color: darken(nth($social, 2), 7%);
+            }
+        }
+    }
+}

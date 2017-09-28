@@ -1,0 +1,14 @@
+@mixin snippet-color {
+    @each $color in $colors {
+        &--#{nth($color, 1)} {
+            background-color: nth($color, 2);
+
+            @if (lightness(nth($color, 2)) > 65) {
+                color: $black;
+
+            } @else {
+                color: $white;
+            }
+        }
+    }
+}

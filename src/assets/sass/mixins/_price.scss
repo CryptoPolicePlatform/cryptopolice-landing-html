@@ -1,0 +1,12 @@
+@mixin price-theme {
+
+    @each $color in $colors {
+        &--#{nth($color, 1)} {
+            color: nth($color, 2);
+
+            .prices__title {
+                background-color: nth($color, 2);
+            }
+        }
+    }
+}

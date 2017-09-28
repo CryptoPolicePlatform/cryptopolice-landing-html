@@ -1,0 +1,52 @@
+.benefits {
+    margin: $block-margin;
+}
+
+.benefits__item {
+    padding: $benefits-item-padding;
+
+    text-align: $benefits-item-align;
+}
+
+.benefits__media {
+    width: $benefits-media-width;
+    height: $benefits-media-height;
+    margin: $benefits-media-margin;
+
+    border: $benefits-media-border;
+    border-radius: $benefits-media-border-radius;
+    text-align: $benefits-media-align;
+
+    position: relative;
+}
+
+.benefits__icon {
+    display: block;
+    width: $benefits-icon-width;
+    height: $benefits-icon-height;
+
+    color: $benefits-icon-color;
+    font-size: $benefits-icon-font-size;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $benefits-icon-zindex;
+    margin: auto;
+}
+
+.benefits__title {
+    margin: $benefits-title-margin;
+
+    color: $benefits-title-color;
+    font-size: $benefits-title-font-size;
+    line-height: $benefits-title-line-height;
+}
+
+.benefits__text {
+    font-size: $benefits-text-font-size;
+    line-height: $benefits-text-line-height;
+    color: $benefits-text-color;
+}

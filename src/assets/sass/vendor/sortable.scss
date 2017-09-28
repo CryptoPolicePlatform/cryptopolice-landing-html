@@ -1,0 +1,47 @@
+.sortable {
+    th:not([data-sortable="false"]) {
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-touch-callout: none;
+        cursor: pointer;
+    }
+
+    th {
+        position: relative;
+
+        &:after {
+            content: $sortable-sorted-icon-desc;
+            visibility: hidden;
+            vertical-align: inherit;
+
+            font-family: fontAwesome;
+            font-size: $sortable-sorted-icon-font-size;
+            line-height: $sortable-sorted-icon-line-height;
+            color: $sortable-sorted-icon-color;
+
+            margin-left: $sortable-sorted-icon-margin-left;
+
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        &[data-sorted="true"] {
+            background-color: $sortable-sorted-bg;
+            padding-right: $sortable-sorted-right-padding;
+        }
+
+        &[data-sorted="true"]:after {
+            visibility: visible;
+        }
+
+        &[data-sorted-direction="descending"]:after {
+            content: $sortable-sorted-icon-desc;
+        }
+
+        &[data-sorted-direction="ascending"]:after {
+            content: $sortable-sorted-icon-asc;
+        }
+    }
+}

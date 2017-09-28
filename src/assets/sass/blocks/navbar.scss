@@ -1,0 +1,224 @@
+.navbar {
+    padding: $navbar-padding;
+
+    background-color: $navbar-bg;
+    border: $navbar-border;
+
+    @include clearfix;
+
+
+    /* Styling */
+    &--dark {
+        border: $navbar-dark-border;
+        background-color: $navbar-dark-bg;
+
+        .navbar__link {
+            color: $navbar-dark-link-color;
+
+            &.active {
+                color: $navbar-dark-link-color-active;
+            }
+        }
+    }
+
+    &--buttons {
+        padding: 0;
+        border: 0;
+
+        background-color: transparent;
+
+        .navbar__item {
+            margin-right: $navbar-buttons-margin-right;
+            background-color: $navbar-buttons-bg;
+
+            border-right: $navbar-buttons-border-right;
+            border-left: $navbar-buttons-border-left;
+
+            transition: border-color .1s linear, background-color .1s linear;
+
+            &:first-of-type {
+                border-left: 0;
+            }
+
+            &:hover {
+                background-color: $navbar-buttons-bg-hover;
+                border-color: $navbar-buttons-bg-hover;
+            }
+        }
+
+        .navbar__link {
+            color: $navbar-buttons-link-color;
+
+            transition: color .1s linear;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &--fixed {
+        width: 100%;
+
+        border: $navbar-fixed-border;
+        box-shadow: $navbar-fixed-box-shadow;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: $navbar-fixed-zindex;
+    }
+}
+
+.navbar__nav {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &--left  { float: left; }
+    &--right { float: right; }
+
+    @include clearfix;
+}
+
+.navbar__item {
+    display: block;
+    float: left;
+    margin-right: $navbar-item-margin-right;
+    position: relative;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    .btn {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        .navbar__submenu {
+            opacity: 1;
+            pointer-events: all;
+            transform: translate3d(-50%, 5px, 0);
+        }
+    }
+
+    &--brand {
+
+        .navbar__link {
+            padding: 0;
+        }
+    }
+}
+
+.navbar__link {
+    display: block;
+    padding: $navbar-link-padding;
+
+    font-size: $navbar-link-font-size;
+    line-height: $navbar-link-line-height;
+    color: $navbar-link-color;
+
+    &:focus { text-decoration: none; }
+
+    i {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 3px;
+
+        font-size: .6em;
+        line-height: 1em;
+        font-weight: normal;
+    }
+
+    &.active {
+        color: $navbar-link-color-active;
+    }
+}
+
+.navbar__text {
+    display: block;
+    padding: $navbar-text-padding;
+
+    font-size: $navbar-text-font-size;
+    line-height: $navbar-text-line-height;
+    color: $navbar-text-color;
+}
+
+
+
+/* Submenu */
+.navbar__submenu {
+    width: auto;
+    min-width: 130px;
+    padding: 0;
+    margin: -5px 0 0;
+
+    font-size: .9em;
+    list-style: none;
+
+    background-color: $white;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 0 .3em rgba($black, .3);
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 1;
+
+    transform: translate3d(-50%, -20px, 0);
+    transition: transform .2s linear, opacity .1s linear;
+
+    &:before {
+        content: "";
+        border-style: solid;
+        border-width: 0 5px 6px 5px;
+        border-color: transparent transparent $light-gray transparent;
+
+        position: absolute;
+        top: -6px;
+        left: 50%;
+        margin-left: -5px;
+        z-index: 1;
+    }
+
+    &:after {
+        content: "";
+        border-style: solid;
+        border-width: 0 4px 5px 4px;
+        border-color: transparent transparent $white transparent;
+
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        margin-left: -4px;
+        z-index: 2;
+    }
+}
+
+.navbar__submenu-item {
+    display: block;
+
+    a {
+        display: block;
+        padding: .4em .8em;
+        transition: background-color .1s linear;
+
+        &:hover {
+            text-decoration: none;
+            background-color: $light-gray;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

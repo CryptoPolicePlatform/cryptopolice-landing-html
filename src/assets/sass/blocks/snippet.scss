@@ -1,0 +1,17 @@
+.snippet {
+    padding: $snippet-padding;
+
+    background-color: $light-gray;
+
+    font-family: $snippet-font-family;
+    font-size: $snippet-font-size;
+    color: $snippet-color;
+    line-height: $snippet-line-height;
+    white-space: $snippet-wrap;
+
+    /* Colors */
+    @include snippet-color;
+
+    &--rounded { border-radius: $snippet-rounded; }
+    &--shadow  { box-shadow: $snippet-shadow; }
+}

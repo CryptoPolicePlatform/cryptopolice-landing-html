@@ -1,0 +1,41 @@
+.team {
+    margin: $block-margin;
+}
+
+.team__item {
+    max-width: $team-item-width;
+    padding: $team-item-padding;
+    margin: $team-item-margin;
+    display: inline-block;
+    vertical-align: top;
+
+    background-color: $team-item-bg;
+
+    /* Styling */
+    &--rounded { border-radius: $team-item-radius; }
+    &--shadow  { box-shadow: $team-item-radius; }
+}
+
+.team__info {
+    text-align: $team-info-text-align;
+}
+
+.team__name {
+    margin-top: $team-name-margin-top;
+
+    font-size: $team-name-font-size;
+    line-height: $team-name-line-height;
+    color: $team-name-color;
+}
+
+.team__text {
+    margin-top: $team-text-margin-top;
+    font-size: $team-text-font-size;
+    line-height: $team-text-line-height;
+    color: $team-text-color;
+}
+
+.team__social {
+    margin-top: $team-social-margin-top;
+    text-align: $team-social-text-align;
+}

@@ -1,0 +1,65 @@
+@import "functions";
+@import "variables";
+@import "mixins";
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: $regular_font_size;
+    line-height: $default_line_height;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    background: $real-black;
+}
+
+a {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus {
+        outline: 0;
+        text-decoration: underline;
+    }
+}
+
+p {
+    margin: 0 0 .5em;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+/* Vendor libs
+==========================*/
+@import "vendor/_normalize";
+@import "fontawesome/font-awesome";
+@import "vendor/animate";
+@import "vendor/modal";
+
+
+
+
+/* Import blocks
+==========================*/
+@import "blocks/grid";
+@import "blocks/intro";
+@import "blocks/block";
+@import "blocks/nav";
+@import "blocks/timer";
+@import "blocks/btn";
+
+
+
+
+/* Helpers (must be as last import to override rules when use)
+==========================*/
+@import "_helpers";

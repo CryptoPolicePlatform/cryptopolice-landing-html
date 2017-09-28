@@ -1,0 +1,7 @@
+.filter {
+    &--grayscale { @include img-filter(grayscale, 1); }
+    &--sepia     { @include img-filter(sepia, 1); }
+    &--invert    { @include img-filter(invert, 1); }
+    &--blur      { @include img-filter(blur, 5px); }
+    &--contrast  { @include img-filter(contrast, 2); }
+}

@@ -1,0 +1,75 @@
+.prices {
+    margin: $block-margin;
+}
+
+.prices__item {
+    display: block;
+    width: 100%;
+    margin-bottom: $prices-item-margin-bottom;
+
+    color: $prices-item-color;
+
+    /* Colors */
+    @include price-theme;
+}
+
+.prices__title {
+    padding: $prices-title-padding;
+    background-color: $prices-title-bg;
+
+    font-size: $prices-title-font-size;
+    line-height: $prices-title-line-height;
+
+    color: $prices-title-color;
+    text-align: $prices-title-align;
+    text-transform: $prices-title-transform;
+}
+
+.prices__header {
+    padding: $prices-header-padding;
+
+    background-color: $prices-header-bg;
+
+    text-align: $prices-header-align;
+}
+
+.prices__sum {
+    font-size: $prices-sum-font-size;
+    line-height: $prices-sum-line-height;
+}
+
+.prices__currency,
+.prices__term {
+    font-weight: $prices-currency-font-weight;
+    font-size: $prices-currency-font-size;
+    line-height: $prices-currency-line-height;
+
+    opacity: $prices-currency-opacity;
+}
+
+.prices__currency {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.prices__term {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.prices__content {
+    padding: $prices-content-padding;
+
+    background-color: $prices-content-bg;
+
+    color: $prices-content-color;
+    text-align: $prices-content-align;
+}
+
+.prices__footer {
+    padding: $prices-footer-padding;
+
+    background-color: $prices-footer-bg;
+
+    text-align: $prices-footer-align;
+}

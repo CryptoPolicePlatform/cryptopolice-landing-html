@@ -1,0 +1,98 @@
+.shop-cart {
+    background-color: $cart-bg;
+
+    &--popup {
+        width: 100%;
+        max-width: $cart-popup-width;
+        position: relative;
+
+        box-shadow: $cart-popup-shadow;
+
+        &:before {
+            content: "";
+            border-style: $cart-popup-arrow-border-style;
+            border-width: $cart-popup-arrow-border-width;
+            border-color: transparent transparent $cart-popup-arrow-border-color transparent;
+
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            z-index: 1;
+        }
+
+        .shop-cart__item {
+            min-height: $cart-popup-item-height;
+            padding: $cart-popup-item-padding;
+        }
+
+        .shop-cart__photo {
+            width: $cart-popup-photo-width;
+            height: $cart-popup-photo-height;
+            top: $cart-popup-pos-top;
+        }
+    }
+}
+
+.shop-cart__header {
+    border-bottom: $cart-header-border-bottom;
+
+    padding: $cart-header-padding;
+}
+
+.shop-cart__item {
+    padding: $cart-item-padding;
+    min-height: $cart-item-height;
+    position: relative;
+
+    border-bottom: $cart-item-border-bottom;
+}
+
+.shop-cart__photo {
+    width: $cart-photo-width;
+    height: $cart-photo-height;
+
+    position: absolute;
+    top: $cart-photo-pos-top;
+    left: $cart-photo-pos-left;
+    z-index: 1;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.shop-cart__excerpt {
+    font-size: $cart-excerpt-font-size;
+    line-height: $cart-excerpt-line-height;
+    color: $cart-excerpt-color;
+
+    p {
+        margin: $cart-excerpt-p-margin;
+
+        &:last-child { margin-bottom: 0; }
+    }
+}
+
+.shop-cart__price {
+    font-size: $cart-price-font-size;
+    line-height: $cart-price-line-height;
+    color: $cart-price-color;
+
+    span {
+        font-size: $cart-price-span-font-size;
+        color: $cart-price-span-color;
+    }
+}
+
+.shop-cart__footer {
+    padding: $cart-price-padding;
+
+    .btn {  margin-bottom: 0; }
+}
+
+.shop-cart__total {
+    font-size: $cart-total-font-size;
+    line-height: $cart-total-line-height;
+    color: $cart-total-color;
+}

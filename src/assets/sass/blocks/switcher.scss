@@ -1,0 +1,173 @@
+.switcher__input {
+    display: none;
+
+    /* Default */
+    &:checked + .switcher__label {
+        color: $switcher-label-color-checked;
+    }
+
+    &:checked + .switcher__label:before {
+        background-color: $switcher-before-bg-checked;
+    }
+
+    &:checked + .switcher__label:active:before {
+        background-color: $switcher-before-bg-active;
+    }
+
+    &:checked + .switcher__label:active:after {
+        transform: translateX($switcher-after-transform-active);
+    }
+
+    &:checked + .switcher__label:after {
+        transform: translateX($switcher-after-transform);
+    }
+
+
+    /* Outline */
+    &:checked + .switcher__label--outline:before {
+        background-color: $switcher-outline-before-bg-checked;
+        border-color: $switcher-outline-before-border-checked;
+    }
+
+    &:checked + .switcher__label--outline:active:before {
+        border-color: $switcher-outline-before-border-active;
+        background-color: $switcher-outline-before-bg-active;
+    }
+
+    &:checked + .switcher__label--outline:after {
+        background-color: $switcher-outline-after-bg-checked;
+    }
+
+    &:checked + .switcher__label--outline:active:after {
+        background-color: $switcher-outline-after-bg-active;
+    }
+
+
+    /* Thih */
+    &:checked + .switcher__label--thin:after {
+        transform: translateX($switcher-thin-after-transform);
+    }
+
+    &:checked + .switcher__label--thin:active:after {
+        transform: translateX($switcher-thin-after-transform-active);
+    }
+}
+
+.switcher__label {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: $switcher-label-indent;
+
+    cursor: pointer;
+    font-size: $switcher-label-font-size;
+    line-height: $switcher-before-height - 1;
+    color: $switcher-label-color;
+    user-select: none;
+
+    position: relative;
+
+    transition: color .1s linear;
+
+    &:before {
+        content: "";
+        display: block;
+        width: $switcher-before-width;
+        height: $switcher-before-height;
+
+        background-color: $switcher-before-bg;
+        border-radius: $switcher-before-radius;
+        box-shadow: $switcher-before-shadow;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        transition: background-color .1s linear, border-color .1s linear;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: $switcher-after-width;
+        height: $switcher-after-height;
+
+        background-color: $switcher-after-bg;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        z-index: 1;
+
+        transition: transform .1s linear;
+    }
+
+    &:active:before {
+        background-color: $switcher-before-bg-active;
+    }
+
+    &:active:after {
+        transform: translateX($switcher-after-transform-active);
+    }
+
+
+    /* Modificators */
+    &--square {
+
+        &:before,
+        &:after {
+            border-radius: 0;
+        }
+    }
+
+    &--outline {
+
+        &:before {
+            background-color: $switcher-outline-before-bg;
+            box-shadow: none;
+            border: $switcher-outline-before-border;
+            box-sizing: content-box;
+        }
+
+        &:after {
+            top: 2px;
+            left: 2px;
+            background-color: $switcher-outline-after-bg;
+        }
+
+        &:active:before {
+            border-color: $switcher-outline-before-border-active;
+            background-color: $switcher-outline-before-bg-active;
+        }
+
+        &:active:after {
+            background-color: $switcher-outline-after-bg-active;
+        }
+    }
+
+    &--thin {
+
+        &:before {
+            height: $switcher-thin-before-height;
+            top: 50%;
+            margin-top: $switcher-thin-before-top;
+        }
+
+        &:after {
+            box-shadow: $switcher-thin-after-shadow;
+
+            top: 0;
+            left: 0;
+        }
+
+        &:active:after {
+            transform: translateX($switcher-thin-after-transform-active);
+        }
+    }
+}
+
+.switcher__text {
+    display: inline-block;
+    vertical-align: middle;
+}

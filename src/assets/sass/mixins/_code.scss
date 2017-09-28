@@ -1,0 +1,23 @@
+@mixin code-theme {
+    @each $color in $colors {
+        &--#{nth($color, 1)} {
+            background-color: nth($color, 2);
+            border-left-color: darken(nth($color, 2), 10%);
+
+            @if (lightness(nth($color, 2)) > 65) {
+                color: $black;
+
+                pre {
+                    color: $black;
+                }
+
+            } @else {
+                color: $white;
+
+                pre {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

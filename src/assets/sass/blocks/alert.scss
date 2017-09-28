@@ -1,0 +1,48 @@
+.alert {
+    padding: $alert-padding;
+    margin-bottom: $alert-margin-bottom;
+
+    font-size: $alert-font-size;
+    line-height: $alert-line-height;
+
+    position: relative;
+
+    background-color: $alert-default-bg;
+    color: $alert-default-color;
+
+    p {
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    /* Colors */
+    @include alert;
+
+    /* Border */
+    @include alert-outline;
+
+    /* Styling */
+    &--rounded { border-radius: $alert-rounded; }
+    &--shadow  { box-shadow: $alert-shadow; }
+}
+
+.alert__button {
+    padding: 0;
+
+    background: none;
+    border: 0;
+
+    color: $alert-close-color;
+    line-height: $alert-close-line-height;
+    font-size: $alert-close-font-size;
+
+    position: absolute;
+    top: $alert-close-top;
+    right: $alert-close-right;
+    z-index: $alert-close-zindex;
+
+    &:focus {
+        outline: 0;
+    }
+}

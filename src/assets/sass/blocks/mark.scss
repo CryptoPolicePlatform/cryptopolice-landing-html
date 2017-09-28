@@ -1,0 +1,26 @@
+.mark {
+    display: inline-block;
+    vertical-align: middle;
+    padding: $mark-padding;
+    margin-bottom: $mark-margin-bottom;
+
+    color: $mark-color;
+    font-size: $mark-font-size;
+    line-height: $mark-line-height;
+
+
+    /* Colors */
+    @each $color in $colors {
+        &--#{nth($color, 1)} {
+            background-color: nth($color, 2);
+        }
+    }
+
+    /* Border */
+    @include mark-outline;
+
+
+    /* Styling */
+    &--rounded { border-radius: $mark-rounded; }
+    &--shadow  { box-shadow: $mark-shadow; }
+}

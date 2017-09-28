@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license
+
+Copyright (c) 2013 Daniel Eden
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+
+/* Some effects originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+@import "animate/flash";
+@import "animate/pulse";
+@import "animate/shake";
+@import "animate/swing";
+@import "animate/tada";
+@import "animate/wobble";
+@import "animate/hinge";
+@import "animate/rollIn";
+@import "animate/rollOut";
+
+@import "animate/bounce";
+@import "animate/bounceIn";
+@import "animate/bounceInDown";
+@import "animate/bounceInLeft";
+@import "animate/bounceInRight";
+@import "animate/bounceInUp";
+@import "animate/bounceOut";
+@import "animate/bounceOutDown";
+@import "animate/bounceOutLeft";
+@import "animate/bounceOutRight";
+@import "animate/bounceOutUp";
+
+@import "animate/fadeIn";
+@import "animate/fadeInDown";
+@import "animate/fadeInDownBig";
+@import "animate/fadeInLeft";
+@import "animate/fadeInLeftBig";
+@import "animate/fadeInRight";
+@import "animate/fadeInRightBig";
+@import "animate/fadeInUp";
+@import "animate/fadeInUpBig";
+@import "animate/fadeOut";
+@import "animate/fadeOutDown";
+@import "animate/fadeOutDownBig";
+@import "animate/fadeOutLeft";
+@import "animate/fadeOutLeftBig";
+@import "animate/fadeOutRight";
+@import "animate/fadeOutRightBig";
+@import "animate/fadeOutUp";
+@import "animate/fadeOutUpBig";
+
+@import "animate/flip";
+@import "animate/flipInX";
+@import "animate/flipInY";
+@import "animate/flipOutX";
+@import "animate/flipOutY";
+
+@import "animate/lightSpeedIn";
+@import "animate/lightSpeedOut";
+
+@import "animate/rotateIn";
+@import "animate/rotateInDownLeft";
+@import "animate/rotateInDownRight";
+@import "animate/rotateInUpLeft";
+@import "animate/rotateInUpRight";
+@import "animate/rotateOut";
+@import "animate/rotateOutDownLeft";
+@import "animate/rotateOutDownRight";
+@import "animate/rotateOutUpLeft";
+@import "animate/rotateOutUpRight";
+
+@import "animate/slideInDown";
+@import "animate/slideInLeft";
+@import "animate/slideInRight";
+@import "animate/slideOutLeft";
+@import "animate/slideOutRight";
+@import "animate/slideOutUp";

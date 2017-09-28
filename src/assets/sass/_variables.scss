@@ -1,0 +1,1604 @@
+/*========================
+1. Settings
+2. Font family
+3. Font sizes
+4. Colors
+5. Form & hints
+6. Label
+7. Switcher
+8. Checkbox
+9. Radio Buttons
+10. Inputs & textarea
+11. Buttons
+12. Dropdown
+13. Breadcrumbs
+14. Pagination
+15. Social
+16. Marks
+17. Alerts
+18. Lists
+19. Select
+20. Table
+21. Tabs
+22. Accordion
+23. Statistic
+24. Rating
+25. Code
+26. Snippet
+27. Progress
+28. Separator
+29. Steps
+30. Vertical Rhythm
+31. Images
+32. Loaders
+33. Navbar
+34. Modals
+35. Rangeslider
+36. Scrollbar
+37. Sortable
+38. Masonry Grid
+39. Tooltips
+40. Intro
+41. Feed
+42. Reviews
+43. Benefits
+44. Comments
+45. Prices
+46. Footer
+47. Products
+48. Product
+49. Shopping Cart
+50. Team
+51. Bootstrap 4 Grid
+=========================*/
+
+
+/* 1. Settings
+=========================*/
+$img: "../i/";
+$fonts: "../fonts/";
+$default_line_height: 1.4;
+
+
+
+/* 2. Font family
+=========================*/
+$tahoma:      Tahoma, sans-serif;
+$pt_sans:     'PT Sans', sans-serif;
+$raleway:     'Raleway', sans-serif;
+$roboto_c:    'Roboto Condensed', sans-serif;
+
+
+
+
+/* 3. Font sizes
+=========================*/
+$regular_font_size: 16px;
+$title_font_size:   2em;
+
+
+
+
+/* 4. Colors
+=========================*/
+$black:         #3e3e3e;
+$white:         #fff;
+$real-black:    #000;
+$gray:          #9e9e9e;
+$light-gray:    #efefef;
+$blue-gray:     #607d8b;
+$red:           #f44336;
+$pink:          #ec407a;
+$purple:        #ab47bc;
+$deep-purple:   #673ab7;
+$indigo:        #3f51b5;
+$blue:          #1976d2;
+$light-blue:    #03a9f4;
+$cyan:          #00acc1;
+$teal:          #009688;
+$green:         #4caf50;
+$light-green:   #8bc34a;
+$lime:          #cddc39;
+$yellow:        #fbc02d;
+$amber:         #ffa000;
+$orange:        #fb8c00;
+$deep-orange:   #ff7043;
+$brown:         #795548;
+
+$colors: (gray $gray) (red $red) (pink $pink) (purple $purple) (deep-purple $deep-purple) (indigo $indigo) (blue $blue) (light-blue $light-blue) (cyan $cyan) (teal $teal) (green $green) (light-green $light-green) (lime $lime) (yellow $yellow) (amber $amber) (orange $orange) (deep-orange $deep-orange) (brown $brown) (black $black);
+
+$block-margin: 20px 0;
+
+
+
+/* 5. Form & hints
+=========================*/
+$form-margin:                   20px 0;
+$form-group-margin-bottom:      1em;
+
+$form-hint-margin-top:          3px;
+$form-hint-color:               $gray;
+$form-hint-font-size:           .8em;
+$form-hint-line-height:         1.2;
+
+
+
+/* 6. Label
+=========================*/
+$label-margin-right:    10px;
+$label-margin-bottom:   5px;
+
+$label-font-size:       1em;
+$label-line-height:     1.4;
+$label-color:           $black;
+
+
+
+/* 7. Switcher
+=========================*/
+
+/* Before element */
+$switcher-before-width:                      40px;
+$switcher-before-height:                     $switcher-before-width / 2;
+$switcher-before-radius:                     $switcher-before-width / 2;
+$switcher-before-shadow:                     1px 1px $switcher-before-width / 40 rgba(0, 0, 0, .3) inset;
+$switcher-before-bg:                         $gray;
+$switcher-before-bg-checked:                 $light-blue;
+$switcher-before-bg-active:                  rgba($switcher-before-bg-checked, .4);
+
+/* After element */
+$switcher-after-width:                       ($switcher-before-width / 2) - 2;
+$switcher-after-height:                      $switcher-before-height - 2;
+$switcher-after-bg:                          $white;
+$switcher-after-bg-active:                   $white;
+$switcher-after-transform:                   $switcher-before-width / 2;
+$switcher-after-transform-active:            $switcher-before-width / 4;
+
+/* Outline */
+$switcher-outline-before-bg:                 transparent;
+$switcher-outline-before-border:             1px solid $gray;
+$switcher-outline-before-bg-checked:         $white;
+$switcher-outline-before-border-checked:     $light-blue;
+$switcher-outline-before-border-active:      rgba($switcher-outline-before-border-checked, .4);
+$switcher-outline-before-bg-active:          rgba($switcher-outline-before-bg-checked, .4);
+
+$switcher-outline-after-bg:                  $gray;
+$switcher-outline-after-bg-checked:          $light-blue;
+$switcher-outline-after-bg-active:           rgba($switcher-outline-after-bg-checked, .4);
+
+/* Thin */
+$switcher-thin-before-height:                3px;
+$switcher-thin-before-top:                   - ceil(($switcher-thin-before-height / 2));
+$switcher-thin-after-shadow:                 0 0 .2em rgba(0, 0, 0, .5);
+$switcher-thin-after-transform:              ($switcher-before-width / 2) + 2;
+$switcher-thin-after-transform-active:       ($switcher-before-width / 4) + 2;
+
+/* Label */
+$switcher-label-color:                       darken($gray, 20%);
+$switcher-label-color-checked:               $black;
+$switcher-label-font-size:                   .8em;
+$switcher-label-indent:                      $switcher-before-width + 10;
+
+
+
+/* 8. Checkbox
+=========================*/
+
+$checkbox-before-border-color:              $gray;
+$checkbox-before-border:                    1px solid $checkbox-before-border-color;
+$checkbox-before-bg:                        $white;
+$checkbox-before-bg-checked:                $green;
+$checkbox-before-border-color-checked:      $checkbox-before-bg-checked;
+$checkbox-before-width:                     20px;
+$checkbox-before-height:                    20px;
+$checkbox-before-radius:                    3px;
+
+$checkbox-color:                            $black;
+$checkbox-indent:                           $checkbox-before-width + 10;
+$checkbox-font-size:                        1em;
+$checkbox-margin-bottom:                    5px;
+$checkbox-inline-margin-right:              5px;
+
+$checkbox-after-icon:                       "\f00c";
+$checkbox-after-color:                      $white;
+$checkbox-after-size:                       $checkbox-before-height - 3;
+$checkbox-after-line-height:                1;
+
+/* Disabled */
+$checkbox-disabled-color:                   $gray;
+$checkbox-before-disabled-border-color:     lighten($checkbox-before-border-color, 15%);
+$checkbox-after-disabled-color:             $gray;
+$checkbox-after-disabled-opacity:           .3;
+$checkbox-cursor-disabled:                  not-allowed;
+
+/* Error */
+$checkbox-color-error:                      $red;
+$checkbox-before-border-color-error:        $red;
+
+
+
+
+/* 9. Radio Buttons
+=========================*/
+
+$radio-before-width:                         20px;
+$radio-before-height:                        20px;
+$radio-before-border-color:                  $gray;
+$radio-before-border:                        1px solid $radio-before-border-color;
+$radio-before-bg:                            $white;
+
+$radio-color:                                $black;
+$radio-font-size:                            1em;
+$radio-indent:                               $radio-before-width + 10;
+$radio-margin-bottom:                        5px;
+$radio-inline-margin-right:                  5px;
+
+$radio-after-bg:                             $gray;
+$radio-after-width:                          $radio-before-width - 6;
+$radio-after-height:                         $radio-before-height - 6;
+
+/* Disabled */
+$radio-color-disabled:                       $gray;
+$radio-opacity-disabled:                     .5;
+$radio-before-border-color-disabled:         lighten($radio-before-border-color, 15%);
+$radio-cursor-disabled:                      not-allowed;
+
+/* Error */
+$radio-color-error:                          $red;
+$radio-before-border-color-error:            $red;
+
+
+
+
+/* 10. Inputs & textarea
+=========================*/
+
+$input-height:                  36px;
+$input-padding:                 .4em .9em;
+$input-color:                   $black;
+$input-font-size:               1em;
+$input-line-height:             1;
+$input-shadow-default:          inset 0 1px 4px rgba(0, 0, 0, .2);
+$input-placeholder-color:       lighten($gray, 20%);
+$input-bg:                      $white;
+$input-bg-focus:                lighten($light-blue, 48%);
+
+$input-icon-color:              $gray;
+$input-icon-color-focus:        $black;
+
+$input-label-bg:                darken($light-gray, 5%);
+$input-label-padding:           .38em .9em;
+$input-label-font-size:         1em;
+$input-label-line-height:       1.4;
+$input-label-color:             lighten($black, 10%);
+
+/* Textarea */
+$textarea-height:               100px;
+$textarea-padding:              .5em .9em;
+$textarea-line-height:          1.4;
+$textarea-color:                $black;
+$textarea-resize:               none;
+$textarea-resize-focus:         vertical;
+
+/* Styling */
+$input-style-rounded:           .3em;
+$input-style-ellipse:           $input-height / 2;
+$input-style-shadow:            1px 1px .3em rgba(0, 0, 0, .2);
+
+/* States */
+$input-error:                   $red;
+$input-success:                 $green;
+
+
+
+
+
+/* 11. Buttons
+=========================*/
+$btn-padding:                       .7em 3em;
+$btn-margin-bottom:                 5px;
+$btn-font-family:                   inherit;
+$btn-font-size:                     1em;
+$btn-line-height:                   1.25em;
+$btn-align:                         center;
+$btn-cursor:                        pointer;
+
+$btn-default-color:                 $black;
+$btn-default-bg:                    $light-gray;
+
+/* Sizes */
+$btn-xs-font-size:                  .7em;
+$btn-s-font-size:                   .8em;
+$btn-m-font-size:                   1.2em;
+$btn-l-font-size:                   1.4em;
+$btn-xl-font-size:                  1.6em;
+$btn-xxl-font-size:                 1.8em;
+
+/* Styling */
+$btn-rounded:                       .3em;
+$btn-ellipse:                       20px;
+$btn-shadow:                        1px 1px .3em rgba(0, 0, 0, .3);
+$btn-icon-margin:                   .5em;
+
+$btn-inverted-border-color:         $gray;
+$btn-inverted-border:               1px solid $gray;
+$btn-inverted-color:                $white;
+
+
+
+
+
+/* 12. Dropdown
+=========================*/
+$dropdown-min-width:            150px;
+$dropdown-shadow:               0 0 .3em rgba(0, 0, 0, .3);
+$dropdown-zindex:               100;
+
+$dropdown-link-padding:         .4em .6em;
+$dropdown-link-bg:              $white;
+$dropdown-link-bg-hover:        $light-gray;
+$dropdown-link-color:           $blue;
+$dropdown-link-font-size:       1em;
+$dropdown-link-line-height:     1.2;
+
+
+
+
+
+/* 13. Breadcrumbs
+=========================*/
+
+$breadcrumbs-color:                         $blue;
+$breadcrumbs-color-current:                 $gray;
+$breadcrumbs-font-size:                     .8em;
+
+$breadcrumbs-item-indent:                   .4em;
+$breadcrumbs-item-divider:                  "/";
+$breadcrumbs-item-divider-margin-left:      .5em;
+$breadcrumbs-item-arrow:                    "\f105";
+$breadcrumbs-item-font-size:                1em;
+$breadcrumbs-item-line-height:              1;
+
+
+
+
+/* 14. Pagination
+=========================*/
+$pagination-width:              36px;
+$pagination-height:             36px;
+$pagination-bg:                 $white;
+$pagination-bg-active:          $blue;
+$pagination-border:             1px solid lighten($gray, 20%);
+$pagination-align:              center;
+$pagination-disabled-opacity:   .4;
+
+$pagination-color:              $black;
+$pagination-color-hover:        $white;
+$pagination-color-current:      $white;
+$pagination-font-size:          1em;
+
+/* Styling */
+$pagination-rounded:            .3em;
+$pagination-circle:             50%;
+$pagination-shadow:             1px 1px .4em rgba(0, 0, 0, .3);
+
+
+
+
+/* 15. Social
+=========================*/
+$social-width:              30px;
+$social-height:             30px;
+$social-margin-bottom:      5px;
+$social-color:              $white;
+$social-font-size:          1em;
+$social-align:              center;
+
+/* Styling */
+$social-rounded:            .3em;
+$social-circle:             50%;
+$social-shadow:             0 0 .2em rgba(0, 0, 0, .3);
+
+
+
+
+/* 16. Marks
+=========================*/
+$mark-color:            $white;
+$mark-font-size:        .8em;
+$mark-line-height:      1.2em;
+$mark-padding:          .2em .5em;
+$mark-margin-bottom:    5px;
+
+$mark-rounded:          .3em;
+$mark-shadow:           1px 1px .3em rgba(0, 0, 0, .4);
+
+
+
+
+/* 17. Alerts
+=========================*/
+$alert-margin-bottom:           10px;
+$alert-padding:                 1em 1.5em;
+$alert-font-size:               .9em;
+$alert-line-height:             1.2;
+$alert-default-bg:              $white;
+$alert-default-color:           $black;
+$alert-default-border-width:    1px;
+
+$alert-close-color:             inherit;
+$alert-close-font-size:         1em;
+$alert-close-line-height:       1;
+$alert-close-top:               .3em;
+$alert-close-right:             .5em;
+$alert-close-zindex:            1;
+
+/* Styling */
+$alert-rounded:                 .3em;
+$alert-shadow:                  0 0 .3em currentColor;
+
+
+
+
+/* 18. Lists
+=========================*/
+$list-margin:                       0;
+$list-padding:                      0;
+$list-color:                        $black;
+$list-font-size:                    1em;
+$list-line-height:                  1.2;
+$list-align:                        left;
+$list-title-weight:                 bold;
+
+$list-divided-border:               1px solid $gray;
+$list-divided-item-padding:         .3em 0 .6em 2.5em;
+$list-divided-icon-width:           15px;
+$list-divided-icon-margin-right:    5px;
+$list-divided-icon-top:             2px;
+$list-divided-icon-left:            0;
+$list-divided-icon-zindex:          1;
+
+$list-item-margin-bottom:           7px;
+$list-item-padding-left:            15px;
+$list-item-text:                    lighten($list-color, 20%);
+$list-item-marker-size:             5px;
+$list-item-marker-radius:           50%;
+$list-item-marker-bg:               $black;
+$list-item-marker-left:             0;
+$list-item-marker-top:              7px;
+
+
+
+
+/* 19. Select
+=========================*/
+$select-height:                 36px;
+$select-font-size:              1em;
+$select-line-height:            1.2;
+$select-color:                  $black;
+$select-padding:                0 3em 0 .8em;
+
+$select-divider-width: 1px;
+$select-divider-right-indent:   2em;
+$select-divider-color:          lighten($gray, 20%);
+$select-divider-right:          2em;
+$select-divider-zindex:         1;
+
+$select-triangle-size:          5px;
+$select-triangle-color:         currentColor;
+$select-triangle-top:           50%;
+$select-triangle-right:         .75em;
+$select-triangle-zindex:        .1;
+
+$select-multiple-height:         100px;
+$select-multiple-padding:        .8em;
+
+
+
+
+
+/* 20. Table
+=========================*/
+$table-color:                       $black;
+$table-font-size:                   1em;
+$table-line-height:                 1.2;
+$table-head-color:                  $black;
+$table-width:                       100%;
+$table-margin-bottom:               10px;
+
+$table-head-bg:                     $light-gray;
+$table-head-border:                 2px solid $gray;
+
+$table-th-padding:                  .5em 1em;
+$table-th-weight:                   normal;
+$table-th-align:                    left;
+
+$table-body-border:                 1px solid $light-gray;
+
+$table-td-padding:                  .5em 1em;
+$table-td-align:                    left;
+
+$table-stripped-bg:                 lighten($light-gray, 5%);
+$table-hover-bg:                    lighten($light-gray, 3%);
+
+$table-separate-cols-th-border:        1px solid $gray;
+$table-separate-cols-td-border:        1px solid $light-gray;
+
+$table-separate-cols-th-border-dark:   1px solid $yellow;
+$table-separate-cols-td-border-dark:   1px solid $white;
+
+
+$table-scrollbar-width:             15px;
+$table-scrollbar-height:            15px;
+$table-scrollbar-bg:                $black;
+$table-scrollbar-thumb:             $yellow;
+
+
+/* On Dark Bg */
+$table-color-dark:                  $white;
+$table-head-color-dark:             $yellow;
+$table-body-border-dark:            $yellow;
+$table-body-bg-dark:                transparent;
+
+$table-stripped-bg-dark:            darken($black, 5%);
+$table-stripped-bg-dark-hover:      darken($black, 3%);
+$table-stripped-color-dark:         $white;
+
+
+
+
+/* 21. Tabs
+=========================*/
+$tabs-item-color:                       $gray;
+$tabs-item-color-active:                $teal;
+$tabs-item-font-size:                   1em;
+$tabs-item-line-height:                 1.2;
+$tabs-item-padding:                     1em 2em;
+
+/* Nav Item */
+$tabs-item-border-color:                transparent;
+$tabs-item-border-bottom:               2px solid $tabs-item-border-color;
+$tabs-item-border-color-active:         $teal;
+$tabs-item-border-color-hover:          rgba($tabs-item-border-color-active, .5);
+$tabs-item-border-width:                1px;
+
+/* Content */
+$tabs-content-padding:                  1em 0;
+$tabs-content-color:                    $black;
+$tabs-content-font-size:                1em;
+$tabs-content-line-height:              1.4;
+
+/* Content with border and bg */
+$tabs-content-fill-bg:              $white;
+$tabs-content-fill-color:           $black;
+$tabs-content-fill-border-color:    lighten($gray, 20%);
+$tabs-content-fill-border:          1px solid $tabs-content-fill-border-color;
+$tabs-content-fill-padding:         1.5em 2em;
+
+$tabs-item-fill-bg-active:          $tabs-content-fill-bg;
+$tabs-item-fill-border-active:      $tabs-content-fill-border-color;
+$tabs-item-fill-color-hover:        $teal;
+
+/* Dark theme */
+$tabs-item-color-dark:                  $gray;
+$tabs-item-color-dark-active:           $yellow;
+$tabs-item-color-dark-hover:            $black;
+
+$tabs-content-bg-dark:                  $black;
+$tabs-content-item-color:               $white;
+$tabs-content-border-color-dark:        $black;
+
+/* Styling */
+$tabs-content-rounded:                  0 0 .3em .3em;
+$tabs-item-rounded-active:              .3em .3em 0 0;
+
+$tabs-content-shadow:                   0 0 .3em rgba(0, 0, 0, .2);
+$tabs-item-shadow-active:               0 -.15em .15em rgba(0, 0, 0, .1);
+
+
+
+
+/* 22. Accordion
+=========================*/
+$accordion-bg:                      $white;
+$accordion-border-color:            lighten($gray, 20%);
+$accordion-border:                  1px solid $accordion-border-color;
+
+/* Title */
+$accordion-title-padding:           .5em 2em .5em 2.1em;
+$accordion-title-font-size:         1em;
+$accordion-title-line-height:       1.2;
+$accordion-title-font-weight:       bold;
+$accordion-title-color:             $gray;
+$accordion-title-color-active:      $black;
+$accordion-title-color-hover:       $black;
+
+/* Title Icon */
+$accordion-title-icon:              "\f105";
+$accordion-title-icon-active:       "\f107";
+$accordion-title-icon-font-size:    1em;
+$accordion-title-icon-line-height:  1;
+$accordion-title-icon-top:          50%;
+$accordion-title-icon-left:         1em;
+$accordion-title-icon-zindex:       1;
+$accordion-title-icon-margin-top:   - $accordion-title-icon-font-size / 2;
+
+/* Content */
+$accordion-content-font-size:       1em;
+$accordion-content-color:           $black;
+$accordion-content-padding:         .5em 1em 1em;
+
+/* Dark theme */
+$accordion-bg-dark:                 $black;
+$accordion-border-color-dark:       $real-black;
+$accordion-title-color-dark:        $gray;
+$accordion-title-color-dark-hover:  $white;
+$accordion-title-color-dark-active: $yellow;
+$accordion-content-color-dark:      $white;
+
+/* Styling */
+$accordion-rounded:                 .3em;
+$accordion-shadow:                  0 0 .3em rgba(0, 0, 0, .3);
+
+
+
+
+/* 23. Statistic
+=========================*/
+$statistic-padding:                 1em;
+$statistic-align:                   center;
+
+$statistic-title-color:             $black;
+$statistic-title-font-size:         2.5em;
+$statistic-title-line-height:       1.2;
+
+$statistic-text-color:              lighten($black, 5%);
+$statistic-text-font-size:          1em;
+$statistic-text-line-height:        1.2;
+$statistic-text-transform:          uppercase;
+
+$statistic-circle-size:             150px;
+$statistic-circle-border-width:     1px;
+$statistic-circle-border:           $statistic-circle-border-width solid $gray;
+$statistic-circle-margin-bottom:    6px;
+$statistic-circle-margin-right:     4px;
+
+/* On Dark Bg */
+$statistic-title-color-dark:        $white;
+$statistic-text-color-dark:         $white;
+
+
+
+
+
+/* 24. Rating
+=========================*/
+$rating-font-size:              1.25em;
+$rating-line-height:            1;
+$rating-color:                  $gray;
+$rating-indent:                 5px;
+
+$rating-star-icon:              "\f005";
+$rating-star-color:             $yellow;
+$rating-star-color-hover:       lighten($rating-star-color, 15%);
+
+$rating-heart-icon:             "\f004";
+$rating-heart-color:            $red;
+$rating-heart-color-hover:      lighten($rating-heart-color, 15%);
+
+
+
+
+/* 25. Code
+=========================*/
+$code-font-family:      Consolas, sans-serif;
+$code-color:            $black;
+$code-font-size:        1em;
+$code-line-height:      1.2;
+$code-bg:               $light-gray;
+$code-border-left:      3px solid darken($light-gray, 5%);
+$code-padding:          .8em;
+$code-margin:           10px 0;
+
+/* Styling */
+$code-rounded:          .3em;
+$code-shadow:           0 0 .5em rgba(0, 0, 0, .3);
+
+
+
+
+
+/* 26. Snippet
+=========================*/
+$snippet-font-family:       $code-font-family;
+$snippet-padding:       .2em .5em;
+$snippet-font-size:     .8em;
+$snippet-line-height:   1;
+$snippet-color:         $black;
+$snippet-bg:            $light-gray;
+$snippet-wrap:          nowrap;
+
+/* Styling */
+$snippet-rounded:       .25em;
+$snippet-shadow:        1px 1px .4em rgba(0, 0, 0, .3);
+
+
+
+
+
+
+/* 27. Progress
+=========================*/
+$progress-height:               20px;
+$progress-thin-height:          6px;
+$progress-bg:                   $light-gray;
+
+/* Bar */
+$progress-bar-padding:          0 .5em;
+$progress-bar-bg:               $gray;
+$progress-color:                $white;
+$progress-font-size:            .9em;
+$progress-align:                right;
+$progress-zindex:               1;
+
+/* Label */
+$progress-label-font-size:      1em;
+$progress-label-line-height:    1.4;
+$progress-label-color:          inherit;
+$progress-label-align:          center;
+$progress-label-zindex:         1;
+
+/* Styling */
+$progress-rounded:              .3em;
+$progress-shadow:               0 0 .3em rgba(0, 0, 0, .3);
+
+
+
+
+
+/* 28. Separator
+=========================*/
+$separator-height:                2px;
+$separator-margin:                1em 0;
+$separator-bg:                    $black;
+$separator-zindex:                1;
+
+/* Title */
+$separator-title-padding:         .5em 2.5em;
+$separator-title-bg:              $black;
+$separator-title-border:          1px solid $separator-bg;
+$separator-title-font-size:       1.2em;
+$separator-title-line-height:     1.2;
+$separator-title-color:           $yellow;
+$separator-title-zindex:          2;
+
+/* Styling */
+$separator-rounded:               .3em;
+$separator-ellipse:               50%;
+$separator-shadow:                0 0 .3em rgba(0, 0, 0, .3);
+
+
+
+/* 29. Steps
+=========================*/
+$steps-bg:                          $light-gray;
+
+/* Item */
+$steps-item-padding:                .8em 2em;
+$steps-item-bg:                     $light-gray;
+$steps-item-border-color:           lighten($gray, 20%);
+$steps-item-border:                 1px solid $steps-item-border-color;
+$steps-item-bg-done:                $green;
+$steps-item-border-color-done:      darken($steps-item-bg-done, 5%);
+
+/* Num */
+$steps-num-size:                    30px;
+$steps-num-font-size:               1em;
+$steps-num-color:                   $gray;
+$steps-num-bg:                      $white;
+$steps-num-radius:                  50%;
+$steps-num-color-done:              $green;
+$steps-num-color-current:           $white;
+$steps-num-bg-current:              $light-blue;
+
+/* Num Text */
+$steps-num-text-font-size:          .9em;
+$steps-num-text-color:              $gray;
+$steps-num-text-line-height:        1.2;
+$steps-num-text-align:              center;
+$steps-num-text-margin-top:         .2em;
+$steps-num-text-done:               $white;
+$steps-num-text-current:            $black;
+
+/* Styling */
+$steps-rounded:                     .3em;
+$steps-item-rounded-first:          .3em 0 0 .3em;
+$steps-item-rounded-last:           0 .3em .3em 0;
+$steps-shadow:                      0 0 .2em rgba(0, 0, 0, .3);
+
+
+
+/* 30. Vertical Rhythm
+=========================*/
+$vr-font-size-val:           16;
+$vr-line-height-val:         24;
+$vr-title-line-height-val:   $vr-line-height-val * 2;
+
+$vr-font-size:               $vr-font-size-val + px;
+$vr-line-height:             $vr-line-height-val + px;
+
+
+
+
+/* 31. Images
+=========================*/
+$image-rounded:     .3em;
+$image-circle:      50%;
+$image-shadow:      0 0 .3em rgba(0, 0, 0, .3);
+
+
+
+
+/* 32. Loaders
+=========================*/
+$loader-size:                           50px;
+$loader-margin:                         20px auto;
+
+/* Spin */
+$loader-spin-size:                      10px;
+$loader-spin-before-color:              $teal;
+$loader-spin-before-zindex:             1;
+$loader-spin-after-color:               darken($light-gray, 10%);
+$loader-spin-anim-duration:             1s;
+
+/* Dots Bounce */
+$loader-dots-bounce-padding-top:        15px;
+$loader-dots-bounce-size:               10px;
+$loader-dots-bounce-margin:             0 2px;
+$loader-dots-bounce-color:              $red;
+$loader-dots-bounce-anim-function:      ease-in-out;
+$loader-dots-bounce-anim-duration:      1s;
+
+/* Dots Fade */
+$loader-dots-fade-padding-top:          15px;
+$loader-dots-fade-size:                 10px;
+$loader-dots-fade-margin:               0 2px;
+$loader-dots-fade-color:                $orange;
+$loader-dots-fade-anim-function:        ease-in-out;
+$loader-dots-fade-anim-duration:        1s;
+
+/* Lines */
+$loader-lines-width:                    5px;
+$loader-lines-height:                   20px;
+$loader-lines-color:                    $black;
+$loader-lines-anim-function:            ease-in-out;
+$loader-lines-anim-duration:            1s;
+
+/* Flip */
+$loader-flip-color:                     $green;
+$loader-flip-perspective:               120px;
+$loader-flip-anim-duration:             1s;
+$loader-flip-zindex:                    1;
+
+
+
+
+
+/* 33. Navbar
+=========================*/
+$navbar-padding:                        .5em;
+$navbar-bg:                             $white;
+$navbar-border:                         1px solid lighten($gray, 20%);
+
+/* Item */
+$navbar-item-margin-right:              5px;
+
+/* Link */
+$navbar-link-padding:                   .6em .8em;
+$navbar-link-font-size:                 1em;
+$navbar-link-line-height:               1;
+$navbar-link-color:                     $black;
+$navbar-link-color-active:              $light-blue;
+
+/* Text */
+$navbar-text-padding:                   .6em .3em;
+$navbar-text-font-size:                 1em;
+$navbar-text-line-height:               1;
+$navbar-text-color:                     darken($light-gray, 5%);
+
+/* Fixed */
+$navbar-fixed-box-shadow:               0 0 .3em rgba(0, 0, 0, .3);
+$navbar-fixed-border:                   0;
+$navbar-fixed-zindex:                   1000;
+
+/* Buttons */
+$navbar-buttons-margin-right:           0;
+$navbar-buttons-bg:                     $light-blue;
+$navbar-buttons-border-right-color:     darken($navbar-buttons-bg, 5%);
+$navbar-buttons-border-left-color:      lighten($navbar-buttons-bg, 5%);
+$navbar-buttons-border-right:           1px solid $navbar-buttons-border-right-color;
+$navbar-buttons-border-left:            1px solid $navbar-buttons-border-left-color;
+$navbar-buttons-bg-hover:               darken($navbar-buttons-bg, 5%);
+$navbar-buttons-link-color:             $white;
+
+/* Dark Theme */
+$navbar-dark-bg:                        #1c588b;
+$navbar-dark-link-color:                $white;
+$navbar-dark-link-color-active:         $yellow;
+$navbar-dark-border:                    0;
+
+
+
+
+/* 34. Modals
+=========================*/
+$modal-max-width:               700px;
+$modal-color:                   $black;
+$modal-bg:                      $white;
+$modal-margin-bottom:           10px;
+$modal-padding:                 35px;
+
+/* Overlay */
+$modal-overlay:                 rgba(43, 46, 56, 0.9);
+$modal-overlay-ie:              $black;
+
+/* Animation */
+$modal-anim-duration:           .3s;
+
+/* Wrapper */
+$modal-wrapper-padding:         10px 10px 0;
+
+/* Close Btn */
+$modal-close-size:              35px;
+$modal-close-color:             $black;
+$modal-close-font-size:         1.2em;
+$modal-close-icon:              "\f00d";
+$modal-close-position-top:      0;
+$modal-close-position-right:    0;
+
+
+
+/* 35. Rangeslider
+=========================*/
+$rangeslider-bg:                            $gray;
+$rangeslider-radius:                        0;
+$rangeslider-disabled-opacity:              .4;
+$rangeslider-fill-color:                    $light-green;
+
+/* Horizontal */
+$rangeslider-horizontal-height:             8px;
+
+/* Vertical */
+$rangeslider-vertical-width:                8px;
+$rangeslider-vertical-min-height:           150px;
+
+/* Handle */
+$rangeslider-handle-width:                  44px;
+$rangeslider-handle-height:                 30px;
+$rangeslider-handle-bg:                     $light-green;
+$rangeslider-handle-border:                 3px solid $white;
+$rangeslider-handle-radius:                 0;
+$rangeslider-handle-shadow:                 0 0 .3em rgba(0, 0, 0, .3);
+$rangeslider-handle-horizontal-top:         -12px;
+$rangeslider-handle-vertical-left:          -10px;
+$rangeslider-handle-zindex:                 1;
+
+/* Handle Arrows */
+$rangeslider-handle-arrow-color:            $white;
+$rangeslider-handle-arrow-size:             1.5em;
+$rangeslider-handle-arrow-line-height:      1;
+$rangeslider-handle-arrow-left-icon:        "\f104";
+$rangeslider-handle-arrow-right-icon:       "\f105";
+$rangeslider-handle-arrow-top:              -1px;
+$rangeslider-handle-arrow-left:             3px;
+$rangeslider-handle-arrow-right:            3px;
+$rangeslider-handle-arrow-zindex:           1;
+
+
+
+/* 36. Scrollbar
+=========================*/
+$scrollbar-container-height:        200px;
+$scrollbar-container-indent:        15px;
+
+/* Bar */
+$scrollbar-bar-width:               10px;
+$scrollbar-bar-height:              10px;
+
+/* Rail */
+$scrollbar-rail-width:              10px;
+$scrollbar-rail-height:             10px;
+$scrollbar-rail-bg:                 lighten($gray, 10%);
+
+/* Dragger */
+$scrollbar-dragger-min-height:      30px;
+$scrollbar-dragger-bg:              $teal;
+
+
+
+
+/* 37. Sortable
+=========================*/
+$sortable-sorted-bg:                    rgba($light-blue, .4);
+
+$sortable-sorted-icon-asc:              "\f106";
+$sortable-sorted-icon-desc:             "\f107";
+$sortable-sorted-icon-font-size:        1em;
+$sortable-sorted-icon-line-height:      1;
+$sortable-sorted-icon-color:            $black;
+$sortable-sorted-icon-margin-left:      10px;
+$sortable-sorted-right-padding:         25px;
+
+
+
+
+/* 38. Masonry Grid
+=========================*/
+$masonry-grid-width:                100%;
+
+$masonry-item-width:                200px;
+$masonry-item-padding:              1em;
+$masonry-item-margin-bottom:        20px;
+$masonry-item-bg:                   $purple;
+$masonry-item-radius:               10px;
+$masonry-item-color:                $white;
+
+
+
+/* 39. Tooltips
+=========================*/
+
+/* Default */
+$tooltip-prefix:                "tip--" !default;
+$tooltip-font-family:           'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$tooltip-zindex:                1000 !default;
+$tooltip-transition-time:       .2s !default;
+$tooltip-transition-func:       ease !default;
+$tooltip-padding:               6px 10px !default;
+$tooltip-font-size:             12px !default;
+$tooltip-default-bg:            $black !default;
+$tooltip-default-color:         $white !default;
+$tooltip-indent:                4px !default;
+$tooltip-transform-indent:      8px !default;
+$tooltip-arrow-size:            4px !default;
+
+/* Sizes */
+$tooltip-sm:                    70px !default;
+$tooltip-md:                    150px !default;
+$tooltip-lg:                    250px !default;
+
+/* Styling */
+$tooltip-shadow:                0 0 10px 2px rgba($black, .4) !default;
+$tooltip-radius:                4px !default;
+
+
+
+
+/* 40. Intro
+=========================*/
+
+$intro-height:                      500px;
+$intro-padding:                     0 2em;
+$intro-content-padding:             1em 2em;
+$intro-content-vertical-align:      middle;
+
+$intro-title-margin:                0 0 .3em;
+$intro-title-font-size:             3em;
+$intro-title-line-height:           1.2;
+$intro-title-color:                 $white;
+$intro-title-weight:                normal;
+
+$intro-text-margin-bottom:          1.5em;
+$intro-text-font-size:              1.5em;
+$intro-text-line-height:            1.2;
+$intro-text-color:                  $white;
+$intro-text-p-margin:               0 0 .7em;
+
+
+
+/* 41. Feed
+=========================*/
+
+/* Item */
+$feed-item-padding:                                 10px;
+$feed-item-margin-bottom:                           30px;
+$feed-item-bg:                                      $white;
+$feed-item-shadow:                                  0 0 .3em rgba(0, 0, 0, .35);
+
+/* Author Avatar */
+$feed-author-avatar-width:                          50px;
+$feed-author-avatar-height:                         50px;
+$feed-author-avatar-top:                            0;
+$feed-author-avatar-left:                           0;
+$feed-author-avatar-zindex:                         1;
+$feed-author-name-font-size:                        1em;
+$feed-author-name-line-height:                      1.2;
+$feed-author-name-color:                            $cyan;
+
+/* Date */
+$feed-date-color:                                   $gray;
+$feed-date-font-size:                               .8em;
+$feed-date-line-height:                             1;
+
+/* Header */
+$feed-header-margin-bottom:                         10px;
+$feed-header-padding-left:                          $feed-author-avatar-width + 10;
+
+/* Title */
+$feed-title-margin:                                 0 0 10px;
+$feed-title-font-size:                              1.8em;
+$feed-title-line-height:                            1.4;
+$feed-title-color:                                  $black;
+$feed-title-font-weight:                            normal;
+$feed-title-icon-font-size:                         .7em;
+$feed-title-icon-margin-right:                      5px;
+
+/* Text */
+$feed-text-margin-bottom:                           10px;
+$feed-text-color:                                   $black;
+$feed-text-font-size:                               .9em;
+$feed-text-line-height:                             1.4;
+
+/* Actions */
+$feed-actions-margin-top:                           10px;
+$feed-actions-item-margin-right:                    10px;
+$feed-actions-item-font-size:                       .9em;
+$feed-actions-item-line-height:                     1;
+$feed-actions-item-color:                           $teal;
+$feed-actions-item-opacity:                         .8;
+$feed-actions-item-icon-margin-right:               5px;
+
+/* Comments */
+$feed-comments-avatar-width:                        40px;
+$feed-comments-avatar-height:                       40px;
+$feed-comments-avatar-top:                          0;
+$feed-comments-avatar-left:                         0;
+$feed-comments-avatar-zindex:                       1;
+
+$feed-comments-margin-top:                          10px;
+$feed-comments-padding-top:                         10px;
+$feed-comments-border-top:                          1px solid $light-gray;
+$feed-comments-item-padding-left:                   $feed-comments-avatar-width + 10;
+$feed-comments-item-margin-bottom:                  10px;
+
+$feed-comments-author-color:                        $blue;
+$feed-comments-author-font-size:                    .9em;
+$feed-comments-author-line-height:                  1.1;
+
+$feed-comments-text-margin-top:                     3px;
+$feed-comments-text-color:                          $black;
+$feed-comments-font-size:                           .9em;
+$feed-comments-line-height:                         1.2;
+
+$feed-comments-footer-margin-top:                   5px;
+$feed-comments-footer-font-size:                    .8em;
+$feed-comments-footer-line-height:                  1.4;
+
+$feed-comments-pubdate-margin-right:                10px;
+$feed-comments-pubdate-color:                       $gray;
+$feed-comments-icon-opacity:                        .8;
+$feed-comments-icon-margin-right:                   3px;
+
+$feed-comments-load-margin-top:                     20px;
+$feed-comments-load-padding:                        .5em;
+$feed-comments-load-bg:                             $light-gray;
+$feed-comments-load-bg-hover:                       darken($feed-comments-load-bg, 3%);
+$feed-comments-load-align:                          center;
+$feed-comments-load-decoration:                     none;
+$feed-comments-load-color:                          $gray;
+$feed-comments-load-font-size:                      1em;
+$feed-comments-load-line-height:                    1.4;
+
+$feed-comments-leave-margin-top:                    10px;
+
+$feed-comments-textarea-height:                     75px;
+$feed-comments-textarea-padding:                    .3em .5em;
+$feed-comments-textarea-font-family:                inherit;
+$feed-comments-textarea-font-size:                  .9em;
+$feed-comments-textarea-line-height:                1.2;
+$feed-comments-textarea-color:                      $black;
+$feed-comments-textarea-border-color:               $light-gray;
+$feed-comments-textarea-border:                     1px solid $feed-comments-textarea-border-color;
+$feed-comments-textarea-resize:                     none;
+$feed-comments-textarea-placeholder-color:          lighten($gray, 20%);
+$feed-comments-textarea-border-color-focus:         $light-blue;
+$feed-comments-textarea-border-shadow-focus:        0 0 .3em rgba($feed-comments-textarea-border-color-focus, .6);
+
+
+
+
+/* 42. Reviews
+=========================*/
+
+/* Photo */
+$reviews-photo-width:                       75px;
+$reviews-photo-height:                      75px;
+$reviews-photo-top:                         0;
+$reviews-photo-left:                        0;
+$reviews-photo-zindex:                      1;
+
+/* Item */
+$reviews-item-padding-left:                 $reviews-photo-width + 15;
+$reviews-item-margin-bottom:                20px;
+
+/* Author */
+$reviews-author-color:                      $cyan;
+$reviews-author-font-size:                  1em;
+$reviews-author-line-height:                1.2;
+$reviews-author-margin-bottom:              5px;
+
+/* Text */
+$reviews-text-color:                        $black;
+$reviews-text-font-size:                    1em;
+$reviews-text-line-height:                  1.4;
+
+/* Rating */
+$reviews-rating-color:                      $yellow;
+$reviews-rating-font-size:                  1em;
+$reviews-rating-line-height:                1;
+$reviews-rating-margin-bottom:              5px;
+
+/* Dark Theme */
+$reviews-author-color-dark:                 $teal;
+$reviews-text-color-dark:                   $white;
+
+
+
+/* 43. Benefits
+=========================*/
+
+$benefits-item-padding: 1.25em;
+$benefits-item-align: center;
+
+/* Media wrapper */
+$benefits-media-width: 100px;
+$benefits-media-height: 100px;
+$benefits-media-margin: 10px auto;
+$benefits-media-border: 1px solid $gray;
+$benefits-media-border-radius: 50%;
+$benefits-media-align: center;
+
+/* Icon */
+$benefits-icon-width: 50px;
+$benefits-icon-height: 50px;
+$benefits-icon-color: $light-blue;
+$benefits-icon-font-size: 3em;
+$benefits-icon-zindex: 1;
+
+/* Title */
+$benefits-title-margin: 0 0 5px;
+$benefits-title-color: $black;
+$benefits-title-font-size: 1.3em;
+$benefits-title-line-height: 1.4;
+
+/* Text */
+$benefits-text-font-size: 1em;
+$benefits-text-line-height: 1.2;
+$benefits-text-color: $gray;
+
+
+
+/* 44. Comments
+=========================*/
+
+/* Avatar */
+$comments-avatar-width:                     50px;
+$comments-avatar-height:                    50px;
+$comments-avatar-top:                       0;
+$comments-avatar-left:                      0;
+$comments-avatar-zindex:                    1;
+
+/* Item */
+$comments-item-padding-left:                $comments-avatar-width + 15;
+$comments-item-margin-bottom:               20px;
+
+/* Author */
+$comments-author-color:                     $cyan;
+$comments-author-font-size:                 1em;
+$comments-author-line-height:               1.2;
+$comments-author-margin-bottom:             5px;
+
+/* Date */
+$comments-date-color:                       $gray;
+$comments-date-font-size:                   .8em;
+$comments-date-line-height:                 1.2;
+$comments-date-margin-left:                 10px;
+
+/* Actions */
+$comments-action-color:                     $gray;
+$comments-action-color-hover:               darken($comments-action-color, 10%);
+$comments-action-font-size:                 .8em;
+$comments-action-line-height:               1;
+$comments-action-margin-left:               5px;
+
+/* Text */
+$comments-text-color:                       $black;
+$comments-text-font-size:                   1em;
+$comments-text-line-height:                 1.4;
+$comments-text-margin-bottom:               5px;
+
+/* Reply */
+$comments-reply-font-size:                  .8em;
+$comments-reply-line-height:                1;
+$comments-reply-color:                      $gray;
+$comments-reply-margin-right:               5px;
+$comments-reply-text-decoration:            none;
+$comments-reply-text-decoration-hover:      underline;
+
+/* Dark Theme */
+$comments-author-color-dark:                $yellow;
+$comments-text-color-dark:                  $white;
+
+
+
+/* 45. Prices
+=========================*/
+
+$prices-item-color:                 $white;
+$prices-item-margin-bottom:         5px;
+
+/* Title */
+$prices-title-bg:                   $gray;
+$prices-title-font-size:            1em;
+$prices-title-line-height:          1.2;
+$prices-title-transform:            uppercase;
+$prices-title-color:                $white;
+$prices-title-align:                left;
+$prices-title-padding:              .5em 1em;
+
+/* Header */
+$prices-header-padding:             1em;
+$prices-header-bg:                  $black;
+$prices-header-align:               center;
+
+/* Sum */
+$prices-sum-font-size:              4em;
+$prices-sum-line-height:            1;
+
+/* Currency and term */
+$prices-currency-font-size:         1em;
+$prices-currency-line-height:       1;
+$prices-currency-font-weight:       300;
+$prices-currency-opacity:           .8;
+
+/* Content */
+$prices-content-padding:            1em 2em;
+$prices-content-bg:                 $white;
+$prices-content-color:              $black;
+$prices-content-align:              center;
+
+/* Footer */
+$prices-footer-padding:             0 2em 1em 2em;
+$prices-footer-bg:                  $white;
+$prices-footer-align:               left;
+
+
+/* 46. Footer
+=========================*/
+
+$footer-padding:                    1em 0;
+$footer-bg:                         $black;
+$footer-block-padding:              .5em 0;
+
+$footer-title-margin:               0 0 .5em;
+$footer-title-font-size:            1.1em;
+$footer-title-line-height:          1.2;
+$footer-title-color:                $white;
+$footer-title-weight:               normal;
+
+$footer-list-font-size:             .9em;
+$footer-list-item-margin:           .3em;
+$footer-list-link-color:            $white;
+
+$footer-brand-margin:               0 0 .3em;
+$footer-brand-font-color:           $white;
+$footer-brand-font-size:            1.5em;
+$footer-brand-line-height:          1.2;
+
+$footer-copyright-margin:           0;
+$footer-copyright-font-size:        1em;
+$footer-copyright-line-height:      1.2;
+$footer-copyright-color:            darken($light-gray, 10%);
+
+
+
+/* 47. Products
+=========================*/
+
+$products-item-max-width:               216px;
+$products-item-padding:                 .5em;
+$products-item-margin:                  0 .5em .5em 0;
+$products-item-bg:                      $white;
+$products-item-hover-shadow:            0 0 .33em rgba(0, 0, 0, .3);
+$products-item-radius:                  .3em;
+$products-item-list-padding:            1em;
+
+$products-content-text-align:           left;
+
+$products-title-margin:                 .4em 0 .3em;
+$products-title-list-margin:            0;
+$products-title-color:                  $blue;
+$products-title-font-size:              1.1em;
+$products-title-line-height:            1.2;
+
+$products-excerpt-margin-bottom:        .5em;
+$products-excerpt-font-size:            .9em;
+$products-excerpt-line-height:          1.2;
+$products-excerpt-color:                $gray;
+$products-excerpt-p-margin:             0;
+
+$products-price-margin-right:           .8em;
+$products-price-list-margin-bottom:     5px;
+$products-price-font-size:              1.2em;
+$products-price-font-size-2x:           2em;
+$products-price-line-height:            1;
+$products-price-color:                  $orange;
+$products-price-del-font-size:          .8em;
+$products-price-del-color:              $gray;
+
+$products-add-to-cart-font-size:        .9em;
+
+$products-badge-padding:                .3em .6em;
+$products-badge-font-size:              .9em;
+$products-badge-line-height:            1;
+$products-badge-color:                  $white;
+$products-badge-transform:              uppercase;
+$products-badge-bg:                     $red;
+$products-badge-pos-top:                0;
+$products-badge-pos-left:               0;
+$products-badge-zindex:                 1;
+
+
+
+/* 48. Product
+=========================*/
+
+$product-details-height:                450px;
+$product-details-padding-left:          540px;
+
+$product-thumb-width:                   50px;
+$product-thumb-margin-bottom:           .5em;
+$product-thumb-border:                  2px solid transparent;
+$product-thumb-border-active:           $orange;
+
+$product-image-width:                   450px;
+$product-image-height:                  450px;
+
+$product-title-margin:                  0 0 .5em;
+$product-title-font-size:               2em;
+$product-title-line-height:             1.2;
+$product-title-color:                   $black;
+$product-title-weight:                  normal;
+
+$product-price-font-size:               2em;
+$product-price-color:                   $deep-orange;
+$product-price-del-font-size:           .7em;
+$product-price-del-color:               $gray;
+$product-price-total-font-size:         1.5em;
+
+$product-main-line-height:              1.2;
+
+$product-info-margin:                   20px 0;
+$product-info-margin-top:               1em;
+
+$product-label-margin-right:            .5em;
+$product-label-font-size:               1em;
+$product-label-color:                   darken($gray, 10%);
+
+$product-footer-margin-top:             1em;
+$product-footer-padding-top:            1em;
+$product-footer-border:                 1px solid $gray;
+$product-footer-font-size:              .9em;
+
+$product-footer-font-size:              .9em;
+
+
+
+/* 49. Shopping Cart
+=========================*/
+$cart-bg:                           $white;
+$cart-header-border-bottom:         1px solid $gray;
+$cart-header-padding:               10px 10px 10px 105px;
+
+$cart-item-padding:                 15px 15px 15px 105px;
+$cart-item-height:                  105px;
+$cart-item-border-bottom:           1px solid $light-gray;
+
+$cart-photo-width:                  75px;
+$cart-photo-height:                 75px;
+$cart-photo-pos-top:                15px;
+$cart-photo-pos-left:               15px;
+
+$cart-excerpt-font-size:            .9em;
+$cart-excerpt-line-height:          1.2;
+$cart-excerpt-color:                $gray;
+$cart-excerpt-p-margin:             0 0 .3em;
+
+$cart-price-font-size:              1.2em;
+$cart-price-line-height:            1.2;
+$cart-price-color:                  $black;
+$cart-price-span-font-size:         .8em;
+$cart-price-span-color:             $gray;
+
+$cart-price-padding:                15px;
+$cart-total-font-size:              1.4em;
+$cart-total-line-height:            1.5;
+$cart-total-color:                  $black;
+
+$cart-popup-width:                  300px;
+$cart-popup-shadow:                 0 .2em .4em rgba(0, 0, 0, .2);
+$cart-popup-arrow-border-style:     solid;
+$cart-popup-arrow-border-width:     0 8px 10px 8px;
+$cart-popup-arrow-border-color:     $white;
+$cart-popup-border-color:           $white;
+
+$cart-popup-item-height:            70px;
+$cart-popup-item-padding:           10px 10px 10px 80px;
+$cart-popup-photo-width:            50px;
+$cart-popup-photo-height:           50px;
+$cart-popup-pos-top:                10px;
+
+
+
+/* 50. Team
+=========================*/
+
+$team-item-width:               280px;
+$team-item-padding:             15px;
+$team-item-margin:              0 15px 30px;
+$team-item-bg:                  $white;
+$team-item-radius:              .3em;
+$team-item-radius:              0 0 .3em rgba(0, 0, 0, .3);
+
+$team-info-text-align:          left;
+
+$team-name-margin-top:          5px;
+$team-name-font-size:           1.2em;
+$team-name-line-height:         1.2;
+$team-name-color:               $black;
+
+$team-text-margin-top:          5px;
+$team-text-font-size:           .9em;
+$team-text-line-height:         1.2;
+$team-text-color:               darken($gray, 10%);
+
+$team-social-margin-top:        10px;
+$team-social-text-align:        left;
+
+
+
+/* 51. Bootstrap 4 Grid
+=========================*/
+
+$enable-grid-classes: true !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;

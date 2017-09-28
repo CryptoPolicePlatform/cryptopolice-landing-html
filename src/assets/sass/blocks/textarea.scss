@@ -1,0 +1,68 @@
+.textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: $textarea-height;
+    padding: $textarea-padding;
+
+    font-size: $input-font-size;
+    line-height: $textarea-line-height;
+    font-family: inherit;
+    color: $textarea-color;
+
+    border: 0;
+    border-radius: 0;
+    box-shadow: $input-shadow-default;
+    background-color: $input-bg;
+    resize: $textarea-resize;
+    appearance: none;
+
+    transition: background-color .1s linear;
+
+    &:focus {
+        background-color: $input-bg-focus;
+        outline: 0;
+        resize: $textarea-resize-focus;
+    }
+
+    &::placeholder {
+        color: $input-placeholder-color;
+    }
+
+
+    /* Styling */
+    &--rounded { border-radius: $input-style-rounded; }
+    &--shadow  { box-shadow: $input-style-shadow; }
+
+    &--slide {
+
+        &::placeholder {
+            transition: padding-left .3s linear;
+        }
+
+        &:focus::placeholder {
+            padding-left: 150%;
+        }
+    }
+
+    &--fade {
+
+        &::placeholder {
+            transition: opacity .2s linear;
+        }
+
+        &:focus::placeholder {
+            opacity: 0;
+        }
+    }
+
+    /* States */
+    &--error {
+        @include input-state($input-error);
+    }
+
+    &--success {
+        @include input-state($input-success);
+    }
+}
+

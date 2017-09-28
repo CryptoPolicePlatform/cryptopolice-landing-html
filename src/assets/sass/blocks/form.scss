@@ -1,0 +1,27 @@
+.form {
+    margin: $form-margin;
+
+    &--inline {
+
+        .form__group {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}
+
+.form__group {
+    margin-bottom: $form-group-margin-bottom;
+
+    &--inline {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+.form__hint {
+    margin-top: $form-hint-margin-top;
+    color: $form-hint-color;
+    font-size: $form-hint-font-size;
+    line-height: $form-hint-line-height;
+}

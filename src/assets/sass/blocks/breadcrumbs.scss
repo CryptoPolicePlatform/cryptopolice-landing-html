@@ -1,0 +1,35 @@
+.breadcrumbs {
+    margin: $block-margin;
+
+    &--arrow .breadcrumbs__item:not(.current):after {
+        content: $breadcrumbs-item-arrow;
+        font-family: FontAwesome;
+        line-height: $breadcrumbs-item-line-height;
+        font-size: $breadcrumbs-item-font-size;
+    }
+}
+
+.breadcrumbs__item {
+    margin-right: $breadcrumbs-item-indent;
+
+    color: $breadcrumbs-color;
+    font-size: $breadcrumbs-font-size;
+    text-decoration: none;
+
+    &:not(.current):after {
+        content: $breadcrumbs-item-divider;
+        display: inline-block;
+        vertical-align: baseline;
+        margin-left: $breadcrumbs-item-divider-margin-left;
+
+        color: $breadcrumbs-color-current;
+    }
+
+    &:hover:not(.current) {
+        text-decoration: underline;
+    }
+
+    &.current {
+        color: $breadcrumbs-color-current;
+    }
+}

@@ -1,0 +1,105 @@
+.intro {
+    position: relative;
+
+    background: #000;
+}
+
+.intro__top-left,
+.intro__top-right,
+.intro__bottom-left,
+.intro__bottom-right {
+    width: 60%;
+    height: 350px;
+
+    position: absolute;
+    z-index: 1;
+
+    &:before {
+        content: "";
+        width: 100px;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        z-index: 2;
+    }
+
+    &:after {
+        content: "";
+        width: 100%;
+        height: 100px;
+
+        position: absolute;
+        left: 0;
+        z-index: 2;
+    }
+}
+
+.intro__top-left,
+.intro__top-right {
+    top: -20px;
+
+    &:after {
+        background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, 1));
+
+        bottom: 0;
+    }
+}
+
+.intro__bottom-left,
+.intro__bottom-right {
+    bottom: 0;
+
+    &:after {
+        background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .1));
+
+        top: 0;
+    }
+}
+
+.intro__top-left,
+.intro__bottom-left {
+    left: 0;
+
+    &:before {
+        left: 0;
+        background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, .1));
+    }
+}
+
+.intro__top-right,
+.intro__bottom-right {
+    right: 0;
+
+    &:before {
+        right: 0;
+        background: linear-gradient(to right, rgba(0, 0, 0, .1), rgba(0, 0, 0, 1));
+    }
+}
+
+.intro__content {
+    width: 100%;
+    min-height: 407px;
+
+    background: url("#{$img}police-hat.png") center top no-repeat;
+}
+
+.intro__title {
+    margin: 40px 0 60px;
+
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+    color: $white;
+    font-size: 3em;
+    line-height: 1;
+
+    text-align: center;
+    font-weight: normal;
+}
+
+.intro__btns {
+    text-align: center;
+
+    .btn {
+        margin: 0 10px;
+    }
+}

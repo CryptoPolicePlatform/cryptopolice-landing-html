@@ -1,0 +1,94 @@
+.comments {
+    margin: $block-margin;
+
+    &--dark {
+
+        .comments__author {
+            color: $comments-author-color-dark;
+        }
+
+        .comments__text {
+            color: $comments-text-color-dark;
+        }
+    }
+}
+
+.comments__item {
+    padding-left: $comments-item-padding-left;
+    position: relative;
+    margin-bottom: $comments-item-margin-bottom;
+
+    > .comments__item {
+        margin-top: $comments-item-margin-bottom;
+    }
+
+    @media (max-width: 540px) {
+        padding-left: 0;
+    }
+}
+
+.comments__avatar {
+    width: $comments-avatar-width;
+    height: $comments-avatar-height;
+
+    position: absolute;
+    top: $comments-avatar-top;
+    left: $comments-avatar-left;
+    z-index: $comments-avatar-zindex;
+
+    @media (max-width: 540px) {
+        position: static;
+        margin-bottom: 10px;
+    }
+}
+
+.comments__author {
+    margin-bottom: $comments-author-margin-bottom;
+
+    color: $comments-author-color;
+    font-size: $comments-author-font-size;
+    line-height: $comments-author-line-height;
+}
+
+.comments__date {
+    margin-left: $comments-date-margin-left;
+
+    color: $comments-date-color;
+    font-size: $comments-date-font-size;
+    line-height: $comments-date-line-height;
+}
+
+.comments__action {
+    margin-left: $comments-action-margin-left;
+
+    font-size: $comments-action-font-size;
+    line-height: $comments-action-line-height;
+    color: $comments-action-color;
+
+    transition: color .1s linear;
+
+    &:hover {
+        color: $comments-action-color-hover;
+    }
+}
+
+.comments__text {
+    margin-bottom: $comments-text-margin-bottom;
+
+    font-size: $comments-text-font-size;
+    line-height: $comments-text-line-height;
+    color: $comments-text-color;
+}
+
+.comments__reply-link {
+    margin-right: $comments-reply-margin-right;
+
+    font-size: $comments-reply-font-size;
+    line-height: $comments-reply-line-height;
+    color: $comments-reply-color;
+    text-decoration: $comments-reply-text-decoration;
+
+    &:hover {
+        text-decoration: $comments-reply-text-decoration-hover;
+    }
+}

@@ -1,0 +1,128 @@
+.select {
+    width: 100%;
+    height: $select-height;
+
+    color: $select-color;
+
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        width: $select-divider-width;
+        height: 100%;
+
+        background-color: $select-divider-color;
+        pointer-events: none;
+
+        position: absolute;
+        top: 0;
+        right: $select-divider-right;
+        z-index: $select-divider-zindex;
+    }
+
+    &:after {
+        content: "";
+        border-style: solid;
+        border-width: $select-triangle-size $select-triangle-size 0 $select-triangle-size;
+        border-color: $select-triangle-color transparent transparent transparent;
+        pointer-events: none;
+
+        position: absolute;
+        top: $select-triangle-top;
+        right: $select-triangle-right;
+        z-index: $select-triangle-zindex;
+        margin-top: - ceil(($select-triangle-size / 2));
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        width: 100%;
+        height: 100%;
+        padding: $select-padding;
+
+        box-shadow: $input-shadow-default;
+        background-color: $input-bg;
+        border-radius: 0;
+        border: 0;
+
+        font-family: inherit;
+        font-size: $select-font-size;
+        line-height: $select-line-height;
+        color: $select-color;
+
+        transition: background-color .1s linear;
+
+        &::-ms-expand {
+            display: none;
+        }
+
+        &:focus {
+            outline: 0;
+            background-color: $input-bg-focus;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+
+    /* Styling */
+    &--rounded {
+        select {
+            border-radius: $input-style-rounded;
+        }
+    }
+
+    &--ellipse {
+        select {
+            border-radius: $input-style-ellipse;
+        }
+    }
+
+    &--shadow  {
+        select {
+            box-shadow: $input-style-shadow;
+        }
+    }
+
+
+    /* Types */
+    &--multiple {
+        height: $select-multiple-height;
+
+        &:before,
+        &:after {
+            display: none;
+        }
+
+        select {
+            padding: $select-multiple-padding;
+        }
+    }
+
+
+    /* States */
+    &--error:before,
+    &--error:after {
+        color: $input-error;
+    }
+    &--success:before,
+    &--success:after {
+        color: $input-success;
+    }
+
+    &--error select {
+        color: $input-error;
+        @include input-state($input-error);
+    }
+
+    &--success select {
+        color: $input-success;
+        @include input-state($input-success);
+    }
+
+}

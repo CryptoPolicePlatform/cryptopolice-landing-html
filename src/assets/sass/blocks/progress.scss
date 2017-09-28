@@ -1,0 +1,63 @@
+.progress {
+    width: 100%;
+    height: $progress-height;
+    margin: $block-margin;
+
+    background-color: $progress-bg;
+
+    position: relative;
+
+    &--thin {
+        height: $progress-thin-height;
+
+        .progress__bar { padding: 0; }
+    }
+
+    /* Styling */
+    &--rounded {
+        border-radius: $progress-rounded;
+
+        .progress__bar { border-radius: $progress-rounded; }
+    }
+    &--shadow  { box-shadow: $progress-shadow; }
+}
+
+.progress__bar {
+    height: 100%;
+    padding: $progress-bar-padding;
+
+    background-color: $progress-bar-bg;
+
+    font-size: $progress-font-size;
+    color: $progress-color;
+    text-align: $progress-align;
+    line-height: $progress-height;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $progress-zindex;
+
+    transition: width .3s linear;
+
+    /* Colors */
+    @each $color in $colors {
+        &--#{nth($color, 1)} {
+            background-color: nth($color, 2);
+        }
+    }
+}
+
+.progress__label {
+    width: 100%;
+
+    font-size: $progress-label-font-size;
+    line-height: $progress-label-line-height;
+    text-align: $progress-label-align;
+    color: $progress-label-color;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: $progress-label-zindex;
+}

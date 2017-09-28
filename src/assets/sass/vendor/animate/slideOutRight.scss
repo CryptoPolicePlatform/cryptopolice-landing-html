@@ -1,0 +1,25 @@
+@-webkit-keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+}
+
+.slideOutRight {
+  animation-name: slideOutRight;
+}

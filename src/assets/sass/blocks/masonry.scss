@@ -1,0 +1,17 @@
+.masonry {
+    width: $masonry-grid-width;
+
+    position: relative;
+}
+
+.masonry__item {
+    width: 100%;
+    max-width: $masonry-item-width;
+    float: left;
+    padding: $masonry-item-padding;
+    margin-bottom: $masonry-item-margin-bottom;
+
+    background-color: $masonry-item-bg;
+    border-radius: $masonry-item-radius;
+    color: $masonry-item-color;
+}

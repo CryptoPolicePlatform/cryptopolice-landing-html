@@ -1,0 +1,25 @@
+@-webkit-keyframes slideOutUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+}
+
+@keyframes slideOutUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+}
+
+.slideOutUp {
+  animation-name: slideOutUp;
+}

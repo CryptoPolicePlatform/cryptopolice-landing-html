@@ -1,0 +1,8 @@
+@mixin mark-outline {
+    @each $color in $colors {
+        &--o-#{nth($color, 1)} {
+            color: nth($color, 2);
+            border: 1px solid nth($color, 2);
+        }
+    }
+}

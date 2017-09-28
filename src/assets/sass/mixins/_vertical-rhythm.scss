@@ -1,0 +1,12 @@
+@mixin vertical-rhythm($val) {
+    $line-height-val:   $vr-title-line-height-val / ($val * $vr-font-size-val);
+    $font-size:         $val + em;
+    $line-height:       $line-height-val + em;
+    $margin-bottom:     ($line-height-val / 2) + em;
+
+    margin-top: $line-height;
+    margin-bottom: $margin-bottom;
+
+    font-size: $font-size;
+    line-height: $line-height;
+}

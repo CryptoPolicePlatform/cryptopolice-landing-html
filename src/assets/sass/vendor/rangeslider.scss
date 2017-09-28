@@ -1,0 +1,89 @@
+.rangeslider,
+.rangeslider__fill {
+    display: block;
+    border-radius: $rangeslider-radius;
+}
+
+.rangeslider {
+    background: $rangeslider-bg;
+    position: relative;
+}
+
+.rangeslider--horizontal {
+    height: $rangeslider-horizontal-height;
+    width: 100%;
+}
+
+.rangeslider--vertical {
+    width: $rangeslider-vertical-width;
+    min-height: $rangeslider-vertical-min-height;
+    max-height: 100%;
+}
+
+.rangeslider--disabled {
+    opacity: $rangeslider-disabled-opacity;
+}
+
+.rangeslider__fill {
+    background: $rangeslider-fill-color;
+    position: absolute;
+}
+.rangeslider--horizontal .rangeslider__fill {
+    top: 0;
+    height: 100%;
+}
+.rangeslider--vertical .rangeslider__fill {
+    bottom: 0;
+    width: 100%;
+}
+
+.rangeslider__handle {
+    display: block;
+    width: $rangeslider-handle-width;
+    height: $rangeslider-handle-height;
+
+    cursor: pointer;
+    background-color: $rangeslider-handle-bg;
+    border: $rangeslider-handle-border;
+    border-radius: $rangeslider-handle-radius;
+    box-shadow: $rangeslider-handle-shadow;
+
+    position: absolute;
+    z-index: $rangeslider-handle-zindex;
+
+    &:before,
+    &:after {
+        font-family: fontAwesome;
+        font-size: $rangeslider-handle-arrow-size;
+        line-height: $rangeslider-handle-arrow-line-height;
+        color: $rangeslider-handle-arrow-color;
+
+        position: absolute;
+        top: $rangeslider-handle-arrow-top;
+        z-index: $rangeslider-handle-arrow-zindex;
+    }
+
+    &:before {
+        content: $rangeslider-handle-arrow-left-icon;
+        left: $rangeslider-handle-arrow-left;
+    }
+
+    &:after {
+        content: $rangeslider-handle-arrow-right-icon;
+        right: $rangeslider-handle-arrow-right;
+    }
+}
+
+.rangeslider--horizontal .rangeslider__handle {
+    top: $rangeslider-handle-horizontal-top;
+    touch-action: pan-y;
+}
+
+.rangeslider--vertical .rangeslider__handle {
+    left: $rangeslider-handle-vertical-left;
+    touch-action: pan-x;
+}
+
+.rangeslider__wrapper {
+    padding-top: 15px;
+}

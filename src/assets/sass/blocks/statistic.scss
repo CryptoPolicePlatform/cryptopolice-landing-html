@@ -1,0 +1,78 @@
+.statistic {
+    margin: $block-margin;
+
+    &--dark {
+        .statistic__title { color: $statistic-title-color-dark; }
+        .statistic__text  { color: $statistic-text-color-dark; }
+    }
+}
+
+.statistic__item {
+    display: inline-block;
+    vertical-align: top;
+    padding: $statistic-padding;
+
+    text-align: $statistic-align;
+
+    &--inline {
+        .statistic__title,
+        .statistic__text {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
+.statistic__title {
+    color: $statistic-title-color;
+    font-size: $statistic-title-font-size;
+    line-height: $statistic-title-line-height;
+}
+
+.statistic__text {
+    color: $statistic-text-color;
+    font-size: $statistic-text-font-size;
+    line-height: $statistic-text-line-height;
+    text-transform: $statistic-text-transform;
+}
+
+.statistic__circle {
+    display: inline-block;
+    vertical-align: top;
+    width: $statistic-circle-size;
+    height: $statistic-circle-size;
+    margin-bottom: $statistic-circle-margin-bottom;
+    margin-right: $statistic-circle-margin-right;
+
+    border: $statistic-circle-border;
+    border-radius: 50%;
+
+    position: relative;
+
+    .statistic__item {
+        display: block;
+        width: 100%;
+
+        position: absolute;
+        top: 50%;
+
+        transform: translateY(-50%);
+    }
+
+    /* Border Color */
+    @each $color in $colors {
+        &--#{nth($color, 1)} {
+            border-color: nth($color, 2);
+        }
+    }
+
+    /* Filled */
+    @include stat-ellipse;
+
+
+    /* 4 Colors Border */
+    &--bc-warm { @include stat-colored($yellow, $amber, $orange, $deep-orange); }
+    &--bc-cold { @include stat-colored($cyan, $blue, $light-blue, $indigo); }
+    &--bc-dark { @include stat-colored($light-gray, $gray, $black, $real-black); }
+
+}

@@ -1,0 +1,23 @@
+@mixin alert {
+    @each $color in $colors {
+        &--#{nth($color, 1)} {
+            background-color: nth($color, 2);
+
+            @if (lightness(nth($color, 2)) > 65) {
+                color: $black;
+            } @else {
+                color: $white;
+            }
+        }
+    }
+}
+
+@mixin alert-outline {
+    @each $color in $colors {
+        &--o-#{nth($color, 1)} {
+            background: transparent;
+            color: nth($color, 2);
+            border: $alert-default-border-width solid nth($color, 2);
+        }
+    }
+}

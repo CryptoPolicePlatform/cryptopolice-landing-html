@@ -1,0 +1,94 @@
+.timer {
+    margin-bottom: 60px;
+
+    text-align: center;
+    color: $white;
+    font-weight: 300;
+}
+
+.timer__title {
+    margin: 0 0 5px;
+
+    color: $white;
+    font-weight: 300;
+    font-size: 1.5em;
+
+    &:after {
+        content: "\f107";
+        display: block;
+        font-family: 'fontAwesome';
+    }
+}
+
+.timer__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 53px;
+    height: 53px;
+    position: relative;
+    margin: 0 8px;
+
+    &:after {
+        display: block;
+        width: 100%;
+
+        text-align: center;
+        font-weight: 300;
+        color: $white;
+        font-size: 12px;
+
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+    }
+
+    &--days {
+        background: linear-gradient(to right, #a24f84, #914189);
+
+        &:after {
+            content: "days";
+        }
+    }
+
+    &--hours {
+        background: linear-gradient(to right, #703fad, #5e45bd);
+
+        &:after {
+            content: "hours";
+        }
+    }
+
+    &--min {
+        background: linear-gradient(to right, #7640ac, #6143ba);
+
+        &:after {
+            content: "minutes";
+        }
+    }
+
+    &--sec {
+        background: linear-gradient(to right, #85409d, #6f41b1);
+
+        &:after {
+            content: "seconds";
+        }
+    }
+}
+
+.timer__inner {
+    width: 49px;
+    height: 49px;
+
+    font-size: 30px;
+    line-height: 49px;
+    font-weight: bold;
+    text-align: center;
+    color: $white;
+
+    background-color: $real-black;
+
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: 1;
+}

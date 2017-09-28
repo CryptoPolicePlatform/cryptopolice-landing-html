@@ -1,0 +1,37 @@
+.nav {
+    padding-top: 10px;
+    margin-bottom: 70px;
+
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.nav__item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+    padding-top: .15em;
+    padding-bottom: .15em;
+
+    color: $white;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &--rounded {
+        padding-left: .8em;
+        padding-right: .8em;
+        border: 2px solid $white;
+        border-radius: 30px;
+
+        transition: background .1s linear, color .1s linear;
+
+        &:hover,
+        &:focus {
+            background-color: $white;
+            text-decoration: none;
+            color: $real-black;
+        }
+    }
+}

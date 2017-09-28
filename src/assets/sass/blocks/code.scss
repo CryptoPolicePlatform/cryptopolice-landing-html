@@ -1,0 +1,25 @@
+.code {
+    display: block;
+    margin: $code-margin;
+    padding: $code-padding;
+
+    background-color: $code-bg;
+    border-left: $code-border-left;
+
+    pre {
+        margin: 0;
+
+        font-size: $code-font-size;
+        line-height: $code-line-height;
+        font-family: $code-font-family;
+        color: $code-color;
+        white-space: pre-wrap;
+    }
+
+    /* Colors */
+    @include code-theme;
+
+    /* Styling */
+    &--rounded { border-radius: $code-rounded; }
+    &--shadow  { box-shadow: $code-shadow; }
+}

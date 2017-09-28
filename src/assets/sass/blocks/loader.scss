@@ -1,0 +1,197 @@
+.loader {
+    width: $loader-size;
+    height: $loader-size;
+    border-radius: 50%;
+    position: relative;
+    margin: $loader-margin;
+
+
+    /* Loader Spin */
+    &--spin {
+
+        &:before,
+        &:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            border-radius: 50%;
+            border: $loader-spin-size solid transparent;
+            border-top-color: $loader-spin-before-color;
+        }
+
+        &:before {
+            z-index: $loader-spin-before-zindex;
+            animation: spin $loader-spin-anim-duration infinite;
+        }
+
+        &:after {
+            border: $loader-spin-size solid $loader-spin-after-color;
+        }
+    }
+
+    /* Loader Dots Bounce */
+    &--dots-bounce {
+        padding-top: $loader-dots-bounce-padding-top;
+        text-align: center;
+
+        span {
+            display: inline-block;
+            width: $loader-dots-bounce-size;
+            height: $loader-dots-bounce-size;
+            margin: $loader-dots-bounce-margin;
+
+            border-radius: 50%;
+            background-color: $loader-dots-bounce-color;
+
+            &:nth-child(1) {
+                animation: bounce $loader-dots-bounce-anim-duration $loader-dots-bounce-anim-function infinite;
+            }
+
+            &:nth-child(2) {
+                animation: bounce $loader-dots-bounce-anim-duration $loader-dots-bounce-anim-function .33s infinite;
+            }
+
+            &:nth-child(3) {
+                animation: bounce $loader-dots-bounce-anim-duration $loader-dots-bounce-anim-function .66s infinite;
+            }
+        }
+    }
+
+
+
+    /* Loader Dots Fade */
+    &--dots-fade {
+        padding-top: $loader-dots-fade-padding-top;
+        text-align: center;
+
+        span {
+            display: inline-block;
+            width: $loader-dots-fade-size;
+            height: $loader-dots-fade-size;
+            margin: $loader-dots-fade-margin;
+
+            border-radius: 50%;
+            background-color: $loader-dots-fade-color;
+
+            &:nth-child(1) {
+                animation: fade $loader-dots-fade-anim-duration $loader-dots-fade-anim-function infinite;
+            }
+
+            &:nth-child(2) {
+                animation: fade $loader-dots-fade-anim-duration $loader-dots-fade-anim-function .33s infinite;
+            }
+
+            &:nth-child(3) {
+                animation: fade $loader-dots-fade-anim-duration $loader-dots-fade-anim-function .66s infinite;
+            }
+        }
+    }
+
+
+    /* Lines */
+    &--lines {
+        padding-top: 15px;
+        text-align: center;
+
+        span {
+            display: inline-block;
+            width: $loader-lines-width;
+            height: $loader-lines-height;
+
+            background-color: $loader-lines-color;
+
+            &:nth-child(1) {
+                animation: grow $loader-lines-anim-duration $loader-lines-anim-function infinite;
+            }
+
+            &:nth-child(2) {
+                animation: grow $loader-lines-anim-duration $loader-lines-anim-function .15s infinite;
+            }
+
+            &:nth-child(3) {
+                animation: grow $loader-lines-anim-duration $loader-lines-anim-function .30s infinite;
+            }
+
+            &:nth-child(4) {
+                animation: grow $loader-lines-anim-duration $loader-lines-anim-function .45s infinite;
+            }
+        }
+    }
+
+
+    /* Flip */
+    &--flip {
+        perspective: $loader-flip-perspective;
+
+        &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+
+            background-color: $loader-flip-color;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: $loader-flip-zindex;
+
+            animation: flip $loader-flip-anim-duration infinite;
+        }
+    }
+
+}
+
+
+
+
+/* Animations
+========================*/
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+    0%, 75%, 100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 0; }
+  60% { opacity: 1; }
+}
+
+@keyframes grow {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(1.8);
+    }
+}
+
+@keyframes flip {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(180deg) rotateX(180deg);
+    }
+}

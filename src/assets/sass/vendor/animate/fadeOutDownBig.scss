@@ -1,0 +1,27 @@
+@-webkit-keyframes fadeOutDownBig {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(2000px);
+  }
+}
+
+@keyframes fadeOutDownBig {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(2000px);
+  }
+}
+
+.fadeOutDownBig {
+  animation-name: fadeOutDownBig;
+}

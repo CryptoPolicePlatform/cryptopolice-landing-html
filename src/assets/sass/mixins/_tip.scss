@@ -1,0 +1,31 @@
+// Generates border-color
+@mixin arrow-color($color) {
+    @each $position in top, bottom, left, right {
+        @if $position == top or $position == bottom {
+
+            @each $xDir in left, right {
+                &.#{$tooltip-prefix}#{$position}-#{$xDir}:before {
+                    border-#{$position}-color: $color;
+                }
+            }
+        }
+        &.#{$tooltip-prefix}#{$position}:before {
+            border-#{$position}-color: $color;
+        }
+    }
+}
+
+// Generates background-color from color list
+@mixin tooltip-colors {
+    @each $color in $colors {
+
+        &--#{nth($color, 1)} {
+
+            @include arrow-color(nth($color, 2));
+
+            &:after {
+                background-color: nth($color, 2);
+            }
+        }
+    }
+}

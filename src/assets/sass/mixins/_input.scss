@@ -1,0 +1,13 @@
+@mixin input-state($color) {
+    border-color: $color;
+    color: $color;
+    background-color: rgba($color, .05);
+
+    &::placeholder {
+       color: $color;
+    }
+
+    &:focus {
+        background-color: rgba($color, .05);
+    }
+}

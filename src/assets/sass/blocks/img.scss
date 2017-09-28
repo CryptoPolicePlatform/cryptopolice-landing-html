@@ -1,0 +1,71 @@
+.img {
+
+    /* Styling */
+    &--rounded { border-radius: $image-rounded; }
+    &--circle  { border-radius: $image-circle; }
+    &--shadow  { box-shadow: $image-shadow; }
+
+    /* Blink */
+    &--blink {
+        display: inline-block;
+        vertical-align: top;
+        overflow: hidden;
+        position: relative;
+
+        &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, .2);
+
+            transition: transform .5s;
+            transform: scale3d(1.9, 2.5, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -120%, 0);
+            pointer-events: none;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        &:hover {
+            &:before {
+                transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 120%, 0);
+            }
+        }
+    }
+
+    /* Fade */
+    &--fade {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        overflow: hidden;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            background: -moz-linear-gradient(top,  rgba($black, 0) 0%, rgba($black, .3) 35%, rgba($black, .7) 100%);
+            background: -webkit-linear-gradient(top,  rgba($black, 0) 0%,rgba($black, .3) 35%,rgba($black, .7) 100%);
+            background: linear-gradient(to bottom,  rgba($black, 0) 0%,rgba($black, .3) 35%,rgba($black, .7) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$black}', endColorstr='#{$black}',GradientType=0 );
+            opacity: 0;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+            transform: translateY(20%);
+            transition: transform .25s ease-in-out, opacity .1s linear;
+        }
+
+        &:hover:after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

@@ -1,0 +1,107 @@
+.radio {
+    display: block;
+    margin-bottom: $radio-margin-bottom;
+
+    &--inline {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: $radio-inline-margin-right;
+    }
+}
+
+.radio__input {
+    display: none;
+
+    &:checked + .radio__label {
+        color: $black;
+    }
+
+    &:checked + .radio__label:before {
+        border-color: $light-blue;
+    }
+
+    &:checked + .radio__label:after {
+        opacity: 1;
+        background-color: $light-blue;
+    }
+
+    &:checked + .radio__label:hover:after {
+        opacity: 1;
+    }
+}
+
+.radio__label {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: $radio-indent;
+
+    cursor: pointer;
+    font-size: $radio-font-size;
+    line-height: $radio-before-height;
+    color: $radio-color;
+    user-select: none;
+
+    position: relative;
+
+    transition: color .1s linear;
+
+    &:before {
+        content: "";
+        display: block;
+        width: $radio-before-width;
+        height: $radio-before-height;
+
+        border: $radio-before-border;
+        background-color: $radio-before-bg;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        transition: border-color .1s linear;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: $radio-after-width;
+        height: $radio-after-height;
+
+        background-color: $radio-after-bg;
+        border-radius: 50%;
+        opacity: 0;
+
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        z-index: 1;
+
+        transition: background-color .1s linear, opacity .1s linear;
+    }
+
+    &:hover:not(&--disabled):after {
+        opacity: $radio-opacity-disabled;
+    }
+
+    &--error {
+        color: $radio-color-error;
+
+        &:before {
+            border-color: $radio-before-border-color-error;
+        }
+    }
+
+    &--disabled {
+        color: $radio-color-disabled;
+
+        &:before {
+            border-color: $radio-before-border-color-disabled;
+        }
+
+        &:hover {
+            cursor: $radio-cursor-disabled;
+        }
+    }
+}

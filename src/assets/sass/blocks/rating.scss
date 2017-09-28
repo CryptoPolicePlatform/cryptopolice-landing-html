@@ -1,0 +1,69 @@
+.rating {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+
+    @include clearfix;
+}
+
+.rating__input {
+    display: none;
+}
+
+.rating__star:before,
+.rating__heart:before {
+    display: inline-block;
+    vertical-align: top;
+    margin: $rating-indent;
+
+    font-size: $rating-font-size;
+    line-height: $rating-line-height;
+    font-family: FontAwesome;
+}
+
+.rating__star:before {
+    content: $rating-star-icon;
+}
+
+.rating__heart:before {
+    content: $rating-heart-icon;
+}
+
+.rating__star,
+.rating__heart {
+    float: right;
+
+    color: $rating-color;
+    cursor: pointer;
+
+    transition: color .1s linear;
+}
+
+.rating__input:checked ~ .rating__star,
+.rating:not(:checked) > .rating__star:hover,
+.rating:not(:checked) > .rating__star:hover ~ .rating__star {
+    color: $rating-star-color;
+}
+
+.rating > .rating__input:checked + .rating__star:hover,
+.rating > .rating__input:checked ~ .rating__star:hover,
+.rating > .rating__star:hover ~ .rating__input:checked ~ .rating__star,
+.rating > .rating__input:checked ~ .rating__star:hover ~ .rating__star {
+    color: $rating-star-color-hover;
+}
+
+.rating__input:checked ~ .rating__heart,
+.rating:not(:checked) > .rating__heart:hover,
+.rating:not(:checked) > .rating__heart:hover ~ .rating__heart {
+    color: $rating-heart-color;
+}
+
+.rating > .rating__input:checked + .rating__heart:hover,
+.rating > .rating__input:checked ~ .rating__heart:hover,
+.rating > .rating__heart:hover ~ .rating__input:checked ~ .rating__heart,
+.rating > .rating__input:checked ~ .rating__heart:hover ~ .rating__heart {
+    color: $rating-heart-color-hover;
+}

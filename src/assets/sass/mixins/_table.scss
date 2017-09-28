@@ -1,0 +1,22 @@
+@mixin table-row($hover) {
+
+    @each $color in $colors {
+        &.row--#{nth($color, 1)} {
+            background-color: nth($color, 2);
+
+            @if (lightness(nth($color, 2)) > 65) {
+                color: $black;
+            } @else {
+                color: $white;
+            }
+
+            @if($hover == true) {
+
+                &:hover {
+                    color: $white;
+                    background-color: darken(nth($color, 2), 5%);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@mixin stat-ellipse {
+    @each $color in $colors {
+        &--f-#{nth($color, 1)} {
+            border-color: nth($color, 2);
+            background-color: nth($color, 2);
+
+            @if (lightness(nth($color, 2)) > 65) {
+                .statistic__text,
+                .statistic__title {
+                    color: $black;
+                }
+
+            } @else {
+                .statistic__text,
+                .statistic__title {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+
+@mixin stat-colored($color1, $color2, $color3, $color4) {
+    border-top-color: $color1;
+    border-right-color: $color2;
+    border-bottom-color: $color3;
+    border-left-color: $color4;
+}
