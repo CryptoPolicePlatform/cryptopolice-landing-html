@@ -553,7 +553,7 @@ $tabs-item-color:                       $gray;
 $tabs-item-color-active:                $teal;
 $tabs-item-font-size:                   1em;
 $tabs-item-line-height:                 1.2;
-$tabs-item-padding:                     1em 2em;
+$tabs-item-padding:                     1.2em 1em;
 
 /* Nav Item */
 $tabs-item-border-color:                transparent;
@@ -730,7 +730,7 @@ $snippet-shadow:        1px 1px .4em rgba(0, 0, 0, .3);
 /* 27. Progress
 =========================*/
 $progress-height:               20px;
-$progress-thin-height:          6px;
+$progress-thin-height:          7px;
 $progress-bg:                   $light-gray;
 
 /* Bar */
@@ -749,7 +749,7 @@ $progress-label-align:          center;
 $progress-label-zindex:         1;
 
 /* Styling */
-$progress-rounded:              .3em;
+$progress-rounded:              .5em;
 $progress-shadow:               0 0 .3em rgba(0, 0, 0, .3);
 
 

@@ -1,0 +1,27 @@
+.docs {
+    padding-bottom: 40px;
+}
+
+.docs__files {
+    margin: 70px 0 50px;
+    text-align: center;
+}
+
+.docs__files-item {
+    display: inline-block;
+    padding: 0 27px;
+    vertical-align: top;
+
+    text-align: center;
+    color: $white;
+
+    span {
+        display: block;
+        margin-top: 10px;
+
+        font-family: 'Gilroy', 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 900;
+        color: $white;
+    }
+}

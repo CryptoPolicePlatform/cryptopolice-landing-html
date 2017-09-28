@@ -68,3 +68,12 @@
 .display-inline        { display: inline; }
 .display-block         { display: block; }
 .display-inline-block  { display: inline-block; }
+
+.mb-30 { margin-bottom: 30px; }
+.mb-50 { margin-bottom: 50px; }
+.mb-80 { margin-bottom: 80px; }
+
+
+.clearfix {
+    @include clearfix;
+}

@@ -157,3 +157,20 @@
     left: 0;
     z-index: 1;
 }
+
+.btn-long {
+    display: block;
+    margin: 0 auto;
+    width: 572px;
+    height: 79px;
+    position: relative;
+
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+    text-align: center;
+    color: $white;
+    font-size: 19px;
+    font-weight: 900;
+    line-height: 79px;
+
+    background: url("#{$img}long-btn-bg.svg") no-repeat;
+}

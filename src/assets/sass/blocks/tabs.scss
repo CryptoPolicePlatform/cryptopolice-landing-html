@@ -1,130 +1,99 @@
 .tabs {
-    margin: $block-margin;
+    width: 100%;
+    margin: 65px auto 0;
 }
 
 .tabs__item:not(.active) { display: none; }
 
 .tabs__nav {
-    @include clearfix;
-
-
-    /* Styling */
-    &--fill {
-
-        .tabs__nav-item {
-            border: $tabs-item-border-width solid transparent;
-            border-bottom: 0;
-
-            position: relative;
-            top: 1px;
-
-            &.active {
-                background-color: $tabs-item-fill-bg-active;
-                border-color: $tabs-item-fill-border-active;
-            }
-
-            &:not(.active):hover {
-                color: $tabs-item-fill-color-hover;
-            }
-        }
-    }
-
-    &--rounded {
-
-        .tabs__nav-item {
-            &.active {
-                border-radius: $tabs-item-rounded-active;
-            }
-        }
-    }
-
-    &--shadow {
-
-        .tabs__nav-item {
-            &.active {
-                box-shadow: $tabs-item-shadow-active;
-            }
-        }
-    }
-
-    &--dark {
-
-        .tabs__nav-item {
-            color: $tabs-item-color-dark;
-
-            &.active {
-                color: $tabs-item-color-dark-active;
-                background-color: $tabs-content-bg-dark;
-                border-color: $tabs-content-border-color-dark;
-            }
-
-            &:not(.active):hover {
-                color: $tabs-item-color-dark-hover;
-            }
-        }
-    }
+    text-align: center;
 }
 
 .tabs__nav-item {
-    display: block;
-    float: left;
+    display: inline-block;
+    vertical-align: top;
     padding: $tabs-item-padding;
 
-    font-size: $tabs-item-font-size;
-    color: $tabs-item-color;
-    line-height: $tabs-item-line-height;
-
-    border-bottom: $tabs-item-border-bottom;
+    font-size: 18px;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: bold;
 
     transition: color .1s linear;
 
     &:focus { text-decoration: none; }
 
     &:hover {
-        text-decoration: none;
-        border-bottom-color: $tabs-item-border-color-hover;
+        text-decoration: underline;
     }
 
     &.active {
-        color: $tabs-item-color-active;
-        border-bottom-color: $tabs-item-border-color-active;
+        position: relative;
+        color: #9f4b8b;
+
+        &:after {
+            content: "";
+            display: block;
+            border-style: solid;
+            border-width: 0 8.5px 9px 8.5px;
+            border-color: transparent transparent #a14b8a transparent;
+
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 
 .tabs__content {
-    padding: $tabs-content-padding;
-
     font-size: $tabs-content-font-size;
     color: $tabs-content-color;
     line-height: $tabs-content-line-height;
+    border-radius: 20px;
+    overflow: hidden;
 
     p {
         &:last-of-type {
             margin-bottom: 0;
         }
     }
+}
 
+.tabs__item-header {
+    padding: 35px 45px;
+    background-color: #a14b8a;
+    background: linear-gradient(#a14b8a, #4d48be);
+    border-bottom: 1px solid #05050b;
 
-    /* Styling */
-    &--fill {
-        padding: $tabs-content-fill-padding;
+    font-size: 18px;
+    font-weight: 300;
+    color: $white;
 
-        color: $tabs-content-fill-color;
-        background-color: $tabs-content-fill-bg;
-        border: $tabs-content-fill-border;
+    p { margin-bottom: 0; }
+
+    &:empty {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: #a14b8a;
     }
+}
 
-    &--rounded {
-        border-radius: $tabs-content-rounded;
-    }
+.tabs__item-content {
+    padding: 35px 45px;
 
-    &--shadow {
-        box-shadow: $tabs-content-shadow;
-    }
+    background-color: #4d48be;
+    background: linear-gradient(rgba(77, 72, 190, .5), rgba(77, 72, 190, 0));
 
-    &--dark {
-        background-color: $tabs-content-bg-dark;
-        border-color: $tabs-content-border-color-dark;
-        color: $tabs-content-item-color;
-    }
+    font-size: 18px;
+    color: $white;
+    font-weight: 300;
+}
+
+.tabs__bounties {
+    padding: 20px 40px 0;
 }

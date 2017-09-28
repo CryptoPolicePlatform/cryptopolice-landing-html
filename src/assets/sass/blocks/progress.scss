@@ -1,7 +1,8 @@
 .progress {
     width: 100%;
     height: $progress-height;
-    margin: $block-margin;
+    margin: 12px 0 25px;
+    overflow: hidden;
 
     background-color: $progress-bg;
 
@@ -16,9 +17,8 @@
     /* Styling */
     &--rounded {
         border-radius: $progress-rounded;
-
-        .progress__bar { border-radius: $progress-rounded; }
     }
+
     &--shadow  { box-shadow: $progress-shadow; }
 }
 
@@ -26,7 +26,7 @@
     height: 100%;
     padding: $progress-bar-padding;
 
-    background-color: $progress-bar-bg;
+    background: linear-gradient(#0192aa 40%, #00d4f7 100%);
 
     font-size: $progress-font-size;
     color: $progress-color;
