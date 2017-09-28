@@ -1,0 +1,54 @@
+.m_scroll_arrows {
+    display: block;
+    transform: rotate(45deg);
+
+    border-right: 3px solid $white;
+    border-bottom: 3px solid $white;
+    margin: 0 auto 1px;
+
+    width: 20px;
+    height: 20px;
+}
+
+.first {
+    margin-top: 1px;
+}
+
+.first, .second {
+    animation: mouse-scroll 1s infinite;
+}
+
+.first {
+    animation-delay: .1s;
+    animation-direction: alternate;
+}
+
+.second {
+    animation-delay: .2s;
+    animation-direction: alternate;
+    margin-top: -6px;
+}
+
+
+
+
+@-moz-keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+
+@keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}

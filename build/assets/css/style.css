@@ -5900,9 +5900,42 @@ html.remodal-is-locked {
 }
 
 .block--intro {
-    padding-bottom: 140px;
+    padding-bottom: 180px;
     position: relative;
     z-index: 5;
+}
+
+.block__action-title {
+    margin: 0 0 80px;
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: 300;
+    color: #fff;
+    font-size: 30px;
+}
+
+.block__title {
+    margin: 0 0 25px;
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: 900;
+    color: #fff;
+    font-size: 36px;
+}
+
+.block__text {
+    padding: 0 45px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+.block__text--sm {
+    font-size: 14px;
+}
+
+.block__text--md {
+    font-size: 1.5em;
 }
 
 .nav {
@@ -5940,7 +5973,7 @@ html.remodal-is-locked {
 }
 
 .timer {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     text-align: center;
     color: #fff;
     font-weight: 300;
@@ -8019,6 +8052,120 @@ html.remodal-is-locked {
     top: 2px;
     left: 0;
     z-index: 1;
+}
+
+.presentation {
+    margin-top: -150px;
+    padding-top: 60px;
+    position: relative;
+    z-index: 10;
+    background: url("../i/city-bg.png") center bottom no-repeat;
+    background-size: cover;
+}
+
+.presentation__video {
+    margin: 55px 0;
+}
+
+.presentation__footer {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.presentation__footer-line {
+    width: 290px;
+    height: 1px;
+    margin: 20px auto;
+    position: relative;
+    background-color: #fff;
+    font-size: 1.4em;
+}
+
+.presentation__footer-line i {
+    display: block;
+    padding: 0 7px;
+    background-color: #000;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.video {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.video--16by9 {
+    padding-bottom: 56.25%;
+}
+
+.video--4by3 {
+    padding-bottom: 75%;
+}
+
+.video iframe {
+    border: 0;
+}
+
+.video__item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.m_scroll_arrows {
+    display: block;
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    margin: 0 auto 1px;
+    width: 20px;
+    height: 20px;
+}
+
+.first {
+    margin-top: 1px;
+}
+
+.first, .second {
+    animation: mouse-scroll 1s infinite;
+}
+
+.first {
+    animation-delay: .1s;
+    animation-direction: alternate;
+}
+
+.second {
+    animation-delay: .2s;
+    animation-direction: alternate;
+    margin-top: -6px;
+}
+
+@keyframes mouse-scroll {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Helpers (must be as last import to override rules when use)

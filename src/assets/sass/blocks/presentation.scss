@@ -1,0 +1,42 @@
+.presentation {
+    margin-top: -150px;
+    padding-top: 60px;
+    position: relative;
+    z-index: 10;
+
+    background: url("#{$img}city-bg.png") center bottom no-repeat;
+    background-size: cover;
+}
+
+.presentation__video {
+    margin: 55px 0;
+}
+
+.presentation__footer {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: $white;
+}
+
+.presentation__footer-line {
+    width: 290px;
+    height: 1px;
+    margin: 20px auto;
+    position: relative;
+
+    background-color: $white;
+
+    font-size: 1.4em;
+
+    i {
+        display: block;
+        padding: 0 7px;
+        background-color: $real-black;
+
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
