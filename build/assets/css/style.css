@@ -7822,7 +7822,7 @@ html.remodal-is-locked {
 }
 
 .first {
-    margin-top: 1px;
+    margin-top: 15px;
 }
 
 .first, .second {
@@ -8190,7 +8190,7 @@ html.remodal-is-locked {
 
 .roadmap {
     padding: 30px 0;
-    background-color: #111114;
+    background: #111114;
     border-top: 1px solid #333335;
     border-bottom: 1px solid #333335;
 }
@@ -8331,8 +8331,9 @@ html.remodal-is-locked {
 }
 
 .join {
+    height: 235px;
     padding: 30px 0;
-    background: #0052a4;
+    background: #0052a4 url("../i/join-us-bg.jpg") center no-repeat;
 }
 
 .join__list {
@@ -8676,7 +8677,8 @@ html.remodal-is-locked {
 }
 
 .team {
-    background-color: #000;
+    background: #000 url("../i/team-bg2.png") center bottom no-repeat;
+    padding-bottom: 330px;
 }
 
 .team__inner {
@@ -8790,6 +8792,62 @@ html.remodal-is-locked {
 .separator:after {
     right: 0;
     background: linear-gradient(to right, #7f4477, #0d0c0c);
+}
+
+.footer {
+    margin-top: -100px;
+    background: linear-gradient(transparent 25%, #000);
+    text-align: center;
+}
+
+.footer__inner {
+    width: 100%;
+    max-width: 767px;
+    margin: 0 auto;
+}
+
+.footer__text {
+    margin-top: 35px;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #fff;
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+}
+
+.footer__text p {
+    margin-bottom: 15px;
+}
+
+.footer__social {
+    padding: 35px 0 35px;
+    border-bottom: 1px solid #666;
+}
+
+.footer__social-title {
+    margin-bottom: 20px;
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    color: #954b92;
+    text-align: center;
+}
+
+.footer__social-item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 19px;
+}
+
+.footer__address {
+    padding: 22px 0;
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.footer__address p {
+    margin-bottom: 15px;
 }
 
 /* Helpers (must be as last import to override rules when use)

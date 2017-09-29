@@ -1,69 +1,60 @@
 .footer {
-    padding: $footer-padding;
+    margin-top: -100px;
 
-    background-color: $footer-bg;
+    background: linear-gradient(rgba($real-black, 0) 25%, $real-black);
+
+    text-align: center;
 }
 
-.footer__block {
-    padding: $footer-block-padding;
+.footer__inner {
+    width: 100%;
+    max-width: 767px;
+    margin: 0 auto;
 }
 
-.footer__title {
-    margin: $footer-title-margin;
+.footer__text {
+    margin-top: 35px;
 
-    font-size: $footer-title-font-size;
-    line-height: $footer-title-line-height;
-    color: $footer-title-color;
-    font-weight: $footer-title-weight;
-}
+    font-size: 14px;
+    line-height: 1.2;
+    color: $white;
+    font-family: 'Gilroy', 'Roboto', sans-serif;
 
-.footer__list {
-    padding: 0;
-    margin: 0;
-
-    list-style: none;
-    font-size: $footer-list-font-size;
-
-    &--inline {
-
-        .footer__list-item {
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 10px;
-
-            @media (max-width: 992px) {
-                margin-left: 0;
-                margin-right: 10px;
-            }
-        }
-    }
-
-    @media (max-width: 992px) {
-        text-align: left;
+    p {
+        margin-bottom: 15px;
     }
 }
 
-.footer__list-item {
-    display: block;
-    margin-bottom: $footer-list-item-margin;
+.footer__social {
+    padding: 35px 0 35px;
 
-    a {
-        color: $footer-list-link-color;
+    border-bottom: 1px solid #666;
+}
+
+.footer__social-title {
+    margin-bottom: 20px;
+
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    color: #954b92;
+    text-align: center;
+}
+
+.footer__social-item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 19px;
+}
+
+.footer__address {
+    padding: 22px 0;
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+    color: $white;
+    font-size: 14px;
+    font-style: normal;
+
+    p {
+        margin-bottom: 15px;
     }
-}
-
-.footer__brand {
-    margin: $footer-brand-margin;
-
-    color: $footer-brand-font-color;
-    font-size: $footer-brand-font-size;
-    line-height: $footer-brand-line-height;
-}
-
-.footer__copyright {
-    margin: $footer-copyright-margin;
-
-    font-size: $footer-copyright-font-size;
-    line-height: $footer-copyright-line-height;
-    color: $footer-copyright-color;
 }

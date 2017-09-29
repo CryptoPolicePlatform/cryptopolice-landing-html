@@ -1,5 +1,6 @@
 .team {
-    background-color: $real-black;
+    background: $real-black url("#{$img}team-bg2.png") center bottom no-repeat;
+    padding-bottom: 330px;
 }
 
 .team__inner {
