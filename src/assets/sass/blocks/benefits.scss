@@ -1,5 +1,5 @@
 .benefits {
-    margin: $block-margin;
+    margin: 50px 0 0;
 }
 
 .benefits__item {
@@ -13,8 +13,6 @@
     height: $benefits-media-height;
     margin: $benefits-media-margin;
 
-    border: $benefits-media-border;
-    border-radius: $benefits-media-border-radius;
     text-align: $benefits-media-align;
 
     position: relative;
@@ -40,9 +38,11 @@
 .benefits__title {
     margin: $benefits-title-margin;
 
+    font-family: 'Gilroy', 'Roboto', sans-serif;
     color: $benefits-title-color;
     font-size: $benefits-title-font-size;
     line-height: $benefits-title-line-height;
+    font-weight: 900;
 }
 
 .benefits__text {

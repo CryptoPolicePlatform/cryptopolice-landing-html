@@ -67,8 +67,11 @@
 
 .display-inline        { display: inline; }
 .display-block         { display: block; }
-.display-inline-block  { display: inline-block; }
+.dib  { display: inline-block; }
+.vam { vertical-align: middle; }
 
+.mb-15 { margin-bottom: 15px; }
+.mb-25 { margin-bottom: 25px; }
 .mb-30 { margin-bottom: 30px; }
 .mb-50 { margin-bottom: 50px; }
 .mb-80 { margin-bottom: 80px; }
@@ -77,3 +80,9 @@
 .clearfix {
     @include clearfix;
 }
+
+.gilroy {
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+}
+
+.no-margin { margin: 0; }

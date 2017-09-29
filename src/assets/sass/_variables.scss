@@ -105,7 +105,28 @@ $orange:        #fb8c00;
 $deep-orange:   #ff7043;
 $brown:         #795548;
 
-$colors: (gray $gray) (red $red) (pink $pink) (purple $purple) (deep-purple $deep-purple) (indigo $indigo) (blue $blue) (light-blue $light-blue) (cyan $cyan) (teal $teal) (green $green) (light-green $light-green) (lime $lime) (yellow $yellow) (amber $amber) (orange $orange) (deep-orange $deep-orange) (brown $brown) (black $black);
+$colors: (
+    gray: $gray,
+    red: $red,
+    pink: $pink,
+    purple: $purple,
+    deep-purple: $deep-purple,
+    indigo: $indigo,
+    blue: $blue,
+    light-blue: $light-blue,
+    cyan: $cyan,
+    teal: $teal,
+    green: $green,
+    light-green: $light-green,
+    lime: $lime,
+    yellow: $yellow,
+    amber: $amber,
+    orange: $orange,
+    deep-orange: $deep-orange,
+    brown: $brown,
+    black: $black,
+    white: $white
+) !default;
 
 $block-margin: 20px 0;
 
@@ -255,11 +276,11 @@ $radio-before-border-color-error:            $red;
 
 $input-height:                  36px;
 $input-padding:                 .4em .9em;
-$input-color:                   $black;
-$input-font-size:               1em;
+$input-color:                   $white;
+$input-font-size:               1.15em;
 $input-line-height:             1;
 $input-shadow-default:          inset 0 1px 4px rgba(0, 0, 0, .2);
-$input-placeholder-color:       lighten($gray, 20%);
+$input-placeholder-color:       lighten($white, 20%);
 $input-bg:                      $white;
 $input-bg-focus:                lighten($light-blue, 48%);
 
@@ -316,7 +337,7 @@ $btn-xxl-font-size:                 1.8em;
 
 /* Styling */
 $btn-rounded:                       .3em;
-$btn-ellipse:                       20px;
+$btn-ellipse:                       30px;
 $btn-shadow:                        1px 1px .3em rgba(0, 0, 0, .3);
 $btn-icon-margin:                   .5em;
 
@@ -1251,11 +1272,9 @@ $benefits-item-padding: 1.25em;
 $benefits-item-align: center;
 
 /* Media wrapper */
-$benefits-media-width: 100px;
-$benefits-media-height: 100px;
-$benefits-media-margin: 10px auto;
-$benefits-media-border: 1px solid $gray;
-$benefits-media-border-radius: 50%;
+$benefits-media-width: 140px;
+$benefits-media-height: 140px;
+$benefits-media-margin: 0 auto 25px;
 $benefits-media-align: center;
 
 /* Icon */
@@ -1266,15 +1285,15 @@ $benefits-icon-font-size: 3em;
 $benefits-icon-zindex: 1;
 
 /* Title */
-$benefits-title-margin: 0 0 5px;
-$benefits-title-color: $black;
-$benefits-title-font-size: 1.3em;
-$benefits-title-line-height: 1.4;
+$benefits-title-margin: 0 0 15px;
+$benefits-title-color: $white;
+$benefits-title-font-size: 1.15em;
+$benefits-title-line-height: 1.1;
 
 /* Text */
 $benefits-text-font-size: 1em;
 $benefits-text-line-height: 1.2;
-$benefits-text-color: $gray;
+$benefits-text-color: $white;
 
 
 

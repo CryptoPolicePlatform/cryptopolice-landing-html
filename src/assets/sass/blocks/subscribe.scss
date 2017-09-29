@@ -1,0 +1,14 @@
+.subscribe {
+    padding: 12px 0 30px;
+    height: 237px;
+
+    background: #111114 url("#{$img}subscribe-bg.png") center no-repeat;
+    border-top: 1px solid #333335;
+    border-bottom: 1px solid #333335;
+}
+
+.subscribe__form {
+    max-width: 310px;
+    width: 100%;
+    margin: 20px auto 0;
+}

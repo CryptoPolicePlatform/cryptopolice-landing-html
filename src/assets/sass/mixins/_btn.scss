@@ -41,13 +41,22 @@
             &:focus {
                 background-color: transparent;
                 color: nth($color, 2);
-                border-color: darken(nth($color, 2), 2%);
+                border-color: darken(nth($color, 2), 5%);
+
+                @if (nth($color, 2) == $white) {
+                    background-color: nth($color, 2);
+                    color: $black;
+                }
             }
 
             &:hover {
                 border-color: nth($color, 2);
                 background-color: nth($color, 2);
                 color: $white;
+
+                @if (nth($color, 2) == $white) {
+                    color: $black;
+                }
             }
 
             &:active {

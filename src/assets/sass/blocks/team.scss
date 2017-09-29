@@ -1,41 +1,75 @@
 .team {
-    margin: $block-margin;
+    background-color: $real-black;
+}
+
+.team__inner {
+    height: 647px;
+    padding-top: 70px;
+    position: relative;
+
+    background: url("#{$img}team-bg.png") center bottom no-repeat;
+
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 70px;
+        background: linear-gradient(rgba($real-black, 0), $real-black);
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+    }
 }
 
 .team__item {
-    max-width: $team-item-width;
-    padding: $team-item-padding;
-    margin: $team-item-margin;
-    display: inline-block;
-    vertical-align: top;
+    padding: 0 65px;
 
-    background-color: $team-item-bg;
-
-    /* Styling */
-    &--rounded { border-radius: $team-item-radius; }
-    &--shadow  { box-shadow: $team-item-radius; }
+    color: $white;
+    text-align: center;
 }
 
-.team__info {
-    text-align: $team-info-text-align;
+.team__ava {
+    width: 139px;
+    height: 139px;
+    position: relative;
+    margin: 0 auto 30px;
+
+    background: url("#{$img}team-avatar-bg.png") center no-repeat;
+
+    img {
+        display: block;
+        width: 115px;
+        height: 115px;
+
+        border-radius: 50%;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        margin: auto;
+    }
 }
 
 .team__name {
-    margin-top: $team-name-margin-top;
+    margin-bottom: 12px;
 
-    font-size: $team-name-font-size;
-    line-height: $team-name-line-height;
-    color: $team-name-color;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.team__job {
+    margin-bottom: 12px;
+
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
 }
 
 .team__text {
-    margin-top: $team-text-margin-top;
-    font-size: $team-text-font-size;
-    line-height: $team-text-line-height;
-    color: $team-text-color;
-}
-
-.team__social {
-    margin-top: $team-social-margin-top;
-    text-align: $team-social-text-align;
+    font-size: 14px;
 }

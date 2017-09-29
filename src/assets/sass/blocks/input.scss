@@ -4,33 +4,29 @@
     padding: $input-padding;
     min-height: $input-height;
 
+    font-family: 'Gilroy', 'Roboto', sans-serif;
     font-size: $input-font-size;
     line-height: $input-line-height;
     font-family: inherit;
     color: $input-color;
 
     border: 0;
+    border-bottom: 1px solid $white;
     border-radius: 0;
-    box-shadow: $input-shadow-default;
-    background-color: $input-bg;
+    background: transparent;
     appearance: none;
 
     transition: background-color .1s linear;
 
     &:focus {
-        background-color: $input-bg-focus;
         outline: 0;
     }
 
     &::placeholder {
+        font-family: 'Gilroy', 'Roboto', sans-serif;
         color: $input-placeholder-color;
     }
 
-
-    /* Styling */
-    &--rounded { border-radius: $input-style-rounded; }
-    &--ellipse { border-radius: $input-style-ellipse; }
-    &--shadow  { box-shadow: $input-style-shadow; }
 
     &--slide {
 

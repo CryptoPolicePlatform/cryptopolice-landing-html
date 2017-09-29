@@ -17,6 +17,10 @@
         display: inline-block;
         vertical-align: top;
     }
+
+    &--m {
+        margin-bottom: 2em;
+    }
 }
 
 .form__hint {

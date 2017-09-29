@@ -1,0 +1,32 @@
+.whitepaper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 237px;
+
+    background: #111114 url("#{$img}whitepaper-bg.png") center no-repeat;
+    border-top: 1px solid #333335;
+    border-bottom: 1px solid #333335;
+
+    text-align: center;
+}
+
+.whitepaper__btn {
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+    color: $white;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+
+    &:after {
+        content: "\f054";
+        font-family: 'fontAwesome';
+        font-size: 22px;
+        line-height: 1;
+        display: inline-block;
+        vertical-align: middle;
+        margin: -1px 25px 0;
+    }
+}

@@ -51,6 +51,8 @@
     /* Horizontal Gradient */
     @include btn-gradient(horizontal);
 
+    &--o2x { border-width: 2px; }
+
 
     /* Sizes */
     &--xs {

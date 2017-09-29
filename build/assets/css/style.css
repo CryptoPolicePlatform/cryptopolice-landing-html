@@ -259,6 +259,20 @@
 ============================*/
 /* Gradient Buttons
 ============================*/
+@font-face {
+    font-family: 'Gilroy';
+  src: url("../fonts/gilroy/gilroy-extrabold-webfont.woff2") format("woff2"), url("../fonts/gilroy/gilroy-extrabold-webfont.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+  src: url("../fonts/gilroy/gilroy-light-webfont.woff2") format("woff2"), url("../fonts/gilroy/gilroy-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -3754,22 +3768,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     animation-name: rollIn;
 }
 
-@keyframes rollOut {
-    0% {
-        opacity: 1;
-        transform: translateX(0px) rotate(0deg);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateX(100%) rotate(120deg);
-    }
-}
-
-.rollOut {
-    animation-name: rollOut;
-}
-
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -3906,110 +3904,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .bounceInUp {
     animation-name: bounceInUp;
-}
-
-@keyframes bounceOut {
-    0% {
-        transform: scale(1);
-    }
-
-    25% {
-        transform: scale(0.95);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.1);
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(0.3);
-    }
-}
-
-.bounceOut {
-    animation-name: bounceOut;
-}
-
-@keyframes bounceOutDown {
-    0% {
-        transform: translateY(0);
-    }
-
-    20% {
-        opacity: 1;
-        transform: translateY(-20px);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(2000px);
-    }
-}
-
-.bounceOutDown {
-    animation-name: bounceOutDown;
-}
-
-@keyframes bounceOutLeft {
-    0% {
-        transform: translateX(0);
-    }
-
-    20% {
-        opacity: 1;
-        transform: translateX(20px);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateX(-2000px);
-    }
-}
-
-.bounceOutLeft {
-    animation-name: bounceOutLeft;
-}
-
-@keyframes bounceOutRight {
-    0% {
-        transform: translateX(0);
-    }
-
-    20% {
-        opacity: 1;
-        transform: translateX(-20px);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateX(2000px);
-    }
-}
-
-.bounceOutRight {
-    animation-name: bounceOutRight;
-}
-
-@keyframes bounceOutUp {
-    0% {
-        transform: translateY(0);
-    }
-
-    20% {
-        opacity: 1;
-        transform: translateY(20px);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(-2000px);
-    }
-}
-
-.bounceOutUp {
-    animation-name: bounceOutUp;
 }
 
 @keyframes fadeIn {
@@ -4154,148 +4048,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     animation-name: fadeInUpBig;
 }
 
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-.fadeOut {
-    animation-name: fadeOut;
-}
-
-@keyframes fadeOutDown {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-}
-
-.fadeOutDown {
-    animation-name: fadeOutDown;
-}
-
-@keyframes fadeOutDownBig {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(2000px);
-    }
-}
-
-.fadeOutDownBig {
-    animation-name: fadeOutDownBig;
-}
-
-@keyframes fadeOutLeft {
-    0% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-}
-
-.fadeOutLeft {
-    animation-name: fadeOutLeft;
-}
-
-@keyframes fadeOutLeftBig {
-    0% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateX(-2000px);
-    }
-}
-
-.fadeOutLeftBig {
-    animation-name: fadeOutLeftBig;
-}
-
-@keyframes fadeOutRight {
-    0% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-}
-
-.fadeOutRight {
-    animation-name: fadeOutRight;
-}
-
-@keyframes fadeOutRightBig {
-    0% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateX(2000px);
-    }
-}
-
-.fadeOutRightBig {
-    animation-name: fadeOutRightBig;
-}
-
-@keyframes fadeOutUp {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-}
-
-.fadeOutUp {
-    animation-name: fadeOutUp;
-}
-
-@keyframes fadeOutUpBig {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(-2000px);
-    }
-}
-
-.fadeOutUpBig {
-    animation-name: fadeOutUpBig;
-}
-
 @keyframes flip {
     0% {
         transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
@@ -4381,42 +4133,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     animation-name: flipInY;
 }
 
-@keyframes flipOutX {
-    0% {
-        transform: perspective(400px) rotateX(0deg);
-        opacity: 1;
-    }
-
-    100% {
-        transform: perspective(400px) rotateX(90deg);
-        opacity: 0;
-    }
-}
-
-.flipOutX {
-    animation-name: flipOutX;
-    -webkit-backface-visibility: visible !important;
-    backface-visibility: visible !important;
-}
-
-@keyframes flipOutY {
-    0% {
-        transform: perspective(400px) rotateY(0deg);
-        opacity: 1;
-    }
-
-    100% {
-        transform: perspective(400px) rotateY(90deg);
-        opacity: 0;
-    }
-}
-
-.flipOutY {
-    -webkit-backface-visibility: visible !important;
-    backface-visibility: visible !important;
-    animation-name: flipOutY;
-}
-
 @keyframes lightSpeedIn {
     0% {
         transform: translateX(100%) skewX(-30deg);
@@ -4442,23 +4158,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .lightSpeedIn {
     animation-name: lightSpeedIn;
     animation-timing-function: ease-out;
-}
-
-@keyframes lightSpeedOut {
-    0% {
-        transform: translateX(0%) skewX(0deg);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(100%) skewX(-30deg);
-        opacity: 0;
-    }
-}
-
-.lightSpeedOut {
-    animation-name: lightSpeedOut;
-    animation-timing-function: ease-in;
 }
 
 @keyframes rotateIn {
@@ -4551,96 +4250,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     animation-name: rotateInUpRight;
 }
 
-@keyframes rotateOut {
-    0% {
-        transform-origin: center center;
-        transform: rotate(0);
-        opacity: 1;
-    }
-
-    100% {
-        transform-origin: center center;
-        transform: rotate(200deg);
-        opacity: 0;
-    }
-}
-
-.rotateOut {
-    animation-name: rotateOut;
-}
-
-@keyframes rotateOutDownLeft {
-    0% {
-        transform-origin: left bottom;
-        transform: rotate(0);
-        opacity: 1;
-    }
-
-    100% {
-        transform-origin: left bottom;
-        transform: rotate(90deg);
-        opacity: 0;
-    }
-}
-
-.rotateOutDownLeft {
-    animation-name: rotateOutDownLeft;
-}
-
-@keyframes rotateOutDownRight {
-    0% {
-        transform-origin: right bottom;
-        transform: rotate(0);
-        opacity: 1;
-    }
-
-    100% {
-        transform-origin: right bottom;
-        transform: rotate(-90deg);
-        opacity: 0;
-    }
-}
-
-.rotateOutDownRight {
-    animation-name: rotateOutDownRight;
-}
-
-@keyframes rotateOutUpLeft {
-    0% {
-        transform-origin: left bottom;
-        transform: rotate(0);
-        opacity: 1;
-    }
-
-    100% {
-        transform-origin: left bottom;
-        transform: rotate(-90deg);
-        opacity: 0;
-    }
-}
-
-.rotateOutUpLeft {
-    animation-name: rotateOutUpLeft;
-}
-
-@keyframes rotateOutUpRight {
-    0% {
-        transform-origin: right bottom;
-        transform: rotate(0);
-        opacity: 1;
-    }
-
-    100% {
-        transform-origin: right bottom;
-        transform: rotate(90deg);
-        opacity: 0;
-    }
-}
-
-.rotateOutUpRight {
-    animation-name: rotateOutUpRight;
-}
-
 @keyframes slideInDown {
     0% {
         opacity: 0;
@@ -4684,51 +4293,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .slideInRight {
     animation-name: slideInRight;
-}
-
-@keyframes slideOutLeft {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateX(-2000px);
-    }
-}
-
-.slideOutLeft {
-    animation-name: slideOutLeft;
-}
-
-@keyframes slideOutRight {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateX(2000px);
-    }
-}
-
-.slideOutRight {
-    animation-name: slideOutRight;
-}
-
-@keyframes slideOutUp {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(-2000px);
-    }
-}
-
-.slideOutUp {
-    animation-name: slideOutUp;
 }
 
 /*
@@ -5912,6 +5476,7 @@ html.remodal-is-locked {
     font-weight: 300;
     color: #fff;
     font-size: 30px;
+    line-height: 1.1;
 }
 
 .block__title {
@@ -6100,7 +5665,9 @@ html.remodal-is-locked {
   /* Vertical Gradient */
   /* Vertical Gradient */
   /* Vertical Gradient */
+  /* Vertical Gradient */
   /* Horizontal Gradient */
+  /* Vertical Gradient */
   /* Vertical Gradient */
   /* Vertical Gradient */
   /* Vertical Gradient */
@@ -6464,6 +6031,23 @@ html.remodal-is-locked {
     background-color: #2c2c2c;
 }
 
+.btn--white {
+    background-color: #fff;
+    color: #3e3e3e;
+}
+
+.btn--white:focus {
+    background-color: #f7f7f7;
+}
+
+.btn--white:hover {
+    background-color: #f2f2f2;
+}
+
+.btn--white:active {
+    background-color: #ededed;
+}
+
 .btn--o-gray {
     background-color: transparent;
     border: 1px solid #9e9e9e;
@@ -6473,7 +6057,7 @@ html.remodal-is-locked {
 .btn--o-gray:focus {
     background-color: transparent;
     color: #9e9e9e;
-    border-color: #999999;
+    border-color: #919191;
 }
 
 .btn--o-gray:hover {
@@ -6496,7 +6080,7 @@ html.remodal-is-locked {
 .btn--o-red:focus {
     background-color: transparent;
     color: #f44336;
-    border-color: #f33a2c;
+    border-color: #f32c1e;
 }
 
 .btn--o-red:hover {
@@ -6519,7 +6103,7 @@ html.remodal-is-locked {
 .btn--o-pink:focus {
     background-color: transparent;
     color: #ec407a;
-    border-color: #eb3774;
+    border-color: #ea296a;
 }
 
 .btn--o-pink:hover {
@@ -6542,7 +6126,7 @@ html.remodal-is-locked {
 .btn--o-purple:focus {
     background-color: transparent;
     color: #ab47bc;
-    border-color: #a642b6;
+    border-color: #9b3eab;
 }
 
 .btn--o-purple:hover {
@@ -6565,7 +6149,7 @@ html.remodal-is-locked {
 .btn--o-deep-purple:focus {
     background-color: transparent;
     color: #673ab7;
-    border-color: #6338af;
+    border-color: #5c34a4;
 }
 
 .btn--o-deep-purple:hover {
@@ -6588,7 +6172,7 @@ html.remodal-is-locked {
 .btn--o-indigo:focus {
     background-color: transparent;
     color: #3f51b5;
-    border-color: #3c4ead;
+    border-color: #3849a2;
 }
 
 .btn--o-indigo:hover {
@@ -6611,7 +6195,7 @@ html.remodal-is-locked {
 .btn--o-blue:focus {
     background-color: transparent;
     color: #1976d2;
-    border-color: #1871c9;
+    border-color: #1669bb;
 }
 
 .btn--o-blue:hover {
@@ -6634,7 +6218,7 @@ html.remodal-is-locked {
 .btn--o-light-blue:focus {
     background-color: transparent;
     color: #03a9f4;
-    border-color: #03a2ea;
+    border-color: #0398db;
 }
 
 .btn--o-light-blue:hover {
@@ -6657,7 +6241,7 @@ html.remodal-is-locked {
 .btn--o-cyan:focus {
     background-color: transparent;
     color: #00acc1;
-    border-color: #00a3b7;
+    border-color: #0095a8;
 }
 
 .btn--o-cyan:hover {
@@ -6680,7 +6264,7 @@ html.remodal-is-locked {
 .btn--o-teal:focus {
     background-color: transparent;
     color: #009688;
-    border-color: #008c7f;
+    border-color: #007d71;
 }
 
 .btn--o-teal:hover {
@@ -6703,7 +6287,7 @@ html.remodal-is-locked {
 .btn--o-green:focus {
     background-color: transparent;
     color: #4caf50;
-    border-color: #49a84d;
+    border-color: #449d48;
 }
 
 .btn--o-green:hover {
@@ -6726,7 +6310,7 @@ html.remodal-is-locked {
 .btn--o-light-green:focus {
     background-color: transparent;
     color: #8bc34a;
-    border-color: #86c042;
+    border-color: #7eb73d;
 }
 
 .btn--o-light-green:hover {
@@ -6749,7 +6333,7 @@ html.remodal-is-locked {
 .btn--o-lime:focus {
     background-color: transparent;
     color: #cddc39;
-    border-color: #cbda30;
+    border-color: #c6d626;
 }
 
 .btn--o-lime:hover {
@@ -6772,7 +6356,7 @@ html.remodal-is-locked {
 .btn--o-yellow:focus {
     background-color: transparent;
     color: #fbc02d;
-    border-color: #fbbd23;
+    border-color: #fbb814;
 }
 
 .btn--o-yellow:hover {
@@ -6795,7 +6379,7 @@ html.remodal-is-locked {
 .btn--o-amber:focus {
     background-color: transparent;
     color: #ffa000;
-    border-color: #f59a00;
+    border-color: #e69000;
 }
 
 .btn--o-amber:hover {
@@ -6818,7 +6402,7 @@ html.remodal-is-locked {
 .btn--o-orange:focus {
     background-color: transparent;
     color: #fb8c00;
-    border-color: #f18600;
+    border-color: #e27e00;
 }
 
 .btn--o-orange:hover {
@@ -6841,7 +6425,7 @@ html.remodal-is-locked {
 .btn--o-deep-orange:focus {
     background-color: transparent;
     color: #ff7043;
-    border-color: #ff6839;
+    border-color: #ff5d2a;
 }
 
 .btn--o-deep-orange:hover {
@@ -6864,7 +6448,7 @@ html.remodal-is-locked {
 .btn--o-brown:focus {
     background-color: transparent;
     color: #795548;
-    border-color: #735144;
+    border-color: #694a3e;
 }
 
 .btn--o-brown:hover {
@@ -6887,7 +6471,7 @@ html.remodal-is-locked {
 .btn--o-black:focus {
     background-color: transparent;
     color: #3e3e3e;
-    border-color: #393939;
+    border-color: #313131;
 }
 
 .btn--o-black:hover {
@@ -6899,6 +6483,32 @@ html.remodal-is-locked {
 .btn--o-black:active {
     border-color: #363636;
     background-color: #363636;
+}
+
+.btn--o-white {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn--o-white:focus {
+    background-color: transparent;
+    color: #fff;
+    border-color: #f2f2f2;
+    background-color: #fff;
+    color: #3e3e3e;
+}
+
+.btn--o-white:hover {
+    border-color: #fff;
+    background-color: #fff;
+    color: #fff;
+    color: #3e3e3e;
+}
+
+.btn--o-white:active {
+    border-color: #f7f7f7;
+    background-color: #f7f7f7;
 }
 
 .btn--i-gray {
@@ -7338,6 +6948,29 @@ html.remodal-is-locked {
     background-color: transparent;
 }
 
+.btn--i-white {
+    background-color: transparent;
+    border: 1px solid #9e9e9e;
+    color: #fff;
+}
+
+.btn--i-white:focus {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fafafa;
+}
+
+.btn--i-white:hover {
+    border-color: #fff;
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn--i-white:active {
+    border-color: #f7f7f7;
+    background-color: transparent;
+}
+
 .btn--vg-gray {
     background: #ababab;
     background: linear-gradient(to bottom, #ababab 0%, #787878 100%);
@@ -7639,6 +7272,22 @@ html.remodal-is-locked {
 }
 
 .btn--vg-black:active {
+    opacity: .8;
+}
+
+.btn--vg-white {
+    background: white;
+    background: linear-gradient(to bottom, white 0%, #d9d9d9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='white', endColorstr='#d9d9d9', GradientType=0 );
+    color: #3e3e3e;
+    transition: opacity .2s linear;
+}
+
+.btn--vg-white:focus, .btn--vg-white:hover {
+    opacity: .9;
+}
+
+.btn--vg-white:active {
     opacity: .8;
 }
 
@@ -7946,6 +7595,26 @@ html.remodal-is-locked {
     opacity: .8;
 }
 
+.btn--hg-white {
+    background: white;
+    background: linear-gradient(to right, white 0%, #d9d9d9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='white', endColorstr='#d9d9d9', GradientType=0 );
+    color: #3e3e3e;
+    transition: opacity .2s linear;
+}
+
+.btn--hg-white:focus, .btn--hg-white:hover {
+    opacity: .9;
+}
+
+.btn--hg-white:active {
+    opacity: .8;
+}
+
+.btn--o2x {
+    border-width: 2px;
+}
+
 .btn--xs {
     min-height: 0;
     font-size: 0.7em;
@@ -7982,7 +7651,7 @@ html.remodal-is-locked {
 }
 
 .btn--ellipse {
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
 .btn--shadow {
@@ -8503,6 +8172,10 @@ html.remodal-is-locked {
     background-color: #3e3e3e;
 }
 
+.progress__bar--white {
+    background-color: #fff;
+}
+
 .progress__label {
     width: 100%;
     font-size: 1em;
@@ -8538,6 +8211,30 @@ html.remodal-is-locked {
     width: 100%;
     max-width: 430px;
     margin-top: -50px;
+    position: relative;
+}
+
+.timeline__item:before {
+    content: "";
+    display: block;
+    width: 9px;
+    height: 9px;
+    background: linear-gradient(#9e4b8c, #5148bb);
+    border-radius: 50%;
+    position: absolute;
+    top: 73px;
+    z-index: 2;
+}
+
+.timeline__item:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: calc(100% - 50px);
+    background-color: #fff;
+    position: absolute;
+    top: 80px;
+    z-index: 1;
 }
 
 .timeline__item:first-child {
@@ -8549,32 +8246,44 @@ html.remodal-is-locked {
     align-self: flex-start;
     float: left;
     text-align: right;
-    padding-right: 20px;
+    padding-right: 25px;
 }
 
 .timeline__item:nth-child(odd) .timeline__date:after {
-    background: linear-gradient(to right, rgba(17, 17, 20, 0), #fff);
+    background: linear-gradient(to right, rgba(17, 17, 20, 0), #666);
     right: -15px;
 }
 
-.timeline__item:nth-child(odd) .timeline__content:before {
-    right: -30px;
+.timeline__item:nth-child(odd):before {
+    right: -11px;
+}
+
+.timeline__item:nth-child(odd):after {
+    right: -7px;
 }
 
 .timeline__item:nth-child(even) {
     -ms-flex-item-align: end;
     align-self: flex-end;
     float: right;
-    padding-left: 20px;
+    padding-left: 25px;
 }
 
 .timeline__item:nth-child(even) .timeline__date:after {
-    background: linear-gradient(to left, rgba(17, 17, 20, 0), #fff);
+    background: linear-gradient(to left, rgba(17, 17, 20, 0), #666);
     left: -15px;
 }
 
-.timeline__item:nth-child(even) .timeline__content:before {
-    left: -29px;
+.timeline__item:nth-child(even):before {
+    left: -8px;
+}
+
+.timeline__item:nth-child(even):after {
+    left: -4px;
+}
+
+.timeline__item:last-child:after {
+    display: none;
 }
 
 .timeline__date {
@@ -8619,19 +8328,419 @@ html.remodal-is-locked {
     font-size: 14px;
     line-height: 1.3;
     font-weight: 300;
+}
+
+.join {
+    padding: 30px 0;
+    background: #0052a4;
+}
+
+.join__list {
+    text-align: center;
+}
+
+.join__list-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 30px;
+}
+
+.mission {
+    padding: 30px 0;
+}
+
+.benefits {
+    margin: 50px 0 0;
+}
+
+.benefits__item {
+    padding: 1.25em;
+    text-align: center;
+}
+
+.benefits__media {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 25px;
+    text-align: center;
     position: relative;
 }
 
-.timeline__content:before {
+.benefits__icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: #03a9f4;
+    font-size: 3em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    margin: auto;
+}
+
+.benefits__title {
+    margin: 0 0 15px;
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 1.15em;
+    line-height: 1.1;
+    font-weight: 900;
+}
+
+.benefits__text {
+    font-size: 1em;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.subscribe {
+    padding: 12px 0 30px;
+    height: 237px;
+    background: #111114 url("../i/subscribe-bg.png") center no-repeat;
+    border-top: 1px solid #333335;
+    border-bottom: 1px solid #333335;
+}
+
+.subscribe__form {
+    max-width: 310px;
+    width: 100%;
+    margin: 20px auto 0;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    padding: 0.4em 0.9em;
+    min-height: 36px;
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+    font-size: 1.15em;
+    line-height: 1;
+    font-family: inherit;
+    color: #fff;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    border-radius: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: background-color .1s linear;
+  /* States */
+}
+
+.input:focus {
+    outline: 0;
+}
+
+.input::-webkit-input-placeholder {
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+    color: white;
+}
+
+.input:-ms-input-placeholder {
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+    color: white;
+}
+
+.input::placeholder {
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+    color: white;
+}
+
+.input--slide::-webkit-input-placeholder {
+    transition: padding-left .3s linear;
+}
+
+.input--slide:-ms-input-placeholder {
+    transition: padding-left .3s linear;
+}
+
+.input--slide::placeholder {
+    transition: padding-left .3s linear;
+}
+
+.input--slide:focus::-webkit-input-placeholder {
+    padding-left: 150%;
+}
+
+.input--slide:focus:-ms-input-placeholder {
+    padding-left: 150%;
+}
+
+.input--slide:focus::placeholder {
+    padding-left: 150%;
+}
+
+.input--fade::-webkit-input-placeholder {
+    transition: opacity .2s linear;
+}
+
+.input--fade:-ms-input-placeholder {
+    transition: opacity .2s linear;
+}
+
+.input--fade::placeholder {
+    transition: opacity .2s linear;
+}
+
+.input--fade:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+.input--fade:focus:-ms-input-placeholder {
+    opacity: 0;
+}
+
+.input--fade:focus::placeholder {
+    opacity: 0;
+}
+
+.input--error {
+    border-color: #f44336;
+    color: #f44336;
+    background-color: rgba(244, 67, 54, 0.05);
+}
+
+.input--error::-webkit-input-placeholder {
+    color: #f44336;
+}
+
+.input--error:-ms-input-placeholder {
+    color: #f44336;
+}
+
+.input--error::placeholder {
+    color: #f44336;
+}
+
+.input--error:focus {
+    background-color: rgba(244, 67, 54, 0.05);
+}
+
+.input--success {
+    border-color: #4caf50;
+    color: #4caf50;
+    background-color: rgba(76, 175, 80, 0.05);
+}
+
+.input--success::-webkit-input-placeholder {
+    color: #4caf50;
+}
+
+.input--success:-ms-input-placeholder {
+    color: #4caf50;
+}
+
+.input--success::placeholder {
+    color: #4caf50;
+}
+
+.input--success:focus {
+    background-color: rgba(76, 175, 80, 0.05);
+}
+
+.input__wrapper {
+    position: relative;
+}
+
+.input__wrapper--label {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.input__wrapper--label .label {
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+.input__wrapper--label .btn {
+    margin-bottom: 0;
+}
+
+.input__wrapper--icon-before .input {
+    padding-left: 2.1em;
+}
+
+.input__wrapper--icon-before .input__icon {
+    left: .7em;
+}
+
+.input__wrapper--icon-after .input {
+    padding-right: 2.1em;
+}
+
+.input__wrapper--icon-after .input__icon {
+    right: .7em;
+}
+
+.input__wrapper--icon-before .input:focus + .input__icon, .input__wrapper--icon-after .input:focus + .input__icon {
+    color: #3e3e3e;
+}
+
+.input__icon {
+    font-size: inherit;
+    color: #9e9e9e;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition: color .1s linear;
+}
+
+.input__label {
+    min-height: 36px;
+    padding: 0.38em 0.9em;
+    background-color: #e2e2e2;
+    font-size: 1em;
+    line-height: 1.4;
+    color: #585858;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.form {
+    margin: 20px 0;
+}
+
+.form--inline .form__group {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.form__group {
+    margin-bottom: 1em;
+}
+
+.form__group--inline {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.form__group--m {
+    margin-bottom: 2em;
+}
+
+.form__hint {
+    margin-top: 3px;
+    color: #9e9e9e;
+    font-size: 0.8em;
+    line-height: 1.2;
+}
+
+.early-bird {
+    height: 237px;
+    background: #0154a6 url("../i/become-officer-bg.png") no-repeat center;
+}
+
+.whitepaper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    height: 237px;
+    background: #111114 url("../i/whitepaper-bg.png") center no-repeat;
+    border-top: 1px solid #333335;
+    border-bottom: 1px solid #333335;
+    text-align: center;
+}
+
+.whitepaper__btn {
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+    color: #fff;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.whitepaper__btn:after {
+    content: "\f054";
+    font-family: 'fontAwesome';
+    font-size: 22px;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -1px 25px 0;
+}
+
+.team {
+    background-color: #000;
+}
+
+.team__inner {
+    height: 647px;
+    padding-top: 70px;
+    position: relative;
+    background: url("../i/team-bg.png") center bottom no-repeat;
+}
+
+.team__inner:after {
     content: "";
     display: block;
-    width: 9px;
-    height: 9px;
-    background: red;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(transparent, #000);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.team__item {
+    padding: 0 65px;
+    color: #fff;
+    text-align: center;
+}
+
+.team__ava {
+    width: 139px;
+    height: 139px;
+    position: relative;
+    margin: 0 auto 30px;
+    background: url("../i/team-avatar-bg.png") center no-repeat;
+}
+
+.team__ava img {
+    display: block;
+    width: 115px;
+    height: 115px;
     border-radius: 50%;
     position: absolute;
-    top: -17px;
-    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    margin: auto;
+}
+
+.team__name {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.team__job {
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.team__text {
+    font-size: 14px;
 }
 
 /* Helpers (must be as last import to override rules when use)
@@ -8728,6 +8837,10 @@ html.remodal-is-locked {
     color: #3e3e3e;
 }
 
+.text-white {
+    color: #fff;
+}
+
 .bg-gray {
     background-color: #9e9e9e;
 }
@@ -8802,6 +8915,10 @@ html.remodal-is-locked {
 
 .bg-black {
     background-color: #3e3e3e;
+}
+
+.bg-white {
+    background-color: #fff;
 }
 
 .text-xs {
@@ -8947,8 +9064,20 @@ html.remodal-is-locked {
     display: block;
 }
 
-.display-inline-block {
+.dib {
     display: inline-block;
+}
+
+.vam {
+    vertical-align: middle;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mb-25 {
+    margin-bottom: 25px;
 }
 
 .mb-30 {
@@ -8970,4 +9099,12 @@ html.remodal-is-locked {
 
 .clearfix:after {
     clear: both;
+}
+
+.gilroy {
+    font-family: 'Gilroy', 'Roboto', sans-serif;
+}
+
+.no-margin {
+    margin: 0;
 }

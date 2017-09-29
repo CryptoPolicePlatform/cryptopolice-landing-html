@@ -1,6 +1,7 @@
 @import "functions";
 @import "variables";
 @import "mixins";
+@import "fonts";
 
 
 body {
@@ -66,6 +67,15 @@ p {
 @import "blocks/progress";
 @import "blocks/roadmap";
 @import "blocks/timeline";
+@import "blocks/join";
+@import "blocks/mission";
+@import "blocks/benefits";
+@import "blocks/subscribe";
+@import "blocks/input";
+@import "blocks/form";
+@import "blocks/early-bird";
+@import "blocks/whitepaper";
+@import "blocks/team";
 
 
 
