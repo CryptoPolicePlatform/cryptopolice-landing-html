@@ -1,57 +1,27 @@
 .separator {
-    margin: $separator-margin;
-    min-height: $separator-height;
-
-    text-align: center;
-
+    max-width: 500px;
+    width: 100%;
+    height: 1px;
+    margin: 0 auto;
     position: relative;
 
-    &:before {
+    &:before,
+    &:after {
         content: "";
+        width: 50%;
+        height: 100%;
         display: block;
-        width: 100%;
-        height: $separator-height;
-
-        background-color: $separator-bg;
 
         position: absolute;
-        top: 50%;
+    }
+
+    &:before {
         left: 0;
-        z-index: $separator-zindex;
-        margin-top: - ceil($separator-height / 2);
+        background: linear-gradient(to right, #0d0c0c, #5248a8);
     }
 
-    &--gradient {
-        height: 10px;
-        background: repeating-linear-gradient(45deg,
-$red 25%, $light-gray 0, $light-gray 50%,
-$red 0, $red 75%, $light-gray 0);
-        background-size: 10px 10px;
-
-        &:before {
-            display: none;
-        }
+    &:after {
+        right: 0;
+        background: linear-gradient(to right, #7f4477, #0d0c0c);
     }
-}
-
-.separator__title {
-    display: inline-block;
-    vertical-align: middle;
-    padding: $separator-title-padding;
-
-    background-color: $separator-title-bg;
-    border: $separator-title-border;
-
-    font-size: $separator-title-font-size;
-    line-height: $separator-title-line-height;
-    color: $separator-title-color;
-
-    position: relative;
-    z-index: $separator-title-zindex;
-
-
-    /* Styling */
-    &--rounded { border-radius: $separator-rounded; }
-    &--ellipse { border-radius: $separator-ellipse; }
-    &--shadow  { box-shadow: $separator-shadow; }
 }

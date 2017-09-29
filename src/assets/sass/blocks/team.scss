@@ -23,8 +23,14 @@
     }
 }
 
+.team__list {
+    margin: 60px 0;
+}
+
 .team__item {
     padding: 0 65px;
+    max-width: 515px;
+    margin: 0 auto;
 
     color: $white;
     text-align: center;
@@ -60,6 +66,12 @@
 
     font-size: 18px;
     font-weight: bold;
+
+    a {
+        font-size: 14px;
+        color: $white;
+        font-weight: normal;
+    }
 }
 
 .team__job {
@@ -72,4 +84,16 @@
 
 .team__text {
     font-size: 14px;
+}
+
+.team__blockquote {
+    margin-top: 45px;
+    margin-bottom: 45px;
+
+    color: $white;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 300;
+    text-align: center;
 }
