@@ -1,5 +1,6 @@
 .footer {
     margin-top: -100px;
+    padding: 0 15px;
 
     background: linear-gradient(rgba($real-black, 0) 25%, $real-black);
 
@@ -45,6 +46,10 @@
     display: inline-block;
     vertical-align: top;
     margin: 0 19px;
+
+    @media #{$media_sm} {
+        margin: 0 5px 8px;
+    }
 }
 
 .footer__address {
@@ -56,5 +61,9 @@
 
     p {
         margin-bottom: 15px;
+    }
+
+    @media #{$media_sm} {
+        padding-bottom: 0;
     }
 }

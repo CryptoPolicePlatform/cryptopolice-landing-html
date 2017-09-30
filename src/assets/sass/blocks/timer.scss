@@ -4,6 +4,10 @@
     text-align: center;
     color: $white;
     font-weight: 300;
+
+    @media #{$media_height} {
+        margin-bottom: 50px;
+    }
 }
 
 .timer__title {
@@ -17,6 +21,10 @@
         content: "\f107";
         display: block;
         font-family: 'fontAwesome';
+    }
+
+    @media #{$media_height} {
+        font-size: 1.2em;
     }
 }
 

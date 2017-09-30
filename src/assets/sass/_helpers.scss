@@ -87,3 +87,21 @@
 }
 
 .no-margin { margin: 0; }
+
+.visible-sm-di {
+    display: none;
+}
+
+@media #{$media_sm} {
+    .text-left-sm {
+        text-align: left;
+    }
+
+    .visible-sm-di {
+        display: inline;
+    }
+
+    .hidden-sm {
+        display: none;
+    }
+}

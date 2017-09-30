@@ -1,5 +1,9 @@
 .officer {
-    padding: 30px 0 100px;
+    padding: 30px 15px 50px;
+
+    @media #{$media_sm} {
+        padding-bottom: 0;
+    }
 }
 
 .parallax-mirror {

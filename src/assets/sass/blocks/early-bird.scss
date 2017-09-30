@@ -1,4 +1,10 @@
 .early-bird {
+    padding: 0 15px;
     height: 237px;
     background: #0154a6 url("#{$img}become-officer-bg.png") no-repeat center;
+
+    @media #{$media_sm} {
+        height: auto;
+        background-size: cover;
+    }
 }

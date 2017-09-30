@@ -1,11 +1,19 @@
 .timeline {
     margin-top: 70px;
     position: relative;
+
+    @media #{$media_md} {
+        margin-top: 30px;
+    }
 }
 
 .timeline__inner {
     display: flex;
     flex-direction: column;
+
+    @media #{$media_md} {
+        display: block;
+    }
 }
 
 .timeline__item {
@@ -55,6 +63,11 @@
             background: linear-gradient(to right, rgba(#111114, 0), #666);
 
             right: -15px;
+
+            @media #{$media_md} {
+                background: linear-gradient(to left, rgba(#111114, 0), #666);
+                right: 0;
+            }
         }
 
         &:before {
@@ -63,6 +76,13 @@
 
         &:after {
             right: -7px;
+        }
+
+        @media #{$media_md} {
+            display: block;
+            float: none;
+            text-align: left;
+            padding-right: 0;
         }
     }
 
@@ -75,6 +95,10 @@
             background: linear-gradient(to left, rgba(#111114, 0), #666);
 
             left: -15px;
+
+            @media #{$media_md} {
+                left: 0;
+            }
         }
 
         &:before {
@@ -84,9 +108,24 @@
         &:after {
             left: -4px;
         }
+
+        @media #{$media_md} {
+            display: block;
+            float: none;
+            padding-left: 0;
+        }
     }
 
     &:last-child {
+        &:after {
+            display: none;
+        }
+    }
+
+    @media #{$media_md} {
+        margin: 0 auto 20px;
+
+        &:before,
         &:after {
             display: none;
         }

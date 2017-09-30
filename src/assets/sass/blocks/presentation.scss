@@ -1,8 +1,8 @@
 .presentation {
     margin-top: -150px;
-    padding-top: 60px;
     position: relative;
-    z-index: 10;
+    z-index: 9;
+    padding: 60px 15px 0;
 
     background: url("#{$img}city-bg.png") center bottom no-repeat;
     background-size: cover;
@@ -20,7 +20,8 @@
 }
 
 .presentation__footer-line {
-    width: 290px;
+    width: 100%;
+    max-width: 290px;
     height: 1px;
     margin: 20px auto;
     position: relative;

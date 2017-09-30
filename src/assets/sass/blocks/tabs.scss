@@ -1,6 +1,10 @@
 .tabs {
     width: 100%;
     margin: 65px auto 0;
+
+    @media #{$media_sm} {
+        margin: 30px auto;
+    }
 }
 
 .tabs__item:not(.active) { display: none; }
@@ -48,6 +52,14 @@
             text-decoration: none;
         }
     }
+
+    @media #{$media_sm} {
+        padding: .5em 1em;
+
+        &.active:after {
+            display: none;
+        }
+    }
 }
 
 .tabs__content {
@@ -81,6 +93,11 @@
         padding-bottom: 10px;
         background: #a14b8a;
     }
+
+    @media #{$media_sm} {
+        padding: 15px;
+        font-size: 16px;
+    }
 }
 
 .tabs__item-content {
@@ -92,8 +109,26 @@
     font-size: 18px;
     color: $white;
     font-weight: 300;
+
+    @media #{$media_sm} {
+        padding: 15px;
+
+        font-size: 16px;
+    }
+}
+
+.tabs__bounties-ico {
+    margin-bottom: 50px;
+
+    @media #{$media_sm} {
+        margin-bottom: 20px;
+    }
 }
 
 .tabs__bounties {
     padding: 20px 40px 0;
+
+    @media #{$media_sm} {
+        padding: 40px 0 20px;
+    }
 }

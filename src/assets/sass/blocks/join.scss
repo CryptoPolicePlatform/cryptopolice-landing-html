@@ -1,7 +1,12 @@
 .join {
     height: 235px;
-    padding: 30px 0;
+    padding: 30px 15px 0;
     background: #0052a4 url("#{$img}join-us-bg.jpg") center no-repeat;
+
+    @media #{$media_sm} {
+        height: auto;
+        background-size: cover;
+    }
 }
 
 .join__list {
@@ -11,5 +16,9 @@
 .join__list-item {
     display: inline-block;
     vertical-align: middle;
-    margin: 0 30px;
+    margin: 0 30px 15px;
+
+    @media #{$media_sm} {
+        margin: 0 15px 15px;
+    }
 }

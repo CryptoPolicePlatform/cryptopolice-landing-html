@@ -1,9 +1,13 @@
 .nav {
     padding-top: 10px;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 
     font-family: 'Gilroy', 'Roboto', sans-serif;
     text-align: center;
+
+    @media #{$media_height} {
+        margin-bottom: 20px;
+    }
 }
 
 .nav__item {
