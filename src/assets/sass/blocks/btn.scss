@@ -78,8 +78,6 @@
 
         background: #a54e89;
         background: linear-gradient(to right, #a54e89, #3b3ba4);
-        border-left: 2px solid #a54e89;
-        border-right: 2px solid #3b3ba4;
         border-radius: 50px;
 
         position: relative;
@@ -129,7 +127,7 @@
 }
 
 .btn__inner {
-    width: 100%;
+    width: calc(100% - 4px);
     height: calc(100% - 4px);
 
     background-color: $real-black;
@@ -138,7 +136,7 @@
 
     position: absolute;
     top: 2px;
-    left: 0;
+    left: 2px;
     z-index: 1;
 }
 

@@ -7,4 +7,5 @@
 //= components/particles.js
 //= components/parallax.js
 //= components/wow.js
+//= components/scroll.js
 

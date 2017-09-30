@@ -27,7 +27,17 @@
 <body>
 
 
-<section class="intro">
+<nav class="nav" id="nav">
+    <a class="nav__item" href="#" data-scroll data-target="#intro">Home</a>
+    <a class="nav__item" href="#" data-scroll data-target="#presentation">About</a>
+    <a class="nav__item" href="#" data-scroll data-target="#docs">Documents</a>
+    <a class="nav__item" href="#" data-scroll data-target="#tokens">Tokens</a>
+    <a class="nav__item" href="#" data-scroll data-target="#team">Team</a>
+    <a class="nav__item  nav__item--rounded" href="#">Become an officer</a>
+    <a class="nav__item" href="#">News</a>
+</nav>
+
+<section class="intro" id="intro">
     <div class="intro__top-left" id="particles-top-left"></div>
     <div class="intro__top-right" id="particles-top-right"></div>
     <div class="intro__bottom-left" id="particles-bottom-left"></div>
@@ -36,62 +46,52 @@
     <div class="block  block--intro">
 
         <div class="intro__content">
-            <nav class="nav">
-                <a class="nav__item" href="#">Home</a>
-                <a class="nav__item" href="#">About</a>
-                <a class="nav__item" href="#">Documents</a>
-                <a class="nav__item" href="#">Tokens</a>
-                <a class="nav__item" href="#">Team</a>
-                <a class="nav__item  nav__item--rounded" href="#">Become an oficer</a>
-                <a class="nav__item" href="#">News</a>
-            </nav>
-
-            <img class="intro__logo  center-block img" src="assets/i/cryptopolice-logo.png" width="351" height="162" alt="CryptoPolice">
-
             <h1 class="intro__title">First community based<br>cryptocurrency police on blockchain</h1>
-        </div>
 
-        <div class="timer">
-            <div class="timer__title">Pre sale 25th october</div>
+            <div class="timer">
+                <div class="timer__title">Pre sale 25th october</div>
 
-            <div class="timer__item  timer__item--days">
-                <div class="timer__inner">10</div>
+                <div class="timer__item  timer__item--days">
+                    <div class="timer__inner">10</div>
+                </div>
+                <div class="timer__item  timer__item--hours">
+                    <div class="timer__inner">22</div>
+                </div>
+                <div class="timer__item  timer__item--min">
+                    <div class="timer__inner">11</div>
+                </div>
+                <div class="timer__item  timer__item--sec">
+                    <div class="timer__inner">55</div>
+                </div>
             </div>
-            <div class="timer__item  timer__item--hours">
-                <div class="timer__inner">22</div>
-            </div>
-            <div class="timer__item  timer__item--min">
-                <div class="timer__inner">11</div>
-            </div>
-            <div class="timer__item  timer__item--sec">
-                <div class="timer__inner">55</div>
-            </div>
-        </div>
 
-        <div class="intro__btns">
-            <a class="btn  btn--o-gradient" href="#">
-                <span class="btn__inner">Subscribe</span>
-            </a>
+            <div class="intro__btns">
+                <a class="btn  btn--o-gradient" href="#">
+                    <span class="btn__inner">Subscribe</span>
+                </a>
 
-            <a class="btn  btn--o-gradient invert" href="#">
-                <span class="btn__inner">whitepaper</span>
-            </a>
-        </div>
+                <a class="btn  btn--o-gradient invert" href="#">
+                    <span class="btn__inner">whitepaper</span>
+                </a>
+            </div>
+        </div><!-- /.intro__content -->
 
     </div><!-- /.block -->
+
+    <div class="block__action  block__action--intro">
+        <a class="block__action-title" href="#" data-scroll data-target="#presentation">
+            Watch video
+            <span class="m_scroll_arrows first"></span>
+            <span class="m_scroll_arrows second"></span>
+        </a>
+    </div>
 </section><!-- /.intro -->
 
 
 
 
-<section class="presentation">
+<section class="presentation" id="presentation">
     <div class="block">
-
-        <h4 class="block__action-title">
-            Watch video
-            <span class="m_scroll_arrows first"></span>
-            <span class="m_scroll_arrows second"></span>
-        </h4>
 
         <h3 class="block__title">What is the CryptoPolice platform?</h3>
         <div class="block__text">
@@ -124,13 +124,15 @@
 <section class="docs">
     <div class="block">
 
-        <h4 class="block__action-title">
-            Read documents
-            <span class="m_scroll_arrows first"></span>
-            <span class="m_scroll_arrows second"></span>
-        </h4>
+        <div class="block__action">
+            <a class="block__action-title" href="#" data-scroll data-target="#docs">
+                Read documents
+                <span class="m_scroll_arrows first"></span>
+                <span class="m_scroll_arrows second"></span>
+            </a>
+        </div>
 
-        <div class="block__text  block__text--md">
+        <div class="block__text  block__text--md" id="docs">
             <p>Here you can find official documents of cryptoPolice project</p>
         </div>
         <div class="block__text">
@@ -192,13 +194,15 @@
     <div class="officer__inner officer_parallax_small" data-parallax-bg-image="assets/i/parallax-small.png" data-parallax-speed="0.5" data-parallax-bg-size="auto" data-parallax-direction="up" data-parallax-bg-position="center center">
         <div class="block">
 
-            <h4 class="block__action-title">
-                Get more about Officer tokens
-                <span class="m_scroll_arrows first"></span>
-                <span class="m_scroll_arrows second"></span>
-            </h4>
+            <div class="block__action">
+                <a class="block__action-title" href="#" data-scroll data-target="#tokens">
+                    Get more about Officer tokens
+                    <span class="m_scroll_arrows first"></span>
+                    <span class="m_scroll_arrows second"></span>
+                </a>
+            </div>
 
-            <h3 class="block__title">Officers tokens</h3>
+            <h3 class="block__title" id="tokens">Officers tokens</h3>
             <div class="block__text">
                 <p>The officers token (OFC) is essential to the functioning of the CryptoPolice platform. Tokens will be used to reward platform users for reporting and verifying information. This is needed to provide additional motivation for user who will provide quality information and do fastest verifications.</p>
             </div>
@@ -549,7 +553,7 @@
 
             <div class="benefits">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-md-4">
                         <div class="benefits__item">
                             <div class="benefits__media">
                                 <img src="assets/i/icon_identify.svg" alt="">
@@ -559,7 +563,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col-md-4">
                         <div class="benefits__item">
                             <div class="benefits__media">
                                 <img src="assets/i/icon_verify.svg" alt="">
@@ -569,7 +573,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col-md-4">
                         <div class="benefits__item">
                             <div class="benefits__media">
                                 <img src="assets/i/icon_notify.svg" alt="">
@@ -620,7 +624,7 @@
 
             <div class="benefits">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-md-4">
                         <div class="benefits__item">
                             <div class="benefits__media">
                                 <img src="assets/i/icon_global.svg" alt="">
@@ -630,7 +634,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col-md-4">
                         <div class="benefits__item">
                             <div class="benefits__media">
                                 <img src="assets/i/icon_straight.svg" alt="">
@@ -640,7 +644,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col-md-4">
                         <div class="benefits__item">
                             <div class="benefits__media">
                                 <img src="assets/i/icon_fast.svg" alt="">
@@ -662,8 +666,8 @@
 <section class="early-bird">
     <div class="block">
 
-        <h4 class="block__action-title  mb-25">
-            "Early bird” Officer<br>registration
+        <h4 class="block__action-title  mb-25  mt-15">
+            "Early bird” Officer registration
         </h4>
 
         <div class="text-center">
@@ -687,7 +691,7 @@
 
             <div class="benefits">
                 <div class="row mb-15">
-                    <div class="col">
+                    <div class="col-md-4">
                         <div class="benefits__item">
                             <div class="benefits__media">
                                 <img src="assets/i/icon_buildonblockchain.svg" alt="">
@@ -697,7 +701,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col-md-4">
                         <div class="benefits__item">
                             <div class="benefits__media">
                                 <img src="assets/i/icon_communitybased.svg" alt="">
@@ -707,7 +711,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col-md-4">
                         <div class="benefits__item">
                             <div class="benefits__media">
                                 <img src="assets/i/icon_multilevelverification.svg" alt="">
@@ -719,7 +723,7 @@
                 </div><!-- /.row -->
 
                 <div class="row">
-                    <div class="col">
+                    <div class="col-md-4">
                         <div class="benefits__item">
                             <div class="benefits__media">
                                 <img src="assets/i/icon_userrewardsystem.svg" alt="">
@@ -729,7 +733,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col-md-4">
                         <div class="benefits__item">
                             <div class="benefits__media">
                                 <img src="assets/i/icon_watchdog.svg" alt="">
@@ -739,7 +743,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col-md-4">
                         <div class="benefits__item">
                             <div class="benefits__media">
                                 <img src="assets/i/icon_knowledgebase.svg" alt="">
@@ -769,7 +773,7 @@
 
 
 
-<section class="team">
+<section class="team" id="team">
     <div class="team__inner">
         <h3 class="block__title">Executive team in Riga</h3>
     </div><!-- /.team__inner -->

@@ -85,7 +85,7 @@ gulp.task("css:build", function () {
         .pipe(plumber())
         .pipe(sass())
         .pipe(autoprefixer({
-            browsers: ["last 5 versions"],
+            browsers: ["last 10 versions"],
             cascade: true
         }))
         .pipe(cssbeautify())

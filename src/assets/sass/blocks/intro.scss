@@ -1,4 +1,7 @@
 .intro {
+    height: 100vh;
+    min-height: 620px;
+    padding-bottom: 100px;
     position: relative;
     z-index: 10;
 }
@@ -31,6 +34,10 @@
         position: absolute;
         left: 0;
         z-index: 2;
+    }
+
+    @media #{$media_height} {
+        height: 250px;
     }
 }
 
@@ -78,16 +85,53 @@
 
 .intro__content {
     width: 100%;
-    min-height: 407px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-bottom: 15px;
+    padding: 120px 15px 0 15px;
 
-    background: url("#{$img}police-hat.png") center top no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:before {
+        content: "";
+        display: block;
+        width: 571px;
+        height: 407px;
+        background: url("#{$img}police-hat-logo.png") center top no-repeat;
+
+        position: absolute;
+        top: -120px;
+        left: 50%;
+        z-index: -1;
+
+        transform: translateX(-50%);
+    }
 
     @media #{$media_height} {
-        min-height: 265px;
-        background-size: auto 93%;
+
+        &:before {
+            height: 300px;
+            top: -50px;
+            background-size: auto 100%;
+        }
+    }
+
+    @media #{$media_sm} {
+
+        &:before {
+            width: 100%;
+            max-width: 400px;
+            top: -35px;
+            background-size: 90% auto;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        &:before {
+            max-width: 290px;
+            top: 40px;
+            background-size: 90% auto;
+        }
     }
 }
 
@@ -110,7 +154,7 @@
 
     @media #{$media_height} {
         font-size: 2em;
-        margin: 20px 0 0;
+        margin: 40px 0 30px;
     }
 
     @media #{$media_sm} {

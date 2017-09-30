@@ -1,12 +1,18 @@
 .nav {
-    padding-top: 10px;
-    margin-bottom: 60px;
+    width: 100%;
+    padding: 20px 10px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 
     font-family: 'Gilroy', 'Roboto', sans-serif;
     text-align: center;
 
-    @media #{$media_height} {
-        margin-bottom: 20px;
+    &.fixed {
+        background-color: rgba($real-black, .9);
     }
 }
 

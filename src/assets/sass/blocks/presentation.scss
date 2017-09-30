@@ -1,8 +1,7 @@
 .presentation {
-    margin-top: -150px;
     position: relative;
-    z-index: 9;
-    padding: 60px 15px 0;
+    z-index: 10;
+    padding: 0 15px 0;
 
     background: url("#{$img}city-bg.png") center bottom no-repeat;
     background-size: cover;
