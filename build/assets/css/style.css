@@ -8507,7 +8507,10 @@ html.remodal-is-locked {
 
 .roadmap {
     padding: 30px 15px;
-    background: #111114;
+    background-image: url("../i/roadmap-top.png"), url("../i/roadmap-bottom.png");
+    background-color: #111114;
+    background-repeat: no-repeat;
+    background-position: center top, center bottom;
     border-top: 1px solid #333335;
     border-bottom: 1px solid #333335;
 }
