@@ -12,7 +12,7 @@
     position: relative;
     margin-left: -15px;
     margin-right: -15px;
-    padding: 70px 15px 0;
+    padding: 70px 0 0;
 
     background: url("#{$img}team-bg.png") center bottom no-repeat;
 
@@ -27,6 +27,10 @@
         bottom: 0;
         left: 0;
         z-index: 10;
+    }
+
+    @media #{$media_sm} {
+        height: 527px;
     }
 }
 
@@ -82,6 +86,7 @@
 
     font-size: 18px;
     font-weight: bold;
+    color: $white;
 
     a {
         font-size: 14px;
@@ -96,10 +101,12 @@
     font-weight: bold;
     font-size: 14px;
     text-transform: uppercase;
+    color: $white;
 }
 
 .team__text {
     font-size: 14px;
+    color: $white;
 }
 
 .team__blockquote {
@@ -116,5 +123,34 @@
     @media #{$media_sm} {
         margin: 15px 0;
         font-size: 18px;
+    }
+}
+
+
+.team__slider {
+    overflow: hidden;
+    display: block;
+    height: 400px;
+    margin: 133px 0 0;
+
+    position: relative;
+
+    @media #{$media_sm} {
+        margin-top: 30px;
+    }
+}
+
+.team__info {
+    max-width: 400px;
+    width: 100%;
+    margin: 40px auto 80px;
+
+    height: 107px;
+    overflow: hidden;
+
+    text-align: center;
+
+    &.slick-initialized {
+        height: auto;
     }
 }

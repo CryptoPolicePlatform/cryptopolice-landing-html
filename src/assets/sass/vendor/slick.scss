@@ -176,7 +176,6 @@ $slick-opacity-not-active: 0.25 !default;
     overflow: hidden;
     display: block;
     margin: 0;
-    padding: 0;
 
     &:focus {
         outline: none;
@@ -215,10 +214,11 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-slide {
-    float: left;
+    display: inline-block;
+    vertical-align: bottom;
     height: 100%;
     min-height: 1px;
-    padding: 0 20px;
+    padding: 0;
     display: none;
 
     &:focus {
@@ -238,7 +238,7 @@ $slick-opacity-not-active: 0.25 !default;
     }
 
     .slick-initialized & {
-        display: block;
+        display: inline-block;
     }
 
     .slick-loading & {
@@ -249,6 +249,19 @@ $slick-opacity-not-active: 0.25 !default;
         display: block;
         height: auto;
         border: 1px solid transparent;
+    }
+
+    img {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+
+    &.slick-current {
+
+        img {
+            -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+        }
     }
 }
 

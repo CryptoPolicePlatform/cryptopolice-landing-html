@@ -14,6 +14,11 @@
     &.fixed {
         background-color: rgba($real-black, .9);
     }
+
+    @media #{$media_sm} {
+       padding: 10px;
+        font-size: .9em;
+    }
 }
 
 .nav__item {

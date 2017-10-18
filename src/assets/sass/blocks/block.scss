@@ -33,6 +33,11 @@
         bottom: 10px;
         left: 0;
         z-index: 10;
+
+        @media #{$media_sm} {
+            position: static;
+            margin-top: 30px;
+        }
     }
 }
 
