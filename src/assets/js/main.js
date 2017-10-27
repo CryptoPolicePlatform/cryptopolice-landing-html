@@ -10,5 +10,6 @@
 //= components/parallax.js
 //= components/wow.js
 //= components/scroll.js
+//= components/slider.js
 //= components/slick.js
 

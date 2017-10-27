@@ -8,7 +8,7 @@
 }
 
 .team__inner {
-    height: 647px;
+    height: 500px;
     position: relative;
     margin-left: -15px;
     margin-right: -15px;
@@ -21,12 +21,16 @@
         display: block;
         width: 100%;
         height: 70px;
-        background: linear-gradient(rgba($real-black, 0), $real-black);
+        background: linear-gradient(rgba($real-black, 0), $real-black 85%);
 
         position: absolute;
         bottom: 0;
         left: 0;
         z-index: 10;
+    }
+
+    @media #{$media_md} {
+        height: 550px;
     }
 
     @media #{$media_sm} {
@@ -131,9 +135,14 @@
     overflow: hidden;
     display: block;
     height: 400px;
-    margin: 133px 0 0;
+    margin: 40px 0 0;
 
     position: relative;
+    display: none;
+
+    @media #{$media_md} {
+        display: block;
+    }
 
     @media #{$media_sm} {
         margin-top: 30px;
@@ -150,7 +159,13 @@
 
     text-align: center;
 
+    display: none;
+
     &.slick-initialized {
         height: auto;
+    }
+
+    @media #{$media_md} {
+        display: block;
     }
 }
