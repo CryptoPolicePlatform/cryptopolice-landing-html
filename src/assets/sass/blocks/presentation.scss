@@ -1,14 +1,13 @@
 .presentation {
     position: relative;
     z-index: 10;
-    padding: 0 15px 0;
-
-    background: url("#{$img}city-bg.png") center bottom no-repeat;
-    background-size: cover;
+    padding: 60px 15px 0;
 }
 
 .presentation__video {
-    margin: 55px 0;
+    width: 100%;
+    max-width: 610px;
+    margin: 135px auto 100px;
 }
 
 .presentation__footer {

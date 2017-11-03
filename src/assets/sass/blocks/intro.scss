@@ -94,12 +94,12 @@
     &:before {
         content: "";
         display: block;
-        width: 571px;
-        height: 407px;
+        width: 569px;
+        height: 406px;
         background: url("#{$img}police-hat-logo.png") center top no-repeat;
 
         position: absolute;
-        top: -120px;
+        top: -100px;
         left: 50%;
         z-index: -1;
 

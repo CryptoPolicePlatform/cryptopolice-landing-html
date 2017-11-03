@@ -94,6 +94,14 @@
     display: none;
 }
 
+.h100 {
+    height: 100%;
+}
+
+.justify-center {
+    align-items: center;
+}
+
 @media #{$media_sm} {
     .text-left-sm {
         text-align: left;

@@ -1,0 +1,83 @@
+.watch-video {
+    height: 238px;
+    margin-top: 70px;
+
+    background: #aa379c url("#{$img}watch-video-bg.jpg") left top no-repeat;
+    background-size: auto 100%;
+}
+
+.watch-video__photo {
+    height: 300px;
+
+    position: relative;
+    bottom: 28px;
+    z-index: 1;
+}
+
+.watch-video__content {
+    padding-left: 20px;
+}
+
+.watch-video__title,
+.watch-video__subtitle {
+    font-family: 'Gilroy', sans-serif;
+    line-height: 1.2;
+    font-weight: 300;
+    color: $white;
+}
+
+.watch-video__title {
+    font-size: 24px;
+}
+
+.watch-video__subtitle {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.watch-video__name {
+    margin-bottom: 10px;
+
+    font-family: 'Gilroy', sans-serif;
+    line-height: 1.2;
+    font-size: 30px;
+    color: $white;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.watch-video__prof {
+    font-family: 'Gilroy', sans-serif;
+    line-height: 1.2;
+    font-weight: 300;
+    color: $white;
+    font-size: 18px;
+}
+
+.watch-video__btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px 15px;
+    margin-top: 20px;
+
+    background: transparent;
+    border: 3px solid $white;
+    border-radius: 30px;
+
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 900;
+    color: $white;
+    font-size: 18px;
+    line-height: 1.1;
+    text-align: center;
+    text-transform: uppercase;
+
+    transition: color .1s linear, background .1s linear;
+
+    &:hover,
+    &:focus {
+        background-color: $white;
+        color: $black;
+        text-decoration: none;
+    }
+}
