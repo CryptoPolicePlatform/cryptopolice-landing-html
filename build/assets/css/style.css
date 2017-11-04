@@ -7480,101 +7480,10 @@ button.swiper-pagination-bullet {
 
 .intro {
     height: 100vh;
-    min-height: 620px;
+    min-height: 640px;
     padding-bottom: 100px;
     position: relative;
     z-index: 10;
-}
-
-.intro__top-left,
-.intro__top-right,
-.intro__bottom-left,
-.intro__bottom-right {
-    width: 60%;
-    height: 350px;
-    position: absolute;
-    z-index: 1;
-}
-
-.intro__top-left:before,
-  .intro__top-right:before,
-  .intro__bottom-left:before,
-  .intro__bottom-right:before {
-    content: "";
-    width: 100px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 2;
-}
-
-.intro__top-left:after,
-  .intro__top-right:after,
-  .intro__bottom-left:after,
-  .intro__bottom-right:after {
-    content: "";
-    width: 100%;
-    height: 100px;
-    position: absolute;
-    left: 0;
-    z-index: 2;
-}
-
-@media (max-height: 880px) {
-    .intro__top-left,
-    .intro__top-right,
-    .intro__bottom-left,
-    .intro__bottom-right {
-        height: 250px;
-    }
-}
-
-.intro__top-left,
-.intro__top-right {
-    top: -20px;
-}
-
-.intro__top-left:after,
-  .intro__top-right:after {
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), black);
-    background: linear-gradient(rgba(0, 0, 0, 0.1), black);
-    bottom: 0;
-}
-
-.intro__bottom-left,
-.intro__bottom-right {
-    bottom: 0;
-}
-
-.intro__bottom-left:after,
-  .intro__bottom-right:after {
-    background: -webkit-linear-gradient(black, rgba(0, 0, 0, 0.1));
-    background: linear-gradient(black, rgba(0, 0, 0, 0.1));
-    top: 0;
-}
-
-.intro__top-left,
-.intro__bottom-left {
-    left: 0;
-}
-
-.intro__top-left:before,
-  .intro__bottom-left:before {
-    left: 0;
-    background: -webkit-linear-gradient(left, black, rgba(0, 0, 0, 0.1));
-    background: linear-gradient(to right, black, rgba(0, 0, 0, 0.1));
-}
-
-.intro__top-right,
-.intro__bottom-right {
-    right: 0;
-}
-
-.intro__top-right:before,
-  .intro__bottom-right:before {
-    right: 0;
-    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.1), black);
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), black);
 }
 
 .intro__content {
