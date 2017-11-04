@@ -1,5 +1,9 @@
 .watchdog {
     padding: 80px 15px;
+
+    @media #{$media_sm} {
+        padding: 30px 15px;
+    }
 }
 
 .watchdog__content {
@@ -8,6 +12,20 @@
     height: 265px;
     margin: 80px auto 40px;
     position: relative;
+
+    @media #{$media_sm} {
+        display: none;
+    }
+}
+
+.watchdog__mobile {
+    display: none;
+
+    @media #{$media_sm} {
+        display: block;
+        max-width: 100%;
+        margin-top: 40px;
+    }
 }
 
 .watchdog__item {

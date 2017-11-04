@@ -1,3 +1,7 @@
 .mission {
     padding: 60px 15px;
+
+    @media #{$media_sm} {
+        padding: 30px 15px;
+    }
 }
