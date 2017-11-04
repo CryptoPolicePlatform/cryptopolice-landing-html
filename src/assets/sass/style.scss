@@ -10,8 +10,7 @@ body {
     line-height: $default_line_height;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    background: $real-black url("#{$img}intro-bg.jpg") center top no-repeat;
+    background-color: $real-black;
 }
 
 

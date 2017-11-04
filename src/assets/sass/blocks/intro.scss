@@ -1,9 +1,15 @@
+.space {
+    background: url("#{$img}space-bottom.jpg") center bottom 250px no-repeat;
+}
+
 .intro {
     height: 100vh;
     min-height: 640px;
     padding-bottom: 100px;
     position: relative;
     z-index: 10;
+
+    background: url("#{$img}space-top.png") center top no-repeat;
 }
 
 .intro__content {
