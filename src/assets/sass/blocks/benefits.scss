@@ -1,5 +1,9 @@
 .benefits {
-    margin: 50px 0 0;
+    margin: 50px 0;
+
+    @media #{$media_sm} {
+        margin-bottom: 0;
+    }
 }
 
 .benefits__item {

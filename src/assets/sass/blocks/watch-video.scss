@@ -1,6 +1,5 @@
 .watch-video {
     height: 238px;
-    margin-top: 70px;
     padding: 0 15px;
 
     background: #aa379c url("#{$img}watch-video-bg.jpg") left top no-repeat;
@@ -8,10 +7,6 @@
 
     @media (max-width: 900px) {
         height: auto;
-    }
-
-    @media #{$media_sm} {
-        margin-top: 0;
     }
 }
 

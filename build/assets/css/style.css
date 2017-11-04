@@ -9698,7 +9698,13 @@ button.swiper-pagination-bullet {
 }
 
 .benefits {
-    margin: 50px 0 0;
+    margin: 50px 0;
+}
+
+@media (max-width: 767px) {
+    .benefits {
+        margin-bottom: 0;
+    }
 }
 
 .benefits__item {
@@ -9846,7 +9852,6 @@ button.swiper-pagination-bullet {
 
 .watch-video {
     height: 238px;
-    margin-top: 70px;
     padding: 0 15px;
     background: #aa379c url("../i/watch-video-bg.jpg") left top no-repeat;
     background-size: auto 100%;
@@ -9855,12 +9860,6 @@ button.swiper-pagination-bullet {
 @media (max-width: 900px) {
     .watch-video {
         height: auto;
-    }
-}
-
-@media (max-width: 767px) {
-    .watch-video {
-        margin-top: 0;
     }
 }
 
