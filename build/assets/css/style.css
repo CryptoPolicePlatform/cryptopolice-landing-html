@@ -9363,13 +9363,14 @@ button.swiper-pagination-bullet {
 }
 
 .roadmap {
-    padding: 30px 15px;
-    background-image: url("../i/roadmap-top.png"), url("../i/roadmap-bottom.png");
-    background-color: #111114;
-    background-repeat: no-repeat;
-    background-position: center top, center bottom;
-    border-top: 1px solid #333335;
-    border-bottom: 1px solid #333335;
+    background: url("../i/team-bg2.png") center bottom no-repeat;
+    padding: 0 15px 330px;
+}
+
+@media (max-width: 767px) {
+    .roadmap {
+        padding-bottom: 100px;
+    }
 }
 
 .timeline {
@@ -9592,7 +9593,7 @@ button.swiper-pagination-bullet {
 .join__list-item {
     display: inline-block;
     vertical-align: middle;
-    margin: 0 30px 15px;
+    margin: 0 20px 15px;
 }
 
 @media (max-width: 767px) {
@@ -10472,14 +10473,7 @@ button.swiper-pagination-bullet {
 }
 
 .team {
-    background: #000 url("../i/team-bg2.png") center bottom no-repeat;
-    padding: 0 15px 330px;
-}
-
-@media (max-width: 767px) {
-    .team {
-        padding-bottom: 100px;
-    }
+    padding: 0 15px;
 }
 
 .team__inner {

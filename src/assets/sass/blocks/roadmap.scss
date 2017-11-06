@@ -1,10 +1,8 @@
 .roadmap {
-    padding: 30px 15px;
+    background: url("#{$img}team-bg2.png") center bottom no-repeat;
+    padding: 0 15px 330px;
 
-    background-image: url("#{$img}roadmap-top.png"), url("#{$img}roadmap-bottom.png");
-    background-color: #111114;
-    background-repeat: no-repeat;
-    background-position: center top, center bottom;
-    border-top: 1px solid #333335;
-    border-bottom: 1px solid #333335;
+    @media #{$media_sm} {
+        padding-bottom: 100px;
+    }
 }
