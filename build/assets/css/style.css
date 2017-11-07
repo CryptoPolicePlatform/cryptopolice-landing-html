@@ -7482,6 +7482,12 @@ button.swiper-pagination-bullet {
     background: url("../i/space-bottom.jpg") center bottom 250px no-repeat;
 }
 
+@media (max-width: 767px) {
+    .space {
+        background-position: center bottom 90px;
+    }
+}
+
 .intro {
     height: 100vh;
     min-height: 640px;
@@ -7536,7 +7542,7 @@ button.swiper-pagination-bullet {
 @media (max-width: 480px) {
     .intro__content:before {
         max-width: 290px;
-        top: 40px;
+        top: -10px;
         background-size: 90% auto;
     }
 }
@@ -7581,6 +7587,7 @@ button.swiper-pagination-bullet {
 @media (max-width: 767px) {
     .intro__btns .btn {
         display: block;
+        margin: 0 auto 5px;
     }
 }
 
@@ -7626,7 +7633,6 @@ button.swiper-pagination-bullet {
 @media (max-width: 767px) {
     .block__action--intro {
         position: static;
-        margin-top: 30px;
     }
 }
 
@@ -7750,6 +7756,12 @@ button.swiper-pagination-bullet {
 @media (max-height: 880px) {
     .timer {
         margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .timer {
+        margin: 20px 0 50px;
     }
 }
 
@@ -8832,6 +8844,12 @@ button.swiper-pagination-bullet {
     width: 100%;
     max-width: 610px;
     margin: 135px auto 100px;
+}
+
+@media (max-width: 767px) {
+    .presentation__video {
+        margin-top: 100px;
+    }
 }
 
 .presentation__footer {
@@ -11188,7 +11206,8 @@ button.swiper-pagination-bullet {
     margin: 0;
 }
 
-.visible-sm-di {
+.visible-sm-di,
+.visible-sm {
     display: none;
 }
 
@@ -11210,6 +11229,10 @@ button.swiper-pagination-bullet {
 
     .visible-sm-di {
         display: inline;
+    }
+
+    .visible-sm {
+        display: block;
     }
 
     .hidden-sm {

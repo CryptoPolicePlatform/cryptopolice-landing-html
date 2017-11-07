@@ -90,7 +90,8 @@
 
 .no-margin { margin: 0; }
 
-.visible-sm-di {
+.visible-sm-di,
+.visible-sm {
     display: none;
 }
 
@@ -102,6 +103,7 @@
     align-items: center;
 }
 
+
 @media #{$media_sm} {
     .text-left-sm {
         text-align: left;
@@ -109,6 +111,10 @@
 
     .visible-sm-di {
         display: inline;
+    }
+
+    .visible-sm {
+        display: block;
     }
 
     .hidden-sm {

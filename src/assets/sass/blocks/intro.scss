@@ -1,5 +1,9 @@
 .space {
     background: url("#{$img}space-bottom.jpg") center bottom 250px no-repeat;
+
+    @media #{$media_sm} {
+        background-position: center bottom 90px;
+    }
 }
 
 .intro {
@@ -58,7 +62,7 @@
 
         &:before {
             max-width: 290px;
-            top: 40px;
+            top: -10px;
             background-size: 90% auto;
         }
     }
@@ -99,6 +103,7 @@
 
         @media #{$media_sm} {
             display: block;
+            margin: 0 auto 5px;
         }
     }
 }

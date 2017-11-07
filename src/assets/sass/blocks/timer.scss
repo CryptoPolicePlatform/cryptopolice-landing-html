@@ -8,6 +8,10 @@
     @media #{$media_height} {
         margin-bottom: 50px;
     }
+
+    @media #{$media_sm} {
+        margin: 20px 0 50px;
+    }
 }
 
 .timer__title {
