@@ -502,7 +502,7 @@ $select-height:                 36px;
 $select-font-size:              1em;
 $select-line-height:            1.2;
 $select-color:                  $black;
-$select-padding:                0 3em 0 .8em;
+$select-padding:                0 2.3em 0 .8em;
 
 $select-divider-width: 1px;
 $select-divider-right-indent:   2em;
@@ -514,7 +514,7 @@ $select-triangle-size:          5px;
 $select-triangle-color:         currentColor;
 $select-triangle-top:           50%;
 $select-triangle-right:         .75em;
-$select-triangle-zindex:        .1;
+$select-triangle-zindex:        1;
 
 $select-multiple-height:         100px;
 $select-multiple-padding:        .8em;

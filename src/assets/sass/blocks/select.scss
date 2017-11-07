@@ -1,25 +1,10 @@
 .select {
     width: 100%;
-    height: $select-height;
+    height: 31px;
 
-    color: $select-color;
+    color: $white;
 
     position: relative;
-
-    &:before {
-        content: "";
-        display: block;
-        width: $select-divider-width;
-        height: 100%;
-
-        background-color: $select-divider-color;
-        pointer-events: none;
-
-        position: absolute;
-        top: 0;
-        right: $select-divider-right;
-        z-index: $select-divider-zindex;
-    }
 
     &:after {
         content: "";
@@ -43,17 +28,16 @@
         height: 100%;
         padding: $select-padding;
 
-        box-shadow: $input-shadow-default;
-        background-color: $input-bg;
+        background-color: transparent;
         border-radius: 0;
-        border: 0;
+        border: 1px solid $white;
 
         font-family: inherit;
-        font-size: $select-font-size;
+        font-size: .9rem;
         line-height: $select-line-height;
-        color: $select-color;
+        color: $white;
 
-        transition: background-color .1s linear;
+        transition: border-color .1s linear;
 
         &::-ms-expand {
             display: none;
@@ -61,7 +45,7 @@
 
         &:focus {
             outline: 0;
-            background-color: $input-bg-focus;
+            border-color: #cb8abc;
         }
 
         &:hover {

@@ -72,6 +72,10 @@
     font-size: 36px;
     line-height: 1.1;
 
+    &--sm {
+        font-size: 1.5em;
+    }
+
     @media #{$media_sm} {
         font-size: 1.5em;
     }

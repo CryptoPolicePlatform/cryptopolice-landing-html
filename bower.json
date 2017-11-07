@@ -10,6 +10,7 @@
     "remodal": "https://github.com/VodkaBears/Remodal.git#^1.1.0",
     "parallax.js": "https://github.com/pixelcog/parallax.js.git#^1.4.2",
     "parallax-background": "https://github.com/erensuleymanoglu/parallax-background.git",
+    "rangeslider.js": "https://github.com/andreruffert/rangeslider.js.git#^2.2.1",
     "slick-carousel": "https://github.com/kenwheeler/slick.git#^1.8.1"
   }
 }

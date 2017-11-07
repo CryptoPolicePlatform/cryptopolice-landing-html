@@ -11,15 +11,19 @@
 }
 
 .form__group {
-    margin-bottom: $form-group-margin-bottom;
+    margin-bottom: 20px;
 
     &--inline {
         display: inline-block;
         vertical-align: top;
     }
 
+    &--sm {
+        margin-bottom: 10px;
+    }
+
     &--m {
-        margin-bottom: 2em;
+        margin-bottom: 40px;
     }
 }
 

@@ -9,4 +9,5 @@
 //= components/scroll.js
 //= components/slider.js
 //= components/slick.js
+//= components/rangeslider.js
 

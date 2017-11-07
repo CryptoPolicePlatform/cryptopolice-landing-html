@@ -5,12 +5,12 @@
 }
 
 .rangeslider {
-    background: $rangeslider-bg;
+    background: linear-gradient(#bbbbbb 50%, #919191 51%, #919191 100%);
     position: relative;
 }
 
 .rangeslider--horizontal {
-    height: $rangeslider-horizontal-height;
+    height: 10px;
     width: 100%;
 }
 
@@ -25,13 +25,15 @@
 }
 
 .rangeslider__fill {
-    background: $rangeslider-fill-color;
+    background: linear-gradient(#cb8abc 50%, #a14b8a 51%, #a14b8a 100%);
     position: absolute;
 }
+
 .rangeslider--horizontal .rangeslider__fill {
     top: 0;
     height: 100%;
 }
+
 .rangeslider--vertical .rangeslider__fill {
     bottom: 0;
     width: 100%;
@@ -39,43 +41,19 @@
 
 .rangeslider__handle {
     display: block;
-    width: $rangeslider-handle-width;
-    height: $rangeslider-handle-height;
+    width: 18px;
+    height: 18px;
 
     cursor: pointer;
-    background-color: $rangeslider-handle-bg;
-    border: $rangeslider-handle-border;
-    border-radius: $rangeslider-handle-radius;
-    box-shadow: $rangeslider-handle-shadow;
+    background: linear-gradient(#da97cc 50%, #ba59a4 51%, #ba59a4 100%);
+    border-radius: 50%;
 
     position: absolute;
     z-index: $rangeslider-handle-zindex;
-
-    &:before,
-    &:after {
-        font-family: fontAwesome;
-        font-size: $rangeslider-handle-arrow-size;
-        line-height: $rangeslider-handle-arrow-line-height;
-        color: $rangeslider-handle-arrow-color;
-
-        position: absolute;
-        top: $rangeslider-handle-arrow-top;
-        z-index: $rangeslider-handle-arrow-zindex;
-    }
-
-    &:before {
-        content: $rangeslider-handle-arrow-left-icon;
-        left: $rangeslider-handle-arrow-left;
-    }
-
-    &:after {
-        content: $rangeslider-handle-arrow-right-icon;
-        right: $rangeslider-handle-arrow-right;
-    }
 }
 
 .rangeslider--horizontal .rangeslider__handle {
-    top: $rangeslider-handle-horizontal-top;
+    top: -4px;
     touch-action: pan-y;
 }
 
@@ -85,5 +63,23 @@
 }
 
 .rangeslider__wrapper {
-    padding-top: 15px;
+    padding-top: 8px;
+    position: relative;
+}
+
+.rangeslider__hint {
+    position: absolute;
+    top: 100%;
+    margin-top: 6px;
+
+    color: $black;
+    font-size: .9em;
+
+    &.min {
+        left: 0;
+    }
+
+    &.max {
+        right: 0;
+    }
 }

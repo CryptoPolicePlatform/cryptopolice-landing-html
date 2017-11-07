@@ -166,3 +166,25 @@
         font-size: 16px;
     }
 }
+
+.back__btn {
+    display: inline-block;
+    padding: 7px 40px;
+
+    border: 0;
+    background: linear-gradient(#464c58 50%, #282d38 51%, #282d38 100%);
+    border-radius: 5px;
+
+    color: $white;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+
+    transition: opacity .1s linear;
+
+    &:hover {
+        opacity: .9;
+        text-decoration: none;
+    }
+}
