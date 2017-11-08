@@ -21,4 +21,14 @@ $(function() {
         modal.open();
     });
 
+
+
+    var dont_miss_modal = $('#dont_miss_modal').remodal();
+    glio.init(
+      [ 'top', function () {
+          dont_miss_modal.open();
+        }
+      ]
+    );
+
 });

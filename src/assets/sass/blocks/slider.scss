@@ -13,7 +13,7 @@
     position: absolute;
     bottom: 0;
 
-    @media #{$media_md} {
+    @media (max-width: 1199px) {
         display: none;
     }
 }
@@ -22,7 +22,7 @@
     position: relative;
     width: 160px;
     height: 250px;
-    margin-left: -85px;
+    margin-left: -95px;
     transition: all 200ms linear;
     text-align: center;
 }
@@ -45,6 +45,10 @@
     overflow: hidden;
 
     text-align: center;
+
+    @media (max-width: 1199px) {
+        display: none;
+    }
 }
 
 .slider__info-item {

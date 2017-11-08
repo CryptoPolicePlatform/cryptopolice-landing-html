@@ -49,24 +49,12 @@
                 <img class="img  center-block  visible-sm" src="assets/i/intro_text_mob.png" alt="">
 
                 <div class="timer">
-                    <div class="timer__title">Pre sale 25th october</div>
-
-                    <div class="timer__item  timer__item--days">
-                        <div class="timer__inner">10</div>
-                    </div>
-                    <div class="timer__item  timer__item--hours">
-                        <div class="timer__inner">22</div>
-                    </div>
-                    <div class="timer__item  timer__item--min">
-                        <div class="timer__inner">11</div>
-                    </div>
-                    <div class="timer__item  timer__item--sec">
-                        <div class="timer__inner">55</div>
-                    </div>
+                    <div class="timer__title">Pre sale 25th November</div>
+                    <div id="timer"></div>
                 </div>
 
                 <div class="intro__btns">
-                    <a class="btn  btn--o-gradient" href="#">
+                    <a class="btn  btn--o-gradient" href="#" data-toggle="remodal" data-target="#subscribe_modal">
                         <span class="btn__inner">Subscribe</span>
                     </a>
 
@@ -721,50 +709,43 @@
         <h3 class="block__title">Executive team in Riga</h3>
 
         <ul class="slider" id="team_slider_desktop">
-            <li style="z-index: 1" data-idx="0"><img src="assets/i/team/igors.png" alt=""></li>
-            <li style="z-index: 2" data-idx="1"><img src="assets/i/team/igors.png" alt=""></li>
-            <li style="z-index: 3" data-idx="2"><img src="assets/i/team/elvijs.png" alt=""></li>
-            <li style="z-index: 4" data-idx="3"><img src="assets/i/team/romans.png" alt=""></li>
-            <li style="z-index: 5" data-idx="4"><img src="assets/i/team/karolina.png" alt=""></li>
-            <li style="z-index: 6" data-idx="5" class="front"><img src="assets/i/team/arturs.png" alt=""></li>
-            <li style="z-index: 5" data-idx="6"><img src="assets/i/team/agris.png" alt=""></li>
-            <li style="z-index: 4" data-idx="7"><img src="assets/i/team/aivis.png" alt=""></li>
-            <li style="z-index: 3" data-idx="8"><img src="assets/i/team/aleksandrs.png" alt=""></li>
-            <li style="z-index: 2" data-idx="9"><img src="assets/i/team/artursB.png" alt=""></li>
-            <li style="z-index: 1" data-idx="10"><img src="assets/i/team/chalis.png" alt=""></li>
+            <li style="z-index: 1" data-idx="0"><img src="assets/i/team/borsciks.png" alt=""></li>
+            <li style="z-index: 2" data-idx="1"><img src="assets/i/team/natalija.png" alt=""></li>
+            <li style="z-index: 3" data-idx="2"><img src="assets/i/team/guna.png" alt=""></li>
+            <li style="z-index: 4" data-idx="3"><img src="assets/i/team/maksims.png" alt=""></li>
+            <li style="z-index: 5" data-idx="4"><img src="assets/i/team/igors.png" alt=""></li>
+            <li style="z-index: 6" data-idx="5"><img src="assets/i/team/elvijs.png" alt=""></li>
+            <li style="z-index: 7" data-idx="6"><img src="assets/i/team/romans.png" alt=""></li>
+            <li style="z-index: 8" data-idx="7"><img src="assets/i/team/karolina.png" alt=""></li>
+            <li style="z-index: 9" data-idx="8" class="front"><img src="assets/i/team/arturs.png" alt=""></li>
+            <li style="z-index: 8" data-idx="9"><img src="assets/i/team/agris.png" alt=""></li>
+            <li style="z-index: 7" data-idx="10"><img src="assets/i/team/oskars.png" alt=""></li>
+            <li style="z-index: 6" data-idx="11"><img src="assets/i/team/aleksandrs.png" alt=""></li>
+            <li style="z-index: 5" data-idx="12"><img src="assets/i/team/aivis.png" alt=""></li>
+            <li style="z-index: 4" data-idx="13"><img src="assets/i/team/artursB.png" alt=""></li>
+            <li style="z-index: 3" data-idx="14"><img src="assets/i/team/chalis.png" alt=""></li>
+            <li style="z-index: 2" data-idx="15"><img src="assets/i/team/dmitrijs.png" alt=""></li>
+            <li style="z-index: 1" data-idx="16"><img src="assets/i/team/juris.png" alt=""></li>
         </ul>
 
         <div class="team__slider" id="team_slider">
-            <div class="slick-item">
-                <img src="assets/i/team/igors.png" alt="">
-            </div>
-            <div class="slick-item">
-                <img src="assets/i/team/elvijs.png" alt="">
-            </div>
-            <div class="slick-item">
-                <img src="assets/i/team/romans.png" alt="">
-            </div>
-            <div class="slick-item">
-                <img src="assets/i/team/karolina.png" alt="">
-            </div>
-            <div class="slick-item active">
-                <img src="assets/i/team/arturs.png" alt="">
-            </div>
-            <div class="slick-item">
-                <img src="assets/i/team/agris.png" alt="">
-            </div>
-            <div class="slick-item">
-                <img src="assets/i/team/aivis.png" alt="">
-            </div>
-            <div class="slick-item">
-                <img src="assets/i/team/aleksandrs.png" alt="">
-            </div>
-            <div class="slick-item">
-                <img src="assets/i/team/artursB.png" alt="">
-            </div>
-            <div class="slick-item">
-                <img src="assets/i/team/chalis.png" alt="">
-            </div>
+            <div class="slick-item"><img src="assets/i/team/borsciks.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/natalija.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/guna.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/maksims.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/igors.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/elvijs.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/romans.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/karolina.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/arturs.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/agris.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/oskars.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/aleksandrs.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/aivis.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/artursB.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/chalis.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/dmitrijs.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/juris.png" alt=""></div>
         </div>
     </div><!-- /.team__inner -->
 
@@ -831,6 +812,42 @@
 
         <div class="slider__info-item" data-idx="10">
             <div class="team__name">Maksim Maksimovich 11 <a href="#"><i class="fa fa-linkedin-square"></i></a></div>
+            <div class="team__job">Crypto police CEO</div>
+            <div class="team__text">Ipsum primis in faucibus orci luctus et ultrices posuere cubilia tristique, ligula eu placerat</div>
+        </div>
+
+        <div class="slider__info-item" data-idx="11">
+            <div class="team__name">Maksim Maksimovich 12 <a href="#"><i class="fa fa-linkedin-square"></i></a></div>
+            <div class="team__job">Crypto police CEO</div>
+            <div class="team__text">Ipsum primis in faucibus orci luctus et ultrices posuere cubilia tristique, ligula eu placerat</div>
+        </div>
+
+        <div class="slider__info-item" data-idx="12">
+            <div class="team__name">Maksim Maksimovich 13 <a href="#"><i class="fa fa-linkedin-square"></i></a></div>
+            <div class="team__job">Crypto police CEO</div>
+            <div class="team__text">Ipsum primis in faucibus orci luctus et ultrices posuere cubilia tristique, ligula eu placerat</div>
+        </div>
+
+        <div class="slider__info-item" data-idx="13">
+            <div class="team__name">Maksim Maksimovich 14 <a href="#"><i class="fa fa-linkedin-square"></i></a></div>
+            <div class="team__job">Crypto police CEO</div>
+            <div class="team__text">Ipsum primis in faucibus orci luctus et ultrices posuere cubilia tristique, ligula eu placerat</div>
+        </div>
+
+        <div class="slider__info-item" data-idx="14">
+            <div class="team__name">Maksim Maksimovich 15 <a href="#"><i class="fa fa-linkedin-square"></i></a></div>
+            <div class="team__job">Crypto police CEO</div>
+            <div class="team__text">Ipsum primis in faucibus orci luctus et ultrices posuere cubilia tristique, ligula eu placerat</div>
+        </div>
+
+        <div class="slider__info-item" data-idx="15">
+            <div class="team__name">Maksim Maksimovich 16 <a href="#"><i class="fa fa-linkedin-square"></i></a></div>
+            <div class="team__job">Crypto police CEO</div>
+            <div class="team__text">Ipsum primis in faucibus orci luctus et ultrices posuere cubilia tristique, ligula eu placerat</div>
+        </div>
+
+        <div class="slider__info-item" data-idx="16">
+            <div class="team__name">Maksim Maksimovich 17 <a href="#"><i class="fa fa-linkedin-square"></i></a></div>
             <div class="team__job">Crypto police CEO</div>
             <div class="team__text">Ipsum primis in faucibus orci luctus et ultrices posuere cubilia tristique, ligula eu placerat</div>
         </div>
@@ -1118,6 +1135,34 @@
         </div><!-- /.block -->
     </div><!-- /.footer__inner -->
 </footer><!-- /.footer -->
+
+
+
+<div class="remodal" id="subscribe_modal" role="dialog">
+    <div class="remodal__inner">
+        <button data-remodal-action="cancel" class="remodal__close" type="button">X</button>
+        <div class="remodal__title">subscribe</div>
+        <form action="/" method="post">
+            <input class="remodal__input" type="text" placeholder="your name">
+            <input class="remodal__input" type="email" placeholder="email address">
+            <button class="remodal__btn" type="submit">submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+<div class="remodal" id="dont_miss_modal" role="dialog">
+    <div class="remodal__inner">
+        <button data-remodal-action="cancel" class="remodal__close" type="button">X</button>
+        <div class="remodal__title">Do not miss the news! Subscribe!</div>
+        <form action="/" method="post">
+            <input class="remodal__input" type="text" placeholder="your name">
+            <input class="remodal__input" type="email" placeholder="email address">
+            <button class="remodal__btn" type="submit">submit</button>
+        </form>
+    </div>
+</div>
 
 
 

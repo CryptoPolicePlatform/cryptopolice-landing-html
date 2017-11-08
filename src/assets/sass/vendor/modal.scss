@@ -1,16 +1,3 @@
-/*
- *  Remodal - v1.1.0
- *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
- *  http://vodkabears.github.io/remodal/
- *
- *  Made by Ilya Makarov
- *  Under MIT License
- */
-
-/* ==========================================================================
-   Remodal's necessary styles
-   ========================================================================== */
-
 /* Hide scroll bar */
 
 html.remodal-is-locked {
@@ -160,52 +147,129 @@ html.remodal-is-locked {
     vertical-align: middle;
 }
 
-/* Close button */
+.remodal__title {
+    margin-bottom: 30px;
 
-.remodal-close {
-    position: absolute;
-    top: $modal-close-position-top;
-    right: $modal-close-position-right;
-
-    display: block;
-    overflow: visible;
-
-    width: $modal-close-size;
-    height: $modal-close-size;
-    margin: 0;
-    padding: 0;
-
-    cursor: pointer;
-    transition: color .2s;
-    text-decoration: none;
-
-    color: $modal-close-color;
-    border: 0;
-    outline: 0;
-    background: transparent;
-}
-
-.remodal-close:hover,
-.remodal-close:focus {
-    color: $black;
-}
-
-.remodal-close:before {
-    font-family: fontAwesome;
-    font-size: $modal-close-font-size;
-    line-height: $modal-close-size;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    display: block;
-
-    width: $modal-close-size;
-
-    content: $modal-close-icon;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 28px;
+    line-height: 1.1;
+    color: $white;
+    font-weight: 900;
+    text-transform: uppercase;
     text-align: center;
 }
+
+.remodal {
+    padding: 7px;
+
+    border-radius: 10px;
+    background-color: rgba($white, .1);
+}
+
+.remodal__inner {
+    padding: 70px 65px 50px;
+    position: relative;
+
+    border-radius: 10px;
+    background: linear-gradient(#4c48be 50%, #a14b8a 100%);
+
+    &:before {
+        content: "";
+        display: block;
+        width: 125px;
+        height: 124px;
+
+        background: url("#{$img}mail-ico.png") center no-repeat;
+
+        position: absolute;
+        left: 50%;
+        top: -80px;
+        z-index: 5;
+        transform: translateX(-50%);
+    }
+
+    @media (max-width: 535px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.remodal__input {
+    display: block;
+    width: 100%;
+    height: 55px;
+    margin-bottom: 13px;
+
+    background-color: transparent;
+    border: 1px solid $white;
+    border-radius: 10px;
+
+    font-family: 'Gilroy', sans-serif;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+
+    transition: border-color .1s linear;
+
+    &:focus {
+        border-color: $yellow;
+        outline: 0;
+    }
+
+    &::placeholder {
+        color: $white;
+    }
+}
+
+.remodal__btn {
+    display: block;
+    width: 100%;
+    height: 52px;
+
+    font-family: 'Gilroy', sans-serif;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+    cursor: pointer;
+
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(#4b48bf 50%, #333096 51%, #333096 100%);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+
+    transition: opacity .1s linear;
+
+    &:hover {
+        opacity: .9;
+    }
+}
+
+.remodal__close {
+    width: 28px;
+    height: 28px;
+
+    font-size: 0;
+    color: transparent;
+
+    border: 0;
+    background: $white url("#{$img}remodal-close.png") center no-repeat;
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+
+    &:focus {
+        outline: 0;
+    }
+}
+
 
 /* Keyframes
    ========================================================================== */

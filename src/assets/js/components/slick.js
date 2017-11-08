@@ -23,7 +23,7 @@ $(function() {
         centerPadding: "0",
         focusOnSelect: true,
         swipeToSlide: true,
-        initialSlide: 4,
+        initialSlide: 8,
         asNavFor: "#team_info"
     });
 
@@ -36,7 +36,7 @@ $(function() {
         asNavFor: "#team_slider",
         swipe: false,
         fade: true,
-        initialSlide: 4
+        initialSlide: 8
     });
 
 });

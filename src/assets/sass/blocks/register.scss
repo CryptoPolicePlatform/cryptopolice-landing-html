@@ -48,16 +48,8 @@
     padding-right: 40px;
 
     @media #{$media_sm} {
-        order: 2;
         padding-right: 0;
-        margin-top: 40px;
-    }
-}
-
-.register__right {
-
-    @media #{$media_sm} {
-        order: 1;
+        margin-bottom: 40px;
     }
 }
 

@@ -958,14 +958,14 @@ $navbar-dark-border:                    0;
 
 /* 34. Modals
 =========================*/
-$modal-max-width:               700px;
+$modal-max-width:               535px;
 $modal-color:                   $black;
 $modal-bg:                      $white;
 $modal-margin-bottom:           10px;
 $modal-padding:                 35px;
 
 /* Overlay */
-$modal-overlay:                 rgba(43, 46, 56, 0.9);
+$modal-overlay:                 rgba($real-black, 0.9);
 $modal-overlay-ie:              $black;
 
 /* Animation */
