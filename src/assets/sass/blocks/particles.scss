@@ -1,0 +1,17 @@
+.particles {
+    width: 60%;
+    height: 400px;
+
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+
+    &--left {
+        left: 0;
+    }
+
+    &--right {
+        right: 0;
+    }
+
+}
