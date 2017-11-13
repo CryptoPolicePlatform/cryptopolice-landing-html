@@ -5990,14 +5990,15 @@ html.remodal-is-locked {
   height: 397px;
   margin: 70px auto 0;
   position: relative; }
+  .escrow__content--sm {
+    display: none; }
   @media (max-width: 830px) {
     .escrow__content {
-      width: 550px;
-      height: 327px; } }
-  @media (max-width: 580px) {
-    .escrow__content {
-      width: 280px;
-      height: 187px; } }
+      display: none; }
+      .escrow__content--sm {
+        display: block;
+        max-width: 100%;
+        margin: 40px auto 0; } }
 
 .escrow__item {
   position: absolute; }
@@ -6007,78 +6008,30 @@ html.remodal-is-locked {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
-    @media (max-width: 580px) {
-      .escrow__item--1 {
-        width: 150px; } }
   .escrow__item--2 {
     top: 90px;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
-    @media (max-width: 580px) {
-      .escrow__item--2 {
-        top: 70px;
-        width: 20px; } }
   .escrow__item--3 {
     top: 150px;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
-    @media (max-width: 830px) {
-      .escrow__item--3 {
-        width: 130px; } }
-    @media (max-width: 580px) {
-      .escrow__item--3 {
-        width: 60px;
-        top: 105px; } }
   .escrow__item--4 {
     top: 190px;
     left: 213px; }
-    @media (max-width: 830px) {
-      .escrow__item--4 {
-        width: 40px;
-        top: 180px;
-        left: 162px; } }
-    @media (max-width: 580px) {
-      .escrow__item--4 {
-        width: 30px;
-        top: 115px;
-        left: 75px; } }
   .escrow__item--5 {
     top: 150px;
     left: 0; }
-    @media (max-width: 830px) {
-      .escrow__item--5 {
-        width: 150px; } }
-    @media (max-width: 580px) {
-      .escrow__item--5 {
-        width: 70px;
-        top: 110px; } }
   .escrow__item--6 {
     top: 190px;
     right: 215px; }
-    @media (max-width: 830px) {
-      .escrow__item--6 {
-        width: 40px;
-        top: 180px;
-        right: 162px; } }
-    @media (max-width: 580px) {
-      .escrow__item--6 {
-        width: 30px;
-        top: 115px;
-        right: 75px; } }
   .escrow__item--7 {
     top: 130px;
     right: 0; }
-    @media (max-width: 830px) {
-      .escrow__item--7 {
-        width: 150px; } }
-    @media (max-width: 580px) {
-      .escrow__item--7 {
-        width: 70px;
-        top: 110px; } }
 
 .team {
   padding: 0 15px; }
@@ -6556,6 +6509,86 @@ input[type=range] {
   @media (max-width: 1199px) {
     .register__social {
       text-align: center; } }
+
+.monetization {
+  padding: 60px 15px; }
+  @media (max-width: 767px) {
+    .monetization {
+      padding: 30px 15px; } }
+
+.monetization__scheme {
+  margin: 75px 0 50px; }
+  @media (max-width: 767px) {
+    .monetization__scheme {
+      margin: 25px 0; } }
+
+.monetization__disclaimer {
+  color: #fff;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  font-weight: 300; }
+  .monetization__disclaimer p {
+    margin: 0; }
+
+.monetization__earn {
+  position: relative;
+  height: 430px;
+  margin: 75px 0 50px; }
+  @media (max-width: 920px) {
+    .monetization__earn {
+      height: auto; } }
+  @media (max-width: 767px) {
+    .monetization__earn {
+      margin: 25px 0; } }
+
+.monetization__earn-left,
+.monetization__earn-right {
+  position: absolute; }
+  @media (max-width: 920px) {
+    .monetization__earn-left,
+    .monetization__earn-right {
+      position: static; }
+      .monetization__earn-left img,
+      .monetization__earn-right img {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 40px; } }
+
+.monetization__earn-left {
+  left: 0; }
+
+.monetization__earn-right {
+  right: 0; }
+
+.partner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  height: 238px;
+  padding: 0 15px;
+  background: #111114 url("../i/partner-bg.jpg") center no-repeat;
+  border-top: 1px solid #333335;
+  border-bottom: 1px solid #333335;
+  text-align: center; }
+  @media (max-width: 767px) {
+    .partner {
+      height: auto;
+      background-size: cover; } }
 
 /* Helpers (must be as last import to override rules when use)
 ==========================*/

@@ -1,0 +1,19 @@
+.partner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 238px;
+    padding: 0 15px;
+
+    background: #111114 url("#{$img}partner-bg.jpg") center no-repeat;
+    border-top: 1px solid #333335;
+    border-bottom: 1px solid #333335;
+
+    text-align: center;
+
+    @media #{$media_sm} {
+        height: auto;
+        background-size: cover;
+    }
+}

@@ -1,0 +1,65 @@
+.monetization {
+    padding: 60px 15px;
+
+    @media #{$media_sm} {
+        padding: 30px 15px;
+    }
+}
+
+.monetization__scheme {
+    margin: 75px 0 50px;
+
+    @media #{$media_sm} {
+        margin: 25px 0;
+    }
+}
+
+.monetization__disclaimer {
+    color: $white;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+    font-weight: 300;
+
+    p {
+        margin: 0;
+    }
+}
+
+.monetization__earn {
+    position: relative;
+    height: 430px;
+    margin: 75px 0 50px;
+
+    @media (max-width: 920px) {
+        height: auto;
+    }
+
+    @media #{$media_sm} {
+        margin: 25px 0;
+    }
+}
+
+.monetization__earn-left,
+.monetization__earn-right {
+    position: absolute;
+
+    @media (max-width: 920px) {
+        position: static;
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 40px;
+        }
+    }
+}
+
+.monetization__earn-left {
+    left: 0;
+}
+
+.monetization__earn-right {
+    right: 0;
+}
