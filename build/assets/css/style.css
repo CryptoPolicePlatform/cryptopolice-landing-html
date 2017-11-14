@@ -4699,6 +4699,7 @@ html.remodal-is-locked {
 .back__btn {
   display: inline-block;
   padding: 7px 40px;
+  margin-top: 20px;
   border: 0;
   background: -webkit-linear-gradient(#464c58 50%, #282d38 51%, #282d38 100%);
   background: linear-gradient(#464c58 50%, #282d38 51%, #282d38 100%);

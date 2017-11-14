@@ -17083,10 +17083,20 @@ $.countdown.UTCDate(-7, new Date(2013, 12-1, 25, 12, 0)) */
 
 }( window, document));
 
-"use strict";
+$(function() {
 
-particlesJS.load('particles-bottom-right', 'assets/particles-top-right.json', function() {});
-particlesJS.load('particles-bottom-left', 'assets/particles-top-left.json', function() {});
+    if($("#particles-bottom-left").length) {
+        particlesJS.load('particles-bottom-left', 'assets/particles-top-left.json', function() {});
+    }
+
+    if($("#particles-bottom-right").length) {
+        particlesJS.load('particles-bottom-right', 'assets/particles-top-right.json', function() {});
+    }
+
+
+});
+
+"use strict";
 $(function() {
 
     "use strict";
