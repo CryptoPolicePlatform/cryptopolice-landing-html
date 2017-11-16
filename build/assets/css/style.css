@@ -283,7 +283,7 @@ body {
 }
 
 a {
-    color: #1976d2;
+    color: #9e4b8c;
     text-decoration: none;
 }
 
@@ -6118,6 +6118,12 @@ html.remodal-is-locked {
 .team__text {
   font-size: 14px;
   color: #fff; }
+
+.morecontent span {
+  display: none; }
+
+.morelink {
+  display: block; }
 
 .team__blockquote {
   margin-top: 45px;

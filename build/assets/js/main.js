@@ -20773,7 +20773,7 @@ $(function() {
         centerPadding: "0",
         focusOnSelect: true,
         swipeToSlide: true,
-        initialSlide: 8,
+        initialSlide: 7,
         asNavFor: "#team_info"
     });
 
@@ -20786,7 +20786,7 @@ $(function() {
         asNavFor: "#team_slider",
         swipe: false,
         fade: true,
-        initialSlide: 8
+        initialSlide: 7
     });
 
 });
@@ -22143,6 +22143,44 @@ $(function() {
                 '<div class="timer__item  timer__item--hours"><div class="timer__inner">{hnn}</div></div>' +
                 '<div class="timer__item  timer__item--min"><div class="timer__inner">{mnn}</div></div>' +
                 '<div class="timer__item  timer__item--sec"><div class="timer__inner">{snn}</div></div>'
+    });
+
+});
+$(function() {
+
+    "use strict";
+
+    var ellipsestext = "...";
+    var moretext = "Read more";
+    var lesstext = "Hide";
+
+    $('[data-dots]').each(function() {
+        var content = $(this).html(),
+            chars = $(this).data('chars');
+
+        if(content.length > chars) {
+
+            var c = content.substr(0, chars);
+            var h = content.substr(chars, content.length - chars);
+
+            var html = c + '<span class="moreellipses">' + ellipsestext + '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+            $(this).html(html);
+        }
+
+    });
+
+    $(".morelink").click(function() {
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
     });
 
 });

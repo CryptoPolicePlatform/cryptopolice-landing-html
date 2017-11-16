@@ -17,4 +17,5 @@
 //= components/rangeslider.js
 //= components/modal.js
 //= components/timer.js
+//= components/dots.js
 
