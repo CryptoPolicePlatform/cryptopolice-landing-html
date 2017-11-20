@@ -31,27 +31,27 @@
 
             <div class="register__right">
                 <h3 class="register__subtitle">Registration form</h3>
-                <form action="/" method="post">
+                <form action="/" method="post" data-ajax-officer-registration>
                     <div class="form__group  form__group--sm">
-                        <input class="register__input" type="text" name="" placeholder="Name">
+                        <input class="register__input" type="text" name="Name" placeholder="Name">
                     </div>
                     <div class="form__group  form__group--sm">
-                        <input class="register__input" type="text" name="" placeholder="Nickame">
+                        <input class="register__input" type="text" name="Nickame" placeholder="Nickame">
                     </div>
                     <div class="form__group  form__group--sm">
-                        <input class="register__input" type="email" name="" placeholder="E-mail">
+                        <input class="register__input" type="email" name="Email" placeholder="E-mail">
                     </div>
                     <div class="form__group">
                         <div class="select">
-                            <select name="country" id="country">
-                                <option value="0">Country</option>
-                                <option value="LV">Latvia</option>
+                            <select name="Country" id="country">
+                                <option disabled selected>Country</option>
+                                <option value="lv">Latvia</option>
                             </select>
                         </div>
                     </div>
                     <div class="form__group">
                         <label class="register__label" for="exp_range">Experience in crypto world (years)</label>
-                        <input type="range" min="1" max="7" step="1" value="3" name="exp_range" id="exp_range" data-slider="#exp_range">
+                        <input type="range" min="1" max="7" step="1" value="3" name="YearsCryptoWorldExperience" id="exp_range" data-slider="#exp_range">
                         <div class="register__hints">
                             <span>1</span>
                             <span>2</span>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="form__group">
                         <label class="register__label" for="know_range">Blockchain knowledge (%)</label>
-                        <input type="range" min="0" max="100" step="25" value="25" name="know_range" id="know_range" data-slider="#know_range">
+                        <input type="range" min="0" max="100" step="25" value="25" name="BlockchainKnowledgePercentage" id="know_range" data-slider="#know_range">
                         <div class="register__hints">
                             <span>0</span>
                             <span>25</span>
@@ -75,7 +75,7 @@
                     </div>
                     <div class="form__group  form__group--m">
                         <label class="register__label" for="trad_range">Trading knowledge (%)</label>
-                        <input type="range" min="0" max="100" step="25" value="75" name="trad_range" id="trad_range" data-slider="#trad_range">
+                        <input type="range" min="0" max="100" step="25" value="75" name="TradingKnowledgePercentage" id="trad_range" data-slider="#trad_range">
                         <div class="register__hints">
                             <span>0</span>
                             <span>25</span>

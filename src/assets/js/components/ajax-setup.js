@@ -1,0 +1,3 @@
+$.ajaxSetup({
+    contentType: "application/json"
+});

@@ -18,4 +18,6 @@
 //= components/modal.js
 //= components/timer.js
 //= components/dots.js
-
+//= components/ajax-setup.js
+//= components/subscribe.js
+//= components/officer-registration.js
