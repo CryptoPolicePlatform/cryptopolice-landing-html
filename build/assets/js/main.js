@@ -22143,6 +22143,11 @@ $(function() {
     * Docs: https://github.com/VodkaBears/Remodal
     */
 
+    var dont_miss_modal = $('#dont_miss_modal').remodal();
+    var subscribe = $('#subscribe_modal').remodal();
+    var modalState = "closed";
+
+
     $("[data-toggle=remodal]").on("click", function(e) {
         e.preventDefault();
 
@@ -22156,14 +22161,26 @@ $(function() {
     });
 
 
+    $(document).on('opened closed', '#subscribe_modal', function () {
+        modalState = subscribe.getState();
 
-    var dont_miss_modal = $('#dont_miss_modal').remodal();
-    glio.init(
-      [ 'top', function () {
-          dont_miss_modal.open();
-        }
-      ]
-    );
+        exitInit(modalState);
+    });
+
+
+    exitInit();
+    function exitInit(state) {
+        glio.init(
+          [ 'top', function () {
+              if(state != "opened") {
+                dont_miss_modal.open();
+              }
+            }
+          ]
+        );
+    }
+
+
 
 });
 $(function() {

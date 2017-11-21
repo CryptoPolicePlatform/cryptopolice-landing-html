@@ -36,7 +36,7 @@
             width: 25px;
             height: 18px;
 
-            background: url("#{$img}tick-ico.png") no-repeat;
+            background: url("#{$img}success-ico.svg") no-repeat;
 
             position: absolute;
             top: 21px;
@@ -55,7 +55,7 @@
             width: 6px;
             height: 26px;
 
-            background: url("#{$img}warning-ico.png") no-repeat;
+            background: url("#{$img}warning-ico.svg") no-repeat;
 
             position: absolute;
             top: 18px;
@@ -71,10 +71,10 @@
         &:before {
             content: "";
             display: block;
-            width: 18px;
-            height: 18px;
+            width: 22px;
+            height: 22px;
 
-            background: url("#{$img}error-ico.png") no-repeat;
+            background: url("#{$img}error-ico.svg") no-repeat;
 
             position: absolute;
             top: 21px;
@@ -123,7 +123,7 @@
     font-size: 0;
 
     position: absolute;
-    top: 24px;
+    top: 30px;
     right: 24px;
     transform: translateY(-50%);
     z-index: $alert-close-zindex;

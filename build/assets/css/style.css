@@ -6670,7 +6670,7 @@ input[type=range] {
       display: block;
       width: 25px;
       height: 18px;
-      background: url("../i/tick-ico.png") no-repeat;
+      background: url("../i/success-ico.svg") no-repeat;
       position: absolute;
       top: 21px;
       left: 22px;
@@ -6683,7 +6683,7 @@ input[type=range] {
       display: block;
       width: 6px;
       height: 26px;
-      background: url("../i/warning-ico.png") no-repeat;
+      background: url("../i/warning-ico.svg") no-repeat;
       position: absolute;
       top: 18px;
       left: 22px;
@@ -6694,9 +6694,9 @@ input[type=range] {
     .alert--error:before {
       content: "";
       display: block;
-      width: 18px;
-      height: 18px;
-      background: url("../i/error-ico.png") no-repeat;
+      width: 22px;
+      height: 22px;
+      background: url("../i/error-ico.svg") no-repeat;
       position: absolute;
       top: 21px;
       left: 22px;
@@ -6745,7 +6745,7 @@ input[type=range] {
   color: transparent;
   font-size: 0;
   position: absolute;
-  top: 24px;
+  top: 30px;
   right: 24px;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
