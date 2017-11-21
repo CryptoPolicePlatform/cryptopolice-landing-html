@@ -6657,7 +6657,7 @@ input[type=range] {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  z-index: 999; }
+  z-index: 10001; }
   .alert p {
     margin-bottom: .2em; }
     .alert p:last-of-type {
