@@ -1,10 +1,15 @@
 $.ajaxSetup({
     contentType: "application/json",
+    beforeSend: function($xhr, options){
+        if (options.contentType == "application/json" && typeof options.data != "string" ) {
+            options.data = JSON.stringify(options.data);
+        }
+    },
     error: function ($xhr) {
         if ($xhr.status === 400 && $xhr.responseJSON) {
             var messages = [];
 
-            for (var field in errors) {
+            for (var field in $xhr.responseJSON) {
                 $xhr.responseJSON[field].forEach(function (msg) {
                     msg = msg.trim();
                     if (msg) {
