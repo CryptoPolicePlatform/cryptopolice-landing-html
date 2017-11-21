@@ -23,3 +23,4 @@
 //= components/officer-registration.js
 //= components/alert.js
 //= components/nav.js
+//= components/helpers.js

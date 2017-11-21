@@ -3,18 +3,18 @@ $(function () {
 
     $('form[data-ajax-officer-registration]').submit(function (event) {
         event.preventDefault();
-        var form = $(this);
-        $.post("https://api.cryptopolice.io/api/officer-signup", {
-            Name: form.find('[name=Name]').val(),
-            Nickame: form.find('[name=Nickame]').val(),
-            Email: form.find('[name=Email]').val(),
-            Country: form.find('[name=Country]').val(),
-            YearsCryptoWorldExperience: form.find('[name=YearsCryptoWorldExperience]').val(),
-            BlockchainKnowledgePercentage: form.find('[name=BlockchainKnowledgePercentage]').val(),
-            TradingKnowledgePercentage: form.find('[name=TradingKnowledgePercentage]').val(),
-        }).done(function () {
+        var $form = $(this);
+        $.post(appApiHost + "/api/officer-signup",
+            appFormHelpers.getJson($form, ['Name', 
+                'Nickname',
+                'Email',
+                'Country',
+                'YearsCryptoWorldExperience',
+                'BlockchainKnowledgePercentage',
+                'TradingKnowledgePercentage'])
+        ).done(function () {
             showAppAlert('success', ['Please check you e-mail for more details']);
-            form[0].reset();
+            $form[0].reset();
         })
     })
 })

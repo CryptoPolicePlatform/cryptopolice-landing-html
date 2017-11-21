@@ -1,10 +1,5 @@
 $.ajaxSetup({
     contentType: "application/json",
-    beforeSend: function($xhr, options){
-        if (options.contentType == "application/json" && typeof options.data != "string" ) {
-            options.data = JSON.stringify(options.data);
-        }
-    },
     error: function ($xhr) {
         if ($xhr.status === 400 && $xhr.responseJSON) {
             var messages = [];

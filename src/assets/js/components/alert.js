@@ -2,7 +2,7 @@ $(function() {
 
     "use strict";
 
-    var alertTpl = $("#alert-tpl").html().trim();
+    var alertTpl = $(window['alert-tpl']).html().trim();
     
     window.showAppAlert = function(type, messagesArray) {
         var $alert = $(alertTpl);
