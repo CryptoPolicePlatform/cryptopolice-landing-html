@@ -8,9 +8,9 @@ $(function () {
             Name: form.find('[name=Name]').val(),
             Email: form.find('[name=Email]').val(),
         }).done(function () {
-
-        }).fail(function () {
-            
+            showAppAlert('success', ['Please check you e-mail for confirmation link']);
+            $('#subscribe_modal').remodal().close();
+            form[0].reset();
         })
     })
 })

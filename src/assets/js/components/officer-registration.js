@@ -13,9 +13,8 @@ $(function () {
             BlockchainKnowledgePercentage: form.find('[name=BlockchainKnowledgePercentage]').val(),
             TradingKnowledgePercentage: form.find('[name=TradingKnowledgePercentage]').val(),
         }).done(function () {
-
-        }).fail(function () {
-            
+            showAppAlert('success', ['Please check you e-mail for more details']);
+            form[0].reset();
         })
     })
 })
