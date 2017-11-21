@@ -22244,7 +22244,7 @@ $.ajaxSetup({
         if ($xhr.status === 400 && $xhr.responseJSON) {
             var messages = [];
 
-            for (var field in errors) {
+            for (var field in $xhr.responseJSON) {
                 $xhr.responseJSON[field].forEach(function (msg) {
                     msg = msg.trim();
                     if (msg) {
@@ -22267,14 +22267,13 @@ $(function () {
 
     $('form[data-js-subscribe]').submit(function (event) {
         event.preventDefault();
-        var form = $(this);
-        $.post("https://api.cryptopolice.io/api/subscribe", {
-            Name: form.find('[name=Name]').val(),
-            Email: form.find('[name=Email]').val(),
-        }).done(function () {
+        var $form = $(this);
+        $.post(appApiHost + "/api/subscribe",
+            appFormHelpers.getJson($form, ['Name', 'Email'])
+        ).done(function () {
             showAppAlert('success', ['Please check you e-mail for confirmation link']);
             $('#subscribe_modal').remodal().close();
-            form[0].reset();
+            $form[0].reset();
         })
     })
 })
@@ -22283,18 +22282,18 @@ $(function () {
 
     $('form[data-ajax-officer-registration]').submit(function (event) {
         event.preventDefault();
-        var form = $(this);
-        $.post("https://api.cryptopolice.io/api/officer-signup", {
-            Name: form.find('[name=Name]').val(),
-            Nickame: form.find('[name=Nickame]').val(),
-            Email: form.find('[name=Email]').val(),
-            Country: form.find('[name=Country]').val(),
-            YearsCryptoWorldExperience: form.find('[name=YearsCryptoWorldExperience]').val(),
-            BlockchainKnowledgePercentage: form.find('[name=BlockchainKnowledgePercentage]').val(),
-            TradingKnowledgePercentage: form.find('[name=TradingKnowledgePercentage]').val(),
-        }).done(function () {
+        var $form = $(this);
+        $.post(appApiHost + "/api/officer-signup",
+            appFormHelpers.getJson($form, ['Name', 
+                'Nickname',
+                'Email',
+                'Country',
+                'YearsCryptoWorldExperience',
+                'BlockchainKnowledgePercentage',
+                'TradingKnowledgePercentage'])
+        ).done(function () {
             showAppAlert('success', ['Please check you e-mail for more details']);
-            form[0].reset();
+            $form[0].reset();
         })
     })
 })
@@ -22302,7 +22301,7 @@ $(function() {
 
     "use strict";
 
-    var alertTpl = $("#alert-tpl").html().trim();
+    var alertTpl = $(window['alert-tpl']).html().trim();
     
     window.showAppAlert = function(type, messagesArray) {
         var $alert = $(alertTpl);
@@ -22341,3 +22340,19 @@ $(function() {
     });
 
 });
+window.appApiHost = "https://api.cryptopolice.io"
+
+window.appFormHelpers = {
+    getJson: function ($form, fieldsArray) {
+        var obj = {};
+
+        for (var field in fieldsArray) {
+            var val = $form.find("[name=" + fieldsArray[field] + "]").val();
+            if (val) {
+                obj[fieldsArray[field]] = val;
+            }
+        }
+
+        return JSON.stringify(obj);
+    }
+}
