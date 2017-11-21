@@ -2,7 +2,7 @@ $(function() {
 
     "use strict";
 
-    $(".alert__button").on("click", function(e) {
+    $(".alert__close").on("click", function(e) {
         e.preventDefault();
 
         var $this = $(this),

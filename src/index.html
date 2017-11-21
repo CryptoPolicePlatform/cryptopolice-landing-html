@@ -8,13 +8,16 @@
 
 
 <nav class="nav" id="nav">
-    <a class="nav__item" href="#" data-scroll data-target="#intro">Home</a>
-    <a class="nav__item" href="#" data-scroll data-target="#presentation">About</a>
-    <a class="nav__item" href="#" data-scroll data-target="#docs">Documents</a>
-    <a class="nav__item" href="#" data-scroll data-target="#tokens">Tokens</a>
-    <a class="nav__item" href="#" data-scroll data-target="#team">Team</a>
-    <a class="nav__item  nav__item--rounded" href="register.html">Become an officer</a>
-    <a class="nav__item" href="#" data-scroll data-target="#roadmap">Roadmap</a>
+    <button class="nav__burger" data-toggle="nav" type="button"><i class="fa fa-bars"></i></button>
+    <div class="nav__inner" id="nav_toggle">
+        <a class="nav__item" href="#" data-scroll data-target="#intro">Home</a>
+        <a class="nav__item" href="#" data-scroll data-target="#presentation">About</a>
+        <a class="nav__item" href="#" data-scroll data-target="#docs">Documents</a>
+        <a class="nav__item" href="#" data-scroll data-target="#tokens">Tokens</a>
+        <a class="nav__item" href="#" data-scroll data-target="#team">Team</a>
+        <a class="nav__item  nav__item--rounded" href="register.html">Become an officer</a>
+        <a class="nav__item" href="#" data-scroll data-target="#roadmap">Roadmap</a>
+    </div>
 </nav>
 
 
@@ -938,11 +941,6 @@
         </div>
     </div><!-- /.team__info -->
 
-
-
-
-
-
 </section><!-- /.team -->
 
 
@@ -1244,6 +1242,15 @@
     </div>
 </div>
 
+
+<!-- success, warning, error -->
+<div class="alert  alert--success">
+    <button class="alert__close">Close</button>
+    <div class="alert__inner">
+        <p>Operation completed successfully!</p>
+        <p>Operation completed successfully!</p>
+    </div>
+</div>
 
 
 <!-- JS -->

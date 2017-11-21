@@ -21,3 +21,5 @@
 //= components/ajax-setup.js
 //= components/subscribe.js
 //= components/officer-registration.js
+//= components/alert.js
+//= components/nav.js

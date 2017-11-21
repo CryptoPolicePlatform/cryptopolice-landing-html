@@ -12,7 +12,6 @@ $(function() {
         $("body, html").animate({
             scrollTop: offset - 70
         }, 700);
-
     });
 
     var wScroll = $(document).scrollTop();
