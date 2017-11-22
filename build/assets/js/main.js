@@ -22238,6 +22238,22 @@ $(function() {
     });
 
 });
+window.appApiHost = "https://api.cryptopolice.io"
+
+window.appFormHelpers = {
+    getJson: function ($form, fieldsArray) {
+        var obj = {};
+
+        for (var field in fieldsArray) {
+            var val = $form.find("[name=" + fieldsArray[field] + "]").val();
+            if (val) {
+                obj[fieldsArray[field]] = val;
+            }
+        }
+
+        return JSON.stringify(obj);
+    }
+}
 $.ajaxSetup({
     contentType: "application/json",
     error: function ($xhr) {
@@ -22262,41 +22278,6 @@ $.ajaxSetup({
         showAppAlert('error', ['Sorry, something went wrong. Please try again later.']);
     }
 });
-$(function () {
-    "use strict";
-
-    $('form[data-js-subscribe]').submit(function (event) {
-        event.preventDefault();
-        var $form = $(this);
-        $.post(appApiHost + "/api/subscribe",
-            appFormHelpers.getJson($form, ['Name', 'Email'])
-        ).done(function () {
-            showAppAlert('success', ['Please check you e-mail for confirmation link']);
-            $('#subscribe_modal').remodal().close();
-            $form[0].reset();
-        })
-    })
-})
-$(function () {
-    "use strict";
-
-    $('form[data-ajax-officer-registration]').submit(function (event) {
-        event.preventDefault();
-        var $form = $(this);
-        $.post(appApiHost + "/api/officer-signup",
-            appFormHelpers.getJson($form, ['Name', 
-                'Nickname',
-                'Email',
-                'Country',
-                'YearsCryptoWorldExperience',
-                'BlockchainKnowledgePercentage',
-                'TradingKnowledgePercentage'])
-        ).done(function () {
-            showAppAlert('success', ['Please check you e-mail for more details']);
-            $form[0].reset();
-        })
-    })
-})
 $(function() {
 
     "use strict";
@@ -22326,6 +22307,49 @@ $(function() {
         });
     }
 });
+$(function () {
+    "use strict";
+
+    $('form[data-js-subscribe]').submit(function (event) {
+        event.preventDefault();
+        var $form = $(this);
+        $.post(appApiHost + "/api/subscribe",
+            appFormHelpers.getJson($form, ['Name', 'Email'])
+        ).done(function () {
+            showAppAlert('success', ['Please check you e-mail for confirmation link']);
+            $('#subscribe_modal').remodal().close();
+            $form[0].reset();
+        })
+    });
+
+    var results = new RegExp('[\?&]subscribe=([^&#]*)').exec(window.location);
+    if (results[1]) {
+        $.post(appApiHost + "/api/subscribe/confirm/" + results[1])
+            .done(function () {
+                showAppAlert('success', ['Thank you, you are now subscribed.']);
+            })
+    }
+})
+$(function () {
+    "use strict";
+
+    $('form[data-ajax-officer-registration]').submit(function (event) {
+        event.preventDefault();
+        var $form = $(this);
+        $.post(appApiHost + "/api/officer-signup",
+            appFormHelpers.getJson($form, ['Name', 
+                'Nickname',
+                'Email',
+                'Country',
+                'YearsCryptoWorldExperience',
+                'BlockchainKnowledgePercentage',
+                'TradingKnowledgePercentage'])
+        ).done(function () {
+            showAppAlert('success', ['Please check you e-mail for more details']);
+            $form[0].reset();
+        })
+    })
+})
 $(function() {
 
     "use strict";
@@ -22340,19 +22364,3 @@ $(function() {
     });
 
 });
-window.appApiHost = "https://api.cryptopolice.io"
-
-window.appFormHelpers = {
-    getJson: function ($form, fieldsArray) {
-        var obj = {};
-
-        for (var field in fieldsArray) {
-            var val = $form.find("[name=" + fieldsArray[field] + "]").val();
-            if (val) {
-                obj[fieldsArray[field]] = val;
-            }
-        }
-
-        return JSON.stringify(obj);
-    }
-}
