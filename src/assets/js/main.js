@@ -18,9 +18,9 @@
 //= components/modal.js
 //= components/timer.js
 //= components/dots.js
+//= components/helpers.js
 //= components/ajax-setup.js
+//= components/alert.js
 //= components/subscribe.js
 //= components/officer-registration.js
-//= components/alert.js
 //= components/nav.js
-//= components/helpers.js
