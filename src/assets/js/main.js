@@ -7,6 +7,8 @@
 //= ../../../bower_components/kbw-countdown/dist/js/jquery.countdown.js
 //= ../../../bower_components/glio.js/glio.js
 
+//= ../../../node_modules/js-cookie/src/js.cookie.js
+
 //= components/particles.js
 //= components/tabs.js
 //= components/parallax.js
