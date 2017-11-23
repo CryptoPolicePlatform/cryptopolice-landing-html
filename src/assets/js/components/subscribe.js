@@ -14,7 +14,7 @@ $(function () {
     });
 
     var results = new RegExp('[\?&]subscribe=([^&#]*)').exec(window.location);
-    if (results[1]) {
+    if (results && results[1]) {
         $.post(appApiHost + "/api/subscribe/confirm/" + results[1])
             .done(function () {
                 showAppAlert('success', ['Thank you, you are now subscribed.']);
