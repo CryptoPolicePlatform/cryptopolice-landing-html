@@ -9,6 +9,12 @@ $(function() {
     * Docs: https://github.com/VodkaBears/Remodal
     */
 
+    function suppress() {
+        return Cookies.get('subscribed') === '1'
+    }
+
+    if (suppress()) return;
+
     var dont_miss_modal = $('#dont_miss_modal').remodal();
 
     if ( ! dont_miss_modal) return;
@@ -41,7 +47,7 @@ $(function() {
     function exitInit(state) {
         glio.init(
           [ 'top', function () {
-              if(state != "opened" && ! dont_miss_modal.data('preventDisplay')) {
+              if(state != "opened" && ! suppress()) {
                 dont_miss_modal.open();
               }
             }
