@@ -22144,6 +22144,9 @@ $(function() {
     */
 
     var dont_miss_modal = $('#dont_miss_modal').remodal();
+
+    if ( ! dont_miss_modal) return;
+
     var subscribe = $('#subscribe_modal').remodal();
     var modalState = "closed";
 
@@ -22172,7 +22175,7 @@ $(function() {
     function exitInit(state) {
         glio.init(
           [ 'top', function () {
-              if(state != "opened") {
+              if(state != "opened" && ! dont_miss_modal.data('preventDisplay')) {
                 dont_miss_modal.open();
               }
             }
@@ -22319,6 +22322,7 @@ $(function () {
             showAppAlert('success', ['Please check you e-mail for confirmation link']);
             $('#subscribe_modal').remodal().close();
             $form[0].reset();
+            $('#dont_miss_modal').data('preventDisplay', true)
         })
     });
 
@@ -22327,7 +22331,8 @@ $(function () {
         $.post(appApiHost + "/api/subscribe/confirm/" + results[1])
             .done(function () {
                 showAppAlert('success', ['Thank you, you are now subscribed.']);
-            })
+            });
+        $('#dont_miss_modal').data('preventDisplay', true)
     }
 })
 $(function () {
