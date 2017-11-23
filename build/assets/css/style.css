@@ -6722,7 +6722,7 @@ input[type=range] {
           flex-direction: column;
   width: 100%;
   min-height: 61px;
-  padding: 8px 60px 8px 75px;
+  padding: 8px 60px 8px 65px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -6731,9 +6731,6 @@ input[type=range] {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  @media (max-width: 530px) {
-    .alert__inner {
-      padding-left: 10px; } }
 
 .alert__close {
   padding: 0;

@@ -102,13 +102,9 @@
     flex-direction: column;
     width: 100%;
     min-height: 61px;
-    padding: 8px 60px 8px 75px;
+    padding: 8px 60px 8px 65px;
     justify-content: center;
     align-items: center;
-
-    @media (max-width: 530px) {
-        padding-left: 10px;
-    }
 }
 
 .alert__close {
