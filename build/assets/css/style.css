@@ -3988,15 +3988,15 @@ html.remodal-is-locked {
       padding: 10px;
       font-size: .9em; } }
   @media (max-width: 767px) {
-    .nav {
-      background-color: rgba(0, 0, 0, 0.9); } }
+    .nav.fixed {
+      background-color: rgba(0, 0, 0, 0.7); } }
 
 @media (max-width: 767px) {
   .nav__inner {
     display: none;
     width: 100%;
     padding: 0 10px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 40px;
     left: 0; } }
@@ -5400,6 +5400,7 @@ html.remodal-is-locked {
     .proof__mobile {
       display: block;
       max-width: 100%;
+      height: auto;
       margin: 80px 0 20px; } }
 
 .proof__item {
@@ -5582,6 +5583,7 @@ html.remodal-is-locked {
     .watchdog__mobile {
       display: block;
       max-width: 100%;
+      height: auto;
       margin-top: 40px; } }
 
 .watchdog__item {
