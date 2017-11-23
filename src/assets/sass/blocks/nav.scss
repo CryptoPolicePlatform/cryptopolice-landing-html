@@ -22,7 +22,9 @@
     }
 
     @media (max-width: 767px) {
-        background-color: rgba($real-black, .9);
+        &.fixed {
+            background-color: rgba($real-black, .7);
+        }
     }
 }
 
@@ -33,7 +35,7 @@
         width: 100%;
         padding: 0 10px;
 
-        background-color: rgba($real-black, .9);
+        background-color: rgba($real-black, .7);
 
         position: absolute;
         top: 40px;
