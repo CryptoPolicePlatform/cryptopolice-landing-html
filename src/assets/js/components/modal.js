@@ -10,6 +10,9 @@ $(function() {
     */
 
     var dont_miss_modal = $('#dont_miss_modal').remodal();
+
+    if ( ! dont_miss_modal) return;
+    
     var subscribe = $('#subscribe_modal').remodal();
     var modalState = "closed";
 
