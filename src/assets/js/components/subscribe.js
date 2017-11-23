@@ -10,6 +10,7 @@ $(function () {
             showAppAlert('success', ['Please check you e-mail for confirmation link']);
             $('#subscribe_modal').remodal().close();
             $form[0].reset();
+            $('#dont_miss_modal').data('preventDisplay', true)
         })
     });
 
@@ -18,6 +19,7 @@ $(function () {
         $.post(appApiHost + "/api/subscribe/confirm/" + results[1])
             .done(function () {
                 showAppAlert('success', ['Thank you, you are now subscribed.']);
-            })
+            });
+        $('#dont_miss_modal').data('preventDisplay', true)
     }
 })
