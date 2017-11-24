@@ -28,7 +28,8 @@ var path = {
         css: "build/assets/css/",
         img: "build/assets/i/",
         fonts: "build/assets/fonts/",
-        json: "build/assets/"
+        json: "build/assets/",
+        static: "build/"
     },
     src: {
         html: "src/*.{htm,html}",
@@ -36,7 +37,8 @@ var path = {
         css: "src/assets/sass/style.scss",
         img: "src/assets/i/**/*.*",
         fonts: "src/assets/fonts/**/*.*",
-        json: "src/assets/*.json"
+        json: "src/assets/*.json",
+        static: "src/*.{txt,xml}"
     },
     watch: {
         html: "src/**/*.{htm,html}",
@@ -79,6 +81,11 @@ gulp.task("html:build", function () {
         .pipe(webserver.reload({stream: true}));
 });
 
+gulp.task("static:build", function () {
+    return gulp.src(path.src.static)
+        .pipe(plumber())
+        .pipe(gulp.dest(path.build.static));
+});
 
 gulp.task("css:build", function () {
     gulp.src(path.src.css)
@@ -151,7 +158,8 @@ gulp.task('build', function (cb) {
         "js:build",
         "fonts:build",
         "image:build",
-        "json:build"
+        "json:build",
+        "static:build"
     , cb);
 });
 

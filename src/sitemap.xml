@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://www.cryptopolice.io/</loc>
+  <lastmod>2017-11-23T16:26:43+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.cryptopolice.io/register.html</loc>
+  <lastmod>2017-11-23T15:35:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.cryptopolice.io/CryptoPolice_whitepaper.pdf</loc>
+  <lastmod>2017-11-23T11:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.cryptopolice.io/CryptoPolice_terms_and_conditions.pdf</loc>
+  <lastmod>2017-11-23T12:18:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.cryptopolice.io/CryptoPolice_token_distribution.pdf</loc>
+  <lastmod>2017-11-23T11:27:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://support.cryptopolice.io/</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://support.cryptopolice.io/single-topic/how-buy-ofc-tokens-using-myetherwallet</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://support.cryptopolice.io/single-topic/how-buy-ofc-tokens-using-mist</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://support.cryptopolice.io/single-topic/how-buy-ofc-tokens-using-metamask</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://support.cryptopolice.io/single-topic/how-buy-ofc-tokens-using-myetherwallet-refferal-code</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://support.cryptopolice.io/single-topic/how-buy-ofc-tokens-using-mist-refferal-code</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://support.cryptopolice.io/single-topic/how-buy-ofc-tokens-using-metamask-refferal-code</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://support.cryptopolice.io/single-topic/how-create-ether-wallet-using-myetherwallet</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://support.cryptopolice.io/single-topic/how-create-ether-wallet-using-mist</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://support.cryptopolice.io/single-topic/how-create-ether-wallet-using-metamask</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://support.cryptopolice.io/single-topic/how-add-ofc-tokens-to-myetherwallet</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://support.cryptopolice.io/single-topic/how-add-ofc-tokens-mist-wallet</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://support.cryptopolice.io/single-topic/how-add-ofc-tokens-metamask</loc>
+  <priority>0.80</priority>
+</url>
+</urlset>
