@@ -1,0 +1,19 @@
+
+Host: www.cryptopolice.io
+Sitemap: https://www.cryptopolice.io/sitemap.xml
+
+User-agent: *
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+
+User-agent: Googlebot
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+User-agent: Yandex
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+
+
