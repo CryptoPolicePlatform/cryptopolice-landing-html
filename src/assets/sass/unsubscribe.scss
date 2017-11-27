@@ -1,0 +1,272 @@
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "fonts";
+
+
+body {
+    margin: 0;
+    background-color: #f8f8f8;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.unsubscribe {
+    width: 100%;
+    max-width: 640px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.unsubscribe__email {
+    font-weight: bold;
+    font-size: 24px;
+    color: #b362d1;
+    text-align: center;
+}
+
+.unsubscribe__title {
+    margin: 20px 0 10px;
+
+    color: $black;
+    font-size: 32px;
+    text-align: center;
+}
+
+.unsubscribe__subtitle {
+    color: $black;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+.unsubscribe__inner {
+    background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 15px;
+}
+
+.unsubscribe__header {
+    padding: 20px;
+
+    border-bottom: 2px solid #ccc;
+
+    text-align: center;
+}
+
+.unsubscribe__btn {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 12px 20px;
+
+    background-color: #50a0f0;
+    border-radius: 8px;
+
+    font-size: 16px;
+    text-align: center;
+    color: $white;
+    text-decoration: none;
+
+    transition: background .1s linear;
+
+    &:hover,
+    &:focus {
+        background-color: #357cc3;
+    }
+}
+
+.unsubscribe__o-btn {
+   display: inline-block;
+    vertical-align: middle;
+    padding: 12px 20px;
+
+    border: 2px solid #50a0f0;
+    border-radius: 8px;
+
+    font-size: 16px;
+    text-align: center;
+    color: $black;
+    text-decoration: none;
+
+    transition: background .1s linear, color .1s linear;
+
+    &:hover,
+    &:focus {
+        color: $white;
+        background-color: #50a0f0;
+    }
+}
+
+.unsubscribe__content {
+    padding: 40px 20px 20px;
+}
+
+.unsubscribe__group {
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+
+    text-transform: uppercase;
+    color: #909090;
+
+    border-bottom: 2px solid #e6e6e6;
+
+    @include clearfix;
+}
+
+.unsubscribe__group-half {
+    float: left;
+    width: 50%;
+}
+
+.unsubscribe__item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e6e6e6;
+
+    @include clearfix;
+}
+
+.unsubscribe__item-left {
+    width: 80%;
+    float: left;
+    padding-right: 20px;
+}
+
+.unsubscribe__item-title {
+    font-size: 24px;
+}
+
+.unsubscribe__item-text {
+    color: #7b7b7b;
+}
+
+.unsubscribe__item-right {
+    width: 20%;
+    float: left;
+}
+
+.unsubscribe__footer {
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+
+.checkbox {
+    display: block;
+    margin-bottom: $checkbox-margin-bottom;
+
+    &--inline {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: $checkbox-inline-margin-right;
+    }
+}
+
+.checkbox__input {
+    display: none;
+
+    &:checked + .checkbox__label {
+        color: $checkbox-color;
+    }
+
+    &:checked + .checkbox__label:before {
+        background-color: $checkbox-before-bg-checked;
+        border-color: $checkbox-before-border-color-checked;
+    }
+
+    &:checked + .checkbox__label:after {
+        opacity: 1;
+    }
+
+    &:checked + .checkbox__label:hover:after {
+        color: $checkbox-after-color;
+        opacity: 1;
+    }
+}
+
+.checkbox__label {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: $checkbox-indent;
+
+    cursor: pointer;
+    font-size: $checkbox-font-size;
+    line-height: $checkbox-before-height;
+    color: $checkbox-color;
+    user-select: none;
+
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        width: $checkbox-before-width;
+        height: $checkbox-before-height;
+
+        border: $checkbox-before-border;
+        background-color: $checkbox-before-bg;
+        border-radius: $checkbox-before-radius;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        transition: border-color .1s linear;
+    }
+
+    &:after {
+        content: $checkbox-after-icon;
+        display: block;
+        font-family: FontAwesome;
+        font-size: $checkbox-after-size;
+        line-height: $checkbox-after-line-height;
+        color: $checkbox-after-color;
+
+        position: absolute;
+        top: 1px;
+        left: 2px;
+        z-index: 1;
+
+        opacity: 0;
+
+        transition: opacity .1s linear, color .1s linear;
+    }
+
+
+    &:hover:not(&--disabled):after {
+        color: $checkbox-after-disabled-color;
+        opacity: $checkbox-after-disabled-opacity;
+    }
+
+    &--error {
+        color: $checkbox-color-error;
+
+        &:before {
+            border-color: $checkbox-before-border-color-error;
+        }
+    }
+
+    &--disabled {
+        color: $checkbox-disabled-color;
+
+        &:before {
+            border-color: $checkbox-before-disabled-border-color;
+        }
+
+        &:hover {
+            cursor: $checkbox-cursor-disabled;
+        }
+    }
+}

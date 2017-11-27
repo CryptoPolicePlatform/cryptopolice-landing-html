@@ -34,7 +34,7 @@ var path = {
     src: {
         html: "src/*.{htm,html}",
         js: "src/assets/js/*.js",
-        css: "src/assets/sass/style.scss",
+        css: ["src/assets/sass/style.scss", "src/assets/sass/unsubscribe.scss"],
         img: "src/assets/i/**/*.*",
         fonts: "src/assets/fonts/**/*.*",
         json: "src/assets/*.json",

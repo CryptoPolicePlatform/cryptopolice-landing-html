@@ -18,8 +18,7 @@
     "gulp-uglify": "^2.0.0",
     "gulp-watch": "^4.3.11",
     "rimraf": "^2.5.4",
-    "run-sequence": "^1.2.2",
-    "swiper": "git+https://github.com/nolimits4web/Swiper.git"
+    "run-sequence": "^1.2.2"
   },
   "scripts": {
     "build": "gulp build",
