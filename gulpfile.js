@@ -88,15 +88,13 @@ gulp.task("static:build", function () {
 });
 
 gulp.task("css:build", function () {
-    gulp.src(path.src.css)
+    gulp.src(path.src.css, {base: './src/assets/sass/'})
         .pipe(plumber())
         .pipe(sass())
         .pipe(autoprefixer({
             browsers: ["last 10 versions"],
             cascade: true
         }))
-        .pipe(cssbeautify())
-        .pipe(gulp.dest(path.build.css))
         .pipe(cssnano({
             zindex: false,
             discardComments: {
@@ -104,8 +102,7 @@ gulp.task("css:build", function () {
             }
         }))
         .pipe(removeComments())
-        .pipe(rename("style.min.css"))
-        .pipe(gulp.dest(path.build.css))
+        .pipe(gulp.dest(path.build.css, {base: './assets/css/'}))
         .pipe(webserver.reload({stream: true}));
 });
 
