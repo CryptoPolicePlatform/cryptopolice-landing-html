@@ -25,5 +25,6 @@ $(function () {
                 showAppAlert('success', ['Thank you, you are now subscribed.']);
             });
         markSubscribed();
+        history.replaceState(null, null, '/')
     }
 })
