@@ -24,10 +24,13 @@
 
 .watch-video__first {
     text-align: center;
+    order: 1;
 
     @media (max-width: 900px) {
-        width: 50%;
+        width: 100%;
+        flex-basis: 50%;
         padding-left: 80px;
+        padding-top: 20px;
         order: 2;
     }
 
@@ -38,6 +41,7 @@
 
 .watch-video__photo {
     padding-left: 60px;
+    order: 2;
 
     img {
         height: 300px;
@@ -48,7 +52,8 @@
     }
 
     @media (max-width: 900px) {
-        width: 50%;
+        width: 100%;
+        flex-basis: 50%;
         order: 3;
         padding-left: 0;
         position: relative;
@@ -57,6 +62,7 @@
             max-width: 100%;
             height: auto;
             display: block;
+            margin: 0 auto;
 
             bottom: -30px;
         }
@@ -65,6 +71,7 @@
 
 .watch-video__content {
     padding-left: 60px;
+    order: 3;
 
     @media (max-width: 900px) {
         width: 100%;
