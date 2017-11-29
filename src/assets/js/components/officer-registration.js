@@ -17,4 +17,13 @@ $(function () {
             $form[0].reset();
         })
     })
+
+    var results = new RegExp('[\?&]officer_signup=([^&#]*)').exec(window.location);
+    if (results && results[1]) {
+        $.post(appApiHost + "/api/officer-signup/confirm/" + results[1])
+            .done(function () {
+                showAppAlert('success', ['Thank you, registration confirmed.']);
+            });
+        history.replaceState(null, null, '/')
+    }
 })
