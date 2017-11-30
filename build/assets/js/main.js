@@ -17251,14 +17251,12 @@ $.countdown.UTCDate(-7, new Date(2013, 12-1, 25, 12, 0)) */
 
 $(function() {
 
-    if($("#particles-bottom-left").length) {
-        particlesJS.load('particles-bottom-left', 'assets/particles-top-left.json', function() {});
-    }
+    var windowW = $(window).innerWidth();
 
-    if($("#particles-bottom-right").length) {
+    if(windowW > 600 && $("#particles-bottom-left").length && $("#particles-bottom-right").length) {
+        particlesJS.load('particles-bottom-left', 'assets/particles-top-left.json', function() {});
         particlesJS.load('particles-bottom-right', 'assets/particles-top-right.json', function() {});
     }
-
 
 });
 
@@ -22469,6 +22467,7 @@ $(function () {
                 showAppAlert('success', ['Thank you, you are now subscribed.']);
             });
         markSubscribed();
+        history.replaceState(null, null, '/')
     }
 })
 $(function () {
@@ -22490,6 +22489,15 @@ $(function () {
             $form[0].reset();
         })
     })
+
+    var results = new RegExp('[\?&]officer_signup=([^&#]*)').exec(window.location);
+    if (results && results[1]) {
+        $.post(appApiHost + "/api/officer-signup/confirm/" + results[1])
+            .done(function () {
+                showAppAlert('success', ['Thank you, registration confirmed.']);
+            });
+        history.replaceState(null, null, '/')
+    }
 })
 $(function() {
 
