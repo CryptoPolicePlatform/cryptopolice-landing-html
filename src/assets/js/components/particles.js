@@ -1,13 +1,11 @@
 $(function() {
 
-    if($("#particles-bottom-left").length) {
-        particlesJS.load('particles-bottom-left', 'assets/particles-top-left.json', function() {});
-    }
+    var windowW = $(window).innerWidth();
 
-    if($("#particles-bottom-right").length) {
+    if(windowW > 600 && $("#particles-bottom-left").length && $("#particles-bottom-right").length) {
+        particlesJS.load('particles-bottom-left', 'assets/particles-top-left.json', function() {});
         particlesJS.load('particles-bottom-right', 'assets/particles-top-right.json', function() {});
     }
-
 
 });
 
