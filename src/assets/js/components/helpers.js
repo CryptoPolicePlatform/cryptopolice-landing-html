@@ -1,4 +1,4 @@
-window.appApiHost = "https://api.cryptopolice.io"
+window.appApiHost = "https://api.cryptopolice.com"
 
 window.appFormHelpers = {
     getJson: function ($form, fieldsArray) {
