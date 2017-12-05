@@ -1,6 +1,6 @@
 
-Host: www.cryptopolice.io
-Sitemap: https://www.cryptopolice.io/sitemap.xml
+Host: www.cryptopolice.com
+Sitemap: https://www.cryptopolice.com/sitemap.xml
 
 User-agent: *
 Disallow: /assets/js/
