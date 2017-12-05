@@ -4,15 +4,19 @@ $(function () {
     $('form[data-ajax-officer-registration]').submit(function (event) {
         event.preventDefault();
         var $form = $(this);
-        $.post(appApiHost + "/api/officer-signup",
-            appFormHelpers.getJson($form, ['Name', 
+        $.post({
+            url: appApiHost + "/api/officer-signup",
+            data: appFormHelpers.getJson($form, ['Name', 
                 'Nickname',
                 'Email',
                 'Country',
                 'YearsCryptoWorldExperience',
                 'BlockchainKnowledgePercentage',
-                'TradingKnowledgePercentage'])
-        ).done(function () {
+                'TradingKnowledgePercentage']),
+            headers: {
+                'X-G-Recaptcha-Response': $form.data('appRecaptcha').userResponseToken
+            }
+        }).done(function () {
             showAppAlert('success', ['Please check you e-mail for more details']);
             $form[0].reset();
         })

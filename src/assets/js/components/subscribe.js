@@ -8,9 +8,13 @@ $(function () {
     $('form[data-js-subscribe]').submit(function (event) {
         event.preventDefault();
         var $form = $(this);
-        $.post(appApiHost + "/api/subscribe",
-            appFormHelpers.getJson($form, ['Name', 'Email'])
-        ).done(function () {
+        $.post({
+            url: appApiHost + "/api/subscribe",
+            data: appFormHelpers.getJson($form, ['Name', 'Email']),
+            headers: {
+                'X-G-Recaptcha-Response': $form.data('appRecaptcha').userResponseToken
+            }
+        }).done(function () {
             showAppAlert('success', ['Please check you e-mail for confirmation link']);
             $('#subscribe_modal').remodal().close();
             $form[0].reset();
