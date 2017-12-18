@@ -9,7 +9,7 @@ $(function () {
         event.preventDefault();
         var $form = $(this);
         $.post({
-            url: appApiHost + "/api/subscribe",
+            url: appApiHost("/subscribe", "v2"),
             data: appFormHelpers.getJson($form, ['Name', 'Email']),
             headers: {
                 'X-G-Recaptcha-Response': $form.data('appRecaptcha').userResponseToken
@@ -24,7 +24,7 @@ $(function () {
 
     var results = new RegExp('[\?&]subscribe=([^&#]*)').exec(window.location);
     if (results && results[1]) {
-        $.post(appApiHost + "/api/subscribe/confirm/" + results[1])
+        $.post(appApiHost("/subscribe/confirm/" + results[1]))
             .done(function () {
                 showAppAlert('success', ['Thank you, you are now subscribed.']);
             });
