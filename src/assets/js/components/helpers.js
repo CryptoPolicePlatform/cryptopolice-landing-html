@@ -1,4 +1,6 @@
-window.appApiHost = "https://api.cryptopolice.com"
+window.appApiHost = function (uri, v) {
+    return "https://api.cryptopolice.com/api" + (v ? "/" + v : "") + uri 
+}
 
 window.appFormHelpers = {
     getJson: function ($form, fieldsArray) {
@@ -12,5 +14,22 @@ window.appFormHelpers = {
         }
 
         return JSON.stringify(obj);
+    }
+}
+
+window.appCaptchaUserResponseTokenCallback = function (userResponseToken) {
+    appPendingRecaptchaRequestCallback(userResponseToken);
+}
+
+window.appPendingRecaptchaRequestCallback = null;
+
+window.appGrecaptchaRequest = function (callback) {
+    if (appPendingRecaptchaRequestCallback === null) {
+        grecaptcha.execute();
+        appPendingRecaptchaRequestCallback = function (userResponseToken) {
+            grecaptcha.reset();
+            appPendingRecaptchaRequestCallback = null;
+            callback(userResponseToken);
+        }
     }
 }
