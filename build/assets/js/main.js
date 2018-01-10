@@ -22428,20 +22428,21 @@ window.appFormHelpers = {
     }
 }
 
-window.appBindRecaptcha = function () {
-    $('[data-recaptchame]').each(function () {
-        var $form = $(this).parent('form');
-        var widgetId = grecaptcha.render(this, {
-            'sitekey' : '6LfWqzsUAAAAAGvaSVAOqhXWMYAI7QvQmx4vOr49',
-            'callback' : function (userResponseToken) {
-                $form.data('appRecaptcha', {
-                    userResponseToken:userResponseToken
-                });
-                $form.submit();
-                grecaptcha.reset(widgetId);
-            }
-        });
-    })
+window.appCaptchaUserResponseTokenCallback = function (userResponseToken) {
+    appPendingRecaptchaRequestCallback(userResponseToken);
+}
+
+window.appPendingRecaptchaRequestCallback = null;
+
+window.appGrecaptchaRequest = function (callback) {
+    if (appPendingRecaptchaRequestCallback === null) {
+        grecaptcha.execute();
+        appPendingRecaptchaRequestCallback = function (userResponseToken) {
+            grecaptcha.reset();
+            appPendingRecaptchaRequestCallback = null;
+            callback(userResponseToken);
+        }
+    }
 }
 $.ajaxSetup({
     contentType: "application/json",
@@ -22506,17 +22507,19 @@ $(function () {
     $('form[data-js-subscribe]').submit(function (event) {
         event.preventDefault();
         var $form = $(this);
-        $.post({
-            url: appApiHost("/subscribe", "v2"),
-            data: appFormHelpers.getJson($form, ['Name', 'Email']),
-            headers: {
-                'X-G-Recaptcha-Response': $form.data('appRecaptcha').userResponseToken
-            }
-        }).done(function () {
-            showAppAlert('success', ['Please check you e-mail for confirmation link']);
-            $('#subscribe_modal').remodal().close();
-            $form[0].reset();
-            markSubscribed();
+        appGrecaptchaRequest(function (userResponseToken) {
+            $.post({
+                url: appApiHost("/subscribe", "v2"),
+                data: appFormHelpers.getJson($form, ['Name', 'Email']),
+                headers: {
+                    'X-G-Recaptcha-Response': userResponseToken
+                }
+            }).done(function () {
+                showAppAlert('success', ['Please check you e-mail for confirmation link']);
+                $('#subscribe_modal').remodal().close();
+                $form[0].reset();
+                markSubscribed();
+            })
         })
     });
 
@@ -22536,21 +22539,23 @@ $(function () {
     $('form[data-ajax-officer-registration]').submit(function (event) {
         event.preventDefault();
         var $form = $(this);
-        $.post({
-            url: appApiHost("/officer-signup", "v2"),
-            data: appFormHelpers.getJson($form, ['Name', 
-                'Nickname',
-                'Email',
-                'Country',
-                'YearsCryptoWorldExperience',
-                'BlockchainKnowledgePercentage',
-                'TradingKnowledgePercentage']),
-            headers: {
-                'X-G-Recaptcha-Response': $form.data('appRecaptcha').userResponseToken
-            }
-        }).done(function () {
-            showAppAlert('success', ['Please check you e-mail for more details']);
-            $form[0].reset();
+        appGrecaptchaRequest(function (userResponseToken) {
+            $.post({
+                url: appApiHost("/officer-signup", "v2"),
+                data: appFormHelpers.getJson($form, ['Name', 
+                    'Nickname',
+                    'Email',
+                    'Country',
+                    'YearsCryptoWorldExperience',
+                    'BlockchainKnowledgePercentage',
+                    'TradingKnowledgePercentage']),
+                headers: {
+                    'X-G-Recaptcha-Response': userResponseToken
+                }
+            }).done(function () {
+                showAppAlert('success', ['Please check you e-mail for more details']);
+                $form[0].reset();
+            })
         })
     })
 
