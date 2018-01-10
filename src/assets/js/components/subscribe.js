@@ -8,17 +8,19 @@ $(function () {
     $('form[data-js-subscribe]').submit(function (event) {
         event.preventDefault();
         var $form = $(this);
-        $.post({
-            url: appApiHost("/subscribe", "v2"),
-            data: appFormHelpers.getJson($form, ['Name', 'Email']),
-            headers: {
-                'X-G-Recaptcha-Response': $form.data('appRecaptcha').userResponseToken
-            }
-        }).done(function () {
-            showAppAlert('success', ['Please check you e-mail for confirmation link']);
-            $('#subscribe_modal').remodal().close();
-            $form[0].reset();
-            markSubscribed();
+        appGrecaptchaRequest(function (userResponseToken) {
+            $.post({
+                url: appApiHost("/subscribe", "v2"),
+                data: appFormHelpers.getJson($form, ['Name', 'Email']),
+                headers: {
+                    'X-G-Recaptcha-Response': userResponseToken
+                }
+            }).done(function () {
+                showAppAlert('success', ['Please check you e-mail for confirmation link']);
+                $('#subscribe_modal').remodal().close();
+                $form[0].reset();
+                markSubscribed();
+            })
         })
     });
 

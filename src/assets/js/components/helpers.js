@@ -17,18 +17,19 @@ window.appFormHelpers = {
     }
 }
 
-window.appBindRecaptcha = function () {
-    $('[data-recaptchame]').each(function () {
-        var $form = $(this).parent('form');
-        var widgetId = grecaptcha.render(this, {
-            'sitekey' : '6LfWqzsUAAAAAGvaSVAOqhXWMYAI7QvQmx4vOr49',
-            'callback' : function (userResponseToken) {
-                $form.data('appRecaptcha', {
-                    userResponseToken:userResponseToken
-                });
-                $form.submit();
-                grecaptcha.reset(widgetId);
-            }
-        });
-    })
+window.appCaptchaUserResponseTokenCallback = function (userResponseToken) {
+    appPendingRecaptchaRequestCallback(userResponseToken);
+}
+
+window.appPendingRecaptchaRequestCallback = null;
+
+window.appGrecaptchaRequest = function (callback) {
+    if (appPendingRecaptchaRequestCallback === null) {
+        grecaptcha.execute();
+        appPendingRecaptchaRequestCallback = function (userResponseToken) {
+            grecaptcha.reset();
+            appPendingRecaptchaRequestCallback = null;
+            callback(userResponseToken);
+        }
+    }
 }
