@@ -103,6 +103,9 @@
     align-items: center;
 }
 
+.visible-sm-inline {
+    display: none;
+}
 
 @media #{$media_sm} {
     .text-left-sm {
@@ -115,6 +118,10 @@
 
     .visible-sm {
         display: block;
+    }
+
+    .visible-sm-inline {
+        display: inline;
     }
 
     .hidden-sm {
