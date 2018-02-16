@@ -1,8 +1,6 @@
 .proof {
     padding: 80px 15px;
 
-    background: url("#{$img}map.png") center 300px no-repeat;
-
     @media #{$media_sm} {
         padding: 30px 15px;
     }

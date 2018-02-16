@@ -1,0 +1,184 @@
+.scheme {
+    padding: 160px 0;
+    position: relative;
+
+    font-family: 'Gilroy', sans-serif;
+    color: $white;
+    text-transform: uppercase;
+}
+
+.scheme__title {
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: 900;
+}
+
+.scheme__img {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    left: -35px;
+}
+
+.scheme__watchdog {
+    position: absolute;
+    left: 40px;
+    top: 290px;
+
+    .watchdog__item--4 {
+        top: 0;
+        left: 0;
+    }
+
+    .watchdog__item--wave1,
+    .watchdog__item--wave2,
+    .watchdog__item--wave3 {
+        top: -30px;
+        left: -25px;
+    }
+}
+
+.scheme__ball {
+    width: 10px;
+    height: 10px;
+
+    background-color: $white;
+    border-radius: 50%;
+
+    position: absolute;
+    left: -60px;
+    z-index: 1;
+
+    &--1 {
+        top: 0;
+
+        transform-origin: center;
+        animation: ball_1 1s infinite;
+    }
+
+    &--2 {
+        top: 50px;
+
+        transform-origin: center;
+        animation-delay: 1s;
+        animation: ball_2 1.2s infinite;
+    }
+
+    &--3 {
+        top: 100px;
+
+        transform-origin: center;
+        animation-delay: 2s;
+        animation: ball_3 2s infinite;
+    }
+}
+
+@keyframes ball_1 {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate3d(50px, 20px, 0);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate3d(0, 0, 0);
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes ball_2 {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate3d(55px, 0, 0);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes ball_3 {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate3d(60px, -20px, 0);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate3d(0, 0, 0);
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.scheme__item {
+    width: 100%;
+    max-width: 270px;
+    position: absolute;
+    text-align: left;
+
+    &--users {
+        left: 0;
+        bottom: 440px;
+    }
+
+    &--facts {
+        top: 70px;
+        left: 50%;
+        z-index: 1;
+
+        transform: translateX(-50%);
+    }
+
+    &--officers {
+        right: 0;
+        bottom: 440px;
+    }
+
+    &--verdict {
+        right: 0;
+        bottom: 170px;
+    }
+
+    &--algorythm {
+        top: 545px;
+        left: 50%;
+        z-index: 1;
+
+        transform: translateX(-50%);
+    }
+
+    &--archive {
+        left: 0;
+        bottom: 170px;
+    }
+}
+
+.scheme__text {
+    margin: 5px 0;
+    font-size: 11px;
+}
