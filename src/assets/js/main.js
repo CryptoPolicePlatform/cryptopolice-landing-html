@@ -26,3 +26,4 @@
 //= components/subscribe.js
 //= components/officer-registration.js
 //= components/nav.js
+//= components/medium-rss.js
