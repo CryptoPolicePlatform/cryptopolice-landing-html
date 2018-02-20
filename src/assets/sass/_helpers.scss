@@ -107,6 +107,12 @@
     display: none;
 }
 
+@media #{$media_md} {
+    .show-md {
+        display: block;
+    }
+}
+
 @media #{$media_sm} {
     .text-left-sm {
         text-align: left;

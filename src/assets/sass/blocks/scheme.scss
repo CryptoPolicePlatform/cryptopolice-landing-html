@@ -5,6 +5,10 @@
     font-family: 'Gilroy', sans-serif;
     color: $white;
     text-transform: uppercase;
+
+    @media #{$media_md} {
+        display: none;
+    }
 }
 
 .scheme__title {
@@ -181,4 +185,16 @@
 .scheme__text {
     margin: 5px 0;
     font-size: 11px;
+}
+
+.scheme-mobile {
+    width: 100%;
+    max-width: 430px;
+    margin: 30px auto 0;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 }
