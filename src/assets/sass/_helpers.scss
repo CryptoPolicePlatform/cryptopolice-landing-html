@@ -107,6 +107,10 @@
     display: none;
 }
 
+.show-md {
+    display: none;
+}
+
 @media #{$media_md} {
     .show-md {
         display: block;

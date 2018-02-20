@@ -22713,7 +22713,7 @@ $(function() {
                     var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart;
                     var src = item.description.substring(srcStart, srcEnd);
 
-                    output += '<li><a href="' + item.link + '" target="_blank" ><img src="' + src + '" width="130"></a>';
+                    output += '<li><a class="news__image" href="' + item.link + '" target="_blank" ><img src="' + src + '" width="130"></a>';
                     output += '<a href="' + item.link + '" target="_blank" >' + item.title + '</h2></a></li>';
                 });
                 $content.html(output);
