@@ -1,0 +1,44 @@
+.checkout {
+    padding: 30px 15px;
+    background: #0054a6 url("#{$img}checkout/bg.jpg") center no-repeat;
+    background-size: auto 100%;
+}
+
+.checkout__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 767px;
+    margin: 60px auto 0;
+}
+
+.checkout__list-item {
+    width: 33.33333%;
+    padding: 0 45px;
+    margin-bottom: 35px;
+
+    text-align: center;
+    color: $white;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    img {
+        display: block;
+        margin: 0 auto 20px;
+    }
+
+    @media #{$media_sm} {
+        width: 50%;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+}
+
+.checkout__footer {
+    margin-top: 45px;
+    text-align: center;
+}

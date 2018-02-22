@@ -1,5 +1,6 @@
 .news {
     display: flex;
+    flex-wrap: wrap;
     height: 550px;
 
     @media #{$media_sm} {
