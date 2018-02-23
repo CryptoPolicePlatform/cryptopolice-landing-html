@@ -14,7 +14,7 @@
 
 .checkout__list-item {
     width: 33.33333%;
-    padding: 0 45px;
+    padding: 0 20px;
     margin-bottom: 35px;
 
     text-align: center;
@@ -26,7 +26,9 @@
 
     img {
         display: block;
-        margin: 0 auto 20px;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
     }
 
     @media #{$media_sm} {
