@@ -16,12 +16,22 @@
         display: none;
     }
 
+    &--auto {
+        width: 100%;
+        height: auto;
+    }
+
     @media (max-width: 830px) {
         display: none;
 
         &--sm {
             display: block;
             max-width: 100%;
+            margin: 40px auto 0;
+        }
+
+        &--auto {
+            display: block;
             margin: 40px auto 0;
         }
     }
