@@ -22540,22 +22540,10 @@ window.appFormHelpers = {
         }
 
         return JSON.stringify(obj);
-    }
-}
-
-window.appCaptchaUserResponseTokenCallback = function (userResponseToken) {
-    appPendingRecaptchaRequestCallback(userResponseToken);
-}
-
-window.appPendingRecaptchaRequestCallback = null;
-
-window.appGrecaptchaRequest = function (callback) {
-    if (appPendingRecaptchaRequestCallback === null) {
-        grecaptcha.execute();
-        appPendingRecaptchaRequestCallback = function (userResponseToken) {
-            grecaptcha.reset();
-            appPendingRecaptchaRequestCallback = null;
-            callback(userResponseToken);
+    },
+    captchaHeader: function($form) {
+        return {
+            'X-G-Recaptcha-Response': $form.find('[name=g-recaptcha-response]').val()
         }
     }
 }
@@ -22622,19 +22610,15 @@ $(function () {
     $('form[data-js-subscribe]').submit(function (event) {
         event.preventDefault();
         var $form = $(this);
-        appGrecaptchaRequest(function (userResponseToken) {
-            $.post({
-                url: appApiHost("/subscribe", "v2"),
-                data: appFormHelpers.getJson($form, ['Name', 'Email']),
-                headers: {
-                    'X-G-Recaptcha-Response': userResponseToken
-                }
-            }).done(function () {
-                showAppAlert('success', ['Please check you e-mail for confirmation link']);
-                $('#subscribe_modal').remodal().close();
-                $form[0].reset();
-                markSubscribed();
-            })
+        $.post({
+            url: appApiHost("/subscribe", "v2"),
+            data: appFormHelpers.getJson($form, ['Name', 'Email']),
+            headers: appFormHelpers.captchaHeader($form)
+        }).done(function () {
+            showAppAlert('success', ['Please check you e-mail for confirmation link']);
+            $('#subscribe_modal').remodal().close();
+            $form[0].reset();
+            markSubscribed();
         })
     });
 
@@ -22645,41 +22629,6 @@ $(function () {
                 showAppAlert('success', ['Thank you, you are now subscribed.']);
             });
         markSubscribed();
-        history.replaceState(null, null, '/')
-    }
-})
-$(function () {
-    "use strict";
-
-    $('form[data-ajax-officer-registration]').submit(function (event) {
-        event.preventDefault();
-        var $form = $(this);
-        appGrecaptchaRequest(function (userResponseToken) {
-            $.post({
-                url: appApiHost("/officer-signup", "v2"),
-                data: appFormHelpers.getJson($form, ['Name', 
-                    'Nickname',
-                    'Email',
-                    'Country',
-                    'YearsCryptoWorldExperience',
-                    'BlockchainKnowledgePercentage',
-                    'TradingKnowledgePercentage']),
-                headers: {
-                    'X-G-Recaptcha-Response': userResponseToken
-                }
-            }).done(function () {
-                showAppAlert('success', ['Please check you e-mail for more details']);
-                $form[0].reset();
-            })
-        })
-    })
-
-    var results = new RegExp('[\?&]officer_signup=([^&#]*)').exec(window.location);
-    if (results && results[1]) {
-        $.post(appApiHost("/officer-signup/confirm/" + results[1]))
-            .done(function () {
-                showAppAlert('success', ['Thank you, registration confirmed.']);
-            });
         history.replaceState(null, null, '/')
     }
 })
