@@ -14,22 +14,10 @@ window.appFormHelpers = {
         }
 
         return JSON.stringify(obj);
-    }
-}
-
-window.appCaptchaUserResponseTokenCallback = function (userResponseToken) {
-    appPendingRecaptchaRequestCallback(userResponseToken);
-}
-
-window.appPendingRecaptchaRequestCallback = null;
-
-window.appGrecaptchaRequest = function (callback) {
-    if (appPendingRecaptchaRequestCallback === null) {
-        grecaptcha.execute();
-        appPendingRecaptchaRequestCallback = function (userResponseToken) {
-            grecaptcha.reset();
-            appPendingRecaptchaRequestCallback = null;
-            callback(userResponseToken);
+    },
+    captchaHeader: function($form) {
+        return {
+            'X-G-Recaptcha-Response': $form.find('[name=g-recaptcha-response]').val()
         }
     }
 }
