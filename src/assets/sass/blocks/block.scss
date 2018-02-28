@@ -16,6 +16,10 @@
         @media #{$media_height} {
             padding-bottom: 90px;
         }
+
+        @media #{$media_sm} {
+            min-height: 650px;
+        }
     }
 }
 
