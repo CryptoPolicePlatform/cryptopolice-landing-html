@@ -27,3 +27,4 @@
 //= components/nav.js
 //= components/medium-rss.js
 //= components/help.js
+//= components/seminar.js
