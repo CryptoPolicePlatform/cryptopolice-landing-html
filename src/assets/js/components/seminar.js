@@ -16,7 +16,7 @@ $(function () {
 
     var results = new RegExp('[\?&]confirm_seminar_signup=([^&#]*)').exec(window.location);
     if (results && results[1]) {
-        $.post(appApiHost("/Seminar/Signup/Confirm/" + results[1], "v1.0"))
+        $.get(appApiHost("/Seminar/Signup/Confirm/" + results[1], "v1.0"))
             .done(function () {
                 showAppAlert('success', ['Paldies par pieteikšanos!']);
             });
