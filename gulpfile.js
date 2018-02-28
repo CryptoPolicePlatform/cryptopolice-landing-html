@@ -32,7 +32,7 @@ var path = {
         static: "build/"
     },
     src: {
-        html: "src/*.{htm,html}",
+        html: "src/**/*.{htm,html}",
         js: "src/assets/js/*.js",
         css: ["src/assets/sass/style.scss", "src/assets/sass/unsubscribe.scss"],
         img: "src/assets/i/**/*.*",
