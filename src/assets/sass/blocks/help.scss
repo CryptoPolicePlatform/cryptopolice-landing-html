@@ -1,0 +1,77 @@
+.help {
+    width: 35px;
+    height: 35px;
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    border-radius: 50%;
+
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 10;
+
+    transform: translateX(60px);
+
+    animation-name: help;
+    animation-duration: .5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.help__ico {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+
+    background: transparent;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    border: 0;
+    outline: 0;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+
+    transition: transform .2s linear, opacity .2s linear;
+
+    &:first-child {
+        z-index: 100;
+    }
+
+    &:nth-child(2) {
+        z-index: 3;
+
+        &.open {
+            transform: translate3d(-60px, 0, 0);
+        }
+    }
+
+    &:nth-child(3) {
+        z-index: 2;
+
+        &.open {
+            transform: translate3d(-39px, -38px, 0);
+        }
+    }
+
+    &:nth-child(4) {
+        z-index: 1;
+
+        &.open {
+            transform: translate3d(0, -60px, 0);
+        }
+    }
+}
+
+
+@keyframes help {
+    0% {
+        transform: translateX(60px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

@@ -26,3 +26,4 @@
 //= components/subscribe.js
 //= components/nav.js
 //= components/medium-rss.js
+//= components/help.js
