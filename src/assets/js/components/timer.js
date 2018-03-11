@@ -2,7 +2,7 @@ $(function() {
 
     "use strict";
 
-    var date = new Date(2018, 2, 12); // YYYY, 0-11 - month, 1-31 day
+    var date = new Date(2018, 2, 20); // YYYY, 0-11 - month, 1-31 day
 
     $('#timer').countdown({
         until: date,
