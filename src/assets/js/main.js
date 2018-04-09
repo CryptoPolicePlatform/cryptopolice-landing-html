@@ -28,3 +28,4 @@
 //= components/medium-rss.js
 //= components/help.js
 //= components/seminar.js
+//= components/token-sale-whitelisting.js

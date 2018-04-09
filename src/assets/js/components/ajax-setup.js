@@ -1,19 +1,24 @@
 $.ajaxSetup({
     contentType: "application/json",
     error: function ($xhr) {
-        if ($xhr.status === 400 && $xhr.responseJSON) {
+        if ($xhr.responseJSON) {
             var messages = [];
+            
+            var error = $xhr.responseJSON.error;
 
-            for (var field in $xhr.responseJSON) {
-                $xhr.responseJSON[field].forEach(function (msg) {
-                    msg = msg.trim();
-                    if (msg) {
-                        messages.push(msg);
-                    }
-                })
-            }
+            if (error && error.message)
+            {
+                messages.push(error.message);
 
-            if (messages.length) {
+                if (error.details instanceof Array)
+                {
+                    error.details.forEach(function (detail) {
+                        if (detail.message) {
+                            messages.push(detail.message);
+                        }
+                    });
+                }
+
                 showAppAlert('error', messages);
                 return;
             }
