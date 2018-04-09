@@ -47,7 +47,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
 
                 <div class="intro__btns">
-                    <a class="btn  btn--o-gradient" href="#" data-toggle="remodal" data-target="#subscribe_modal" title="Subscribe to CryptoPolice important updates">
+                    <a class="btn  btn--o-gradient" href="#" data-toggle="remodal" data-target="#tokensale_whitelist_modal" title="Token sale whitelisting request">
                         <span class="btn__inner">Whitelisting</span>
                     </a>
 
@@ -1591,6 +1591,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </div>
 
+
+<div class="remodal" id="tokensale_whitelist_modal" role="dialog">
+    <div class="remodal__inner">
+        <button data-remodal-action="cancel" class="remodal__close" type="button">X</button>
+        <div class="remodal__title">Token sale whitelisting</div>
+        <form action="/" method="post" data-js-token-sale-whitelist>
+            <input class="remodal__input" type="email" placeholder="email address" name="Email">
+            <div class="g-recaptcha" data-sitekey="6LfH70gUAAAAAGFxqECzZSb-kHaHSv255x8FcEq3" style="display: inline-block"></div>
+            <button class="remodal__btn" type="submit" data-recaptchame>submit</button>
+        </form>
+    </div>
+</div>
 
 
 <div class="remodal" id="dont_miss_modal" role="dialog">

@@ -22550,19 +22550,24 @@ window.appFormHelpers = {
 $.ajaxSetup({
     contentType: "application/json",
     error: function ($xhr) {
-        if ($xhr.status === 400 && $xhr.responseJSON) {
+        if ($xhr.responseJSON) {
             var messages = [];
+            
+            var error = $xhr.responseJSON.error;
 
-            for (var field in $xhr.responseJSON) {
-                $xhr.responseJSON[field].forEach(function (msg) {
-                    msg = msg.trim();
-                    if (msg) {
-                        messages.push(msg);
-                    }
-                })
-            }
+            if (error && error.message)
+            {
+                messages.push(error.message);
 
-            if (messages.length) {
+                if (error.details instanceof Array)
+                {
+                    error.details.forEach(function (detail) {
+                        if (detail.message) {
+                            messages.push(detail.message);
+                        }
+                    });
+                }
+
                 showAppAlert('error', messages);
                 return;
             }
@@ -22707,3 +22712,18 @@ $(function () {
         history.replaceState(null, null, '/')
     }
 })
+$(function () {
+    $('form[data-js-token-sale-whitelist]').submit(function (event) {
+        event.preventDefault();
+        var $form = $(this);
+        $.post({
+            url: appApiHost("/Crowdsale/Participant/Signup/Whitelisting", "v1.0"),
+            data: appFormHelpers.getJson($form, ['Email']),
+            headers: appFormHelpers.captchaHeader($form)
+        }).done(function () {
+            showAppAlert('success', ['You will receive confirmation e-mail shortly']);
+            $('#tokensale_whitelist_modal').remodal().close();
+            $form[0].reset();
+        })
+    });
+});
