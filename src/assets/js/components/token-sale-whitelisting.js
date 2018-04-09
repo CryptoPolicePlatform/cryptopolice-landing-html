@@ -7,7 +7,7 @@ $(function () {
             data: appFormHelpers.getJson($form, ['Email']),
             headers: appFormHelpers.captchaHeader($form)
         }).done(function () {
-            showAppAlert('success', ['Please check you e-mail for confirmation link']);
+            showAppAlert('success', ['You will receive confirmation e-mail shortly']);
             $('#tokensale_whitelist_modal').remodal().close();
             $form[0].reset();
         })
