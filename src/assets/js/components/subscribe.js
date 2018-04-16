@@ -18,6 +18,10 @@ $(function () {
             $form[0].reset();
             markSubscribed();
         })
+        .fail(jqXhrErrorHandler)
+        .always(function () {
+            grecaptcha.reset()
+        })
     });
 
     var results = new RegExp('[\?&]subscribe=([^&#]*)').exec(window.location);
