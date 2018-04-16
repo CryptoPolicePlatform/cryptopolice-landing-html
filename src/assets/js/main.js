@@ -29,3 +29,4 @@
 //= components/help.js
 //= components/seminar.js
 //= components/token-sale-whitelisting.js
+//= components/referral.js
