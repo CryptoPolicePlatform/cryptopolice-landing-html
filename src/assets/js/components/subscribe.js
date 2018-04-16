@@ -29,8 +29,8 @@ $(function () {
         $.post(appApiHost("/subscribe/confirm/" + results[1], "v1.0"))
             .done(function () {
                 showAppAlert('success', ['Thank you, you are now subscribed.']);
-            });
-        markSubscribed();
-        history.replaceState(null, null, '/')
+                markSubscribed();
+                history.replaceState(null, null, '/');
+            }).fail(jqXhrErrorHandler);
     }
 })
