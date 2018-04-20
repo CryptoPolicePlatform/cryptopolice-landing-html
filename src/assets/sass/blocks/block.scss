@@ -15,6 +15,10 @@
 
         @media #{$media_height} {
             padding-bottom: 90px;
+
+            .intro--tokensale & {
+                padding-bottom: 0;
+            }
         }
 
         @media #{$media_sm} {

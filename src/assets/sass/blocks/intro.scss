@@ -15,6 +15,34 @@
     z-index: 10;
 
     background: url("#{$img}space-top.png") center top no-repeat;
+
+    &--tokensale {
+        height: auto;
+        padding-bottom: 0;
+        min-height: 0;
+
+        .intro__content {
+            &:before {
+                width: 285px;
+                height: 203px;
+                background-size: cover;
+
+                top: 20px;
+            }
+
+            @media #{$media_sm} {
+                &:before {
+                    top: -70px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                &:before {
+                    top: -90px;
+                }
+            }
+        }
+    }
 }
 
 .intro__content {

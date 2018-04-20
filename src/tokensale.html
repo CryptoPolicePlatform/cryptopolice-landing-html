@@ -1,5 +1,55 @@
-<section class="officer officer_parallax_big" data-parallax-bg-image="assets/i/parallax-big.png" data-parallax-bg-size="auto" data-parallax-direction="down" data-parallax-bg-position="center center">
-    <div class="officer__inner officer_parallax_small" data-parallax-bg-image="assets/i/parallax-small.png" data-parallax-speed="0.5" data-parallax-bg-size="auto" data-parallax-direction="up" data-parallax-bg-position="center center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    //= tpl/head.html
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GNJ8BN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<nav class="nav" id="nav">
+    <button class="nav__burger" data-toggle="nav" type="button"><i class="fa fa-bars"></i></button>
+    <div class="nav__inner" id="nav_toggle">
+        <div class="nav__left">
+            <a class="nav__item" href="#" data-scroll data-target="#intro">Home</a>
+            <a class="nav__item" href="#" data-scroll data-target="#tokens">OFCR tokens</a>
+            <a class="nav__item" href="#" data-scroll data-target="#milestones">Token Sale milestones</a>
+            <a class="nav__item" href="https://medium.com/cryptopolice" target="_blank">Blog</a>
+            <a class="nav__item" href="https://support.cryptopolice.com/" target="_blank">FAQ</a>
+        </div>
+        <div class="nav__right">
+            <a class="nav__item  nav__item--rounded" href="index.html">CryptoPolice</a>
+            <a class="nav__item  nav__item--rounded" href="#" target="_blank">Demo</a>
+        </div>
+    </div>
+</nav>
+
+
+
+<section class="intro  intro--tokensale" id="intro">
+
+    <div class="block  block--intro">
+        <div class="intro__content">
+            <img class="img  hidden-sm" src="assets/i/intro_text.png?v2" alt="First community based decentralized police on blockchain">
+            <img class="img  center-block  visible-sm" src="assets/i/intro_text_mob.png?v2" alt="CryptoPolice logo">
+
+            <div class="timer">
+                <div class="timer__title">Whitelisting is LIVE! Pre-Sale starts - May 15</div>
+                <div id="timer"></div>
+            </div>
+        </div><!-- /.intro__content -->
+    </div><!-- /.block -->
+
+</section><!-- /.intro -->
+
+
+
+<section class="officer  mission_parallax_big" data-parallax-bg-image="assets/i/parallax2-big.png" data-parallax-bg-size="auto" data-parallax-direction="up" data-parallax-bg-position="center center" id="milestones" id="tokens">
+    <div class="mission_parallax_small" data-parallax-bg-image="assets/i/parallax2-small.png" data-parallax-bg-size="auto" data-parallax-speed="0.2" data-parallax-direction="down" data-parallax-bg-position="center center">
         <div class="block">
 
             <div class="block__action">
@@ -244,10 +294,11 @@
 
 
 
+//= tpl/whitepaper-cta.html
 
 
 
-<section class="monetization  mission_parallax_big" data-parallax-bg-image="assets/i/parallax2-big.png" data-parallax-bg-size="auto" data-parallax-direction="up" data-parallax-bg-position="center center">
+<section class="monetization  mission_parallax_big" data-parallax-bg-image="assets/i/parallax2-big.png" data-parallax-bg-size="auto" data-parallax-direction="up" data-parallax-bg-position="center center" id="milestones">
     <div class="mission_parallax_small" data-parallax-bg-image="assets/i/parallax2-small.png" data-parallax-bg-size="auto" data-parallax-speed="0.2" data-parallax-direction="down" data-parallax-bg-position="center center">
         <div class="block">
             <h3 class="block__title">Token Sale milestones</h3>
@@ -262,3 +313,36 @@
         </div>
     </div>
 </section><!-- /.milestones -->
+
+
+
+//= tpl/whitelist-cta.html
+
+
+//= tpl/footer.html
+
+
+//= tpl/whitelist-modal.html
+
+
+<div class="remodal" id="dont_miss_modal" role="dialog">
+    <div class="remodal__inner">
+        <button data-remodal-action="cancel" class="remodal__close" type="button">X</button>
+        <div class="remodal__title">Do not miss the news! Subscribe!</div>
+        <form action="/" method="post" data-js-subscribe>
+            <input class="remodal__input" type="text" placeholder="your name" name="Name">
+            <input class="remodal__input" type="email" placeholder="email address" name="Email">
+            <div class="g-recaptcha" data-sitekey="6LfH70gUAAAAAGFxqECzZSb-kHaHSv255x8FcEq3" style="display: inline-block"></div>
+            <button class="remodal__btn" type="submit" data-recaptchame>submit</button>
+        </form>
+    </div>
+</div>
+
+
+//= tpl/help.html
+
+
+//= tpl/script.html
+
+</body>
+</html>
