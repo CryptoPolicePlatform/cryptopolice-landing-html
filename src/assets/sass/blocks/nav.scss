@@ -29,6 +29,11 @@
 }
 
 .nav__inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 
     @media (max-width: 767px) {
         display: none;
@@ -43,6 +48,16 @@
     }
 }
 
+.nav__right {
+    text-align: right;
+
+    @media (max-width: 767px) {
+        .nav__item {
+            margin-bottom: 8px;
+        }
+    }
+}
+
 .nav__item {
     display: inline-block;
     vertical-align: top;
@@ -51,6 +66,7 @@
     padding-bottom: .15em;
 
     color: $white;
+    text-align: center;
 
     &:hover {
         text-decoration: underline;

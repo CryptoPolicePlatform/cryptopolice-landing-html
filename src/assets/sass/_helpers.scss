@@ -111,6 +111,12 @@
     display: none;
 }
 
+.img-blockchain {
+    width: 100%;
+    max-width: 840px;
+    margin: 60px auto 0;
+}
+
 @media #{$media_md} {
     .show-md {
         display: block;

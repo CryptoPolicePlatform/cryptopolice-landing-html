@@ -53,6 +53,10 @@
             color: $black;
         }
     }
+
+    @media (max-width: 767px) {
+        max-height: 300px;
+    }
 }
 
 .news__image {

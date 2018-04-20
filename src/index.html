@@ -13,30 +13,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="nav" id="nav">
     <button class="nav__burger" data-toggle="nav" type="button"><i class="fa fa-bars"></i></button>
     <div class="nav__inner" id="nav_toggle">
-        <a class="nav__item" href="#" data-scroll data-target="#intro">Home</a>
-        <a class="nav__item" href="#" data-scroll data-target="#presentation">About</a>
-        <a class="nav__item" href="#" data-scroll data-target="#documents">Documents</a>
-        <a class="nav__item" href="#" data-scroll data-target="#token">Token</a>
-        <a class="nav__item" href="#" data-scroll data-target="#team">Team</a>
-        <a class="nav__item  nav__item--rounded" href="#" data-toggle="remodal" data-target="#tokensale_whitelist_modal">Join Whitelist</a>
-        <a class="nav__item" href="#" data-scroll data-target="#roadmap">Roadmap</a>
-        <a class="nav__item" href="https://medium.com/cryptopolice" target="_blank">Blog</a>
-        <a class="nav__item" href="https://support.cryptopolice.com/" target="_blank">FAQ</a>
+        <div class="nav__left">
+            <a class="nav__item" href="#" data-scroll data-target="#intro">Home</a>
+            <a class="nav__item" href="#" data-scroll data-target="#presentation">About</a>
+            <a class="nav__item" href="#" data-scroll data-target="#documents">Documents</a>
+            <a class="nav__item" href="#" data-scroll data-target="#products">Products</a>
+            <a class="nav__item" href="#" data-scroll data-target="#team">Team</a>
+            <a class="nav__item" href="#" data-scroll data-target="#roadmap">Roadmap</a>
+            <a class="nav__item" href="https://medium.com/cryptopolice" target="_blank">Blog</a>
+            <a class="nav__item" href="https://support.cryptopolice.com/" target="_blank">FAQ</a>
+        </div>
+        <div class="nav__right">
+            <a class="nav__item  nav__item--rounded" href="#">Tokensale</a>
+            <a class="nav__item  nav__item--rounded" href="#">Demo</a>
+        </div>
     </div>
 </nav>
 
 
 <div class="space">
     <section class="intro" id="intro">
-        <div class="particles particles--left">
-            <div id="particles-bottom-left"></div>
-        </div>
-        <div class="particles particles--right">
-            <div id="particles-bottom-right"></div>
-        </div>
 
         <div class="block  block--intro">
-
             <div class="intro__content">
                 <img class="img  hidden-sm" src="assets/i/intro_text.png?v2" alt="First community based decentralized police on blockchain">
                 <img class="img  center-block  visible-sm" src="assets/i/intro_text_mob.png?v2" alt="CryptoPolice logo">
@@ -56,9 +54,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </a>
                 </div>
             </div><!-- /.intro__content -->
-
-
-
         </div><!-- /.block -->
 
         <div class="block__action  block__action--intro">
@@ -82,7 +77,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="presentation__video">
                 <div class="video video--16by9">
-                    <iframe class="video__item" src="https://www.youtube.com/embed/0oSFMgAIc1o" allowfullscreen title="CryptoPolice video presentation"></iframe>
+                    <iframe class="video__item" src="https://www.youtube.com/embed/mb4oJb7_FwM" allowfullscreen title="CryptoPolice video presentation"></iframe>
                 </div>
             </div>
 
@@ -96,85 +91,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section><!-- /.presentation -->
 </div><!-- /.space -->
 
-
-
-
-<section class="docs">
-    <div class="block">
-
-        <div class="block__action">
-            <a class="block__action-title" href="#" data-scroll data-target="#news">
-                Read our news
-                <span class="m_scroll_arrows first"></span>
-                <span class="m_scroll_arrows second"></span>
-            </a>
-        </div>
-
-        <div id="news">
-            <div class="news">
-                <div class="news__half hidden-sm">
-                    <a class="twitter-timeline" data-height="550" href="https://twitter.com/CryptoPolicecom?ref_src=twsrc%5Etfw">Tweets by CryptoPolice</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
-                <div class="news__half">
-                    <div class="news__medium">
-                        <div class="news__title">Our news feed</div>
-                        <ul class="news__list" id="medium_feed"></ul>
-                        <a class="news__see-all" href="https://medium.com/cryptopolice" target="_blank">See all articles</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div><!-- /.block -->
-</section><!-- /.docs -->
-
-
-<div class="checkout">
-    <div class="block">
-        <h3 class="block__title text-upper">Demo version of CryptoPolice platform</h3>
-
-        <div class="checkout__list">
-            <div class="checkout__list-item">
-                <img src="assets/i/checkout/1.png" alt="CryptoPolice early bird">
-                165 early bird<br>officers
-            </div>
-            <div class="checkout__list-item">
-                <img src="assets/i/checkout/2.png" alt="CryptoPolice Academy">
-                cryptopolice<br>academy
-            </div>
-            <div class="checkout__list-item">
-                <img src="assets/i/checkout/3.png" alt="CryptoPolice community section">
-                community<br>section
-            </div>
-            <div class="checkout__list-item">
-                <img src="assets/i/checkout/4.png" alt="CryptoPolice bounty section">
-                bounty<br>section
-            </div>
-            <div class="checkout__list-item">
-                <img src="assets/i/checkout/5.png" alt="CryptoPolice KYC">
-                kyc
-            </div>
-            <div class="checkout__list-item">
-                <img src="assets/i/checkout/6.png" alt="CryptoPolice on github">
-                all code on<br>github
-            </div>
-        </div>
-
-        <div class="text-center">
-            <a class="btn  btn--o-white  btn--o2x  btn--xl  btn--ellipse  text-upper  text-bold" href="https://www.cryptopolice.com/platform/" target="_blank">Visit platform</a>
-        </div>
-        <!--
-        <div class="checkout__footer">
-            <a href="#" target="_blank">
-                <img src="assets/i/checkout/appstore-btn.png" alt="CryptoPolice on appstore">
-            </a>
-            <a href="#" target="_blank">
-                <img src="assets/i/checkout/gpay-btn.png" alt="CryptoPolice on googleplay">
-            </a>
-        </div>
-        -->
-    </div><!-- /.block -->
-</div><!-- /.checkout -->
 
 
 
@@ -208,8 +124,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span>Token distribution</span>
             </a>
         </div>
-
-        <a class="btn-long" href="https://support.cryptopolice.com" target="_blank" title="CryptoPolice support center">Need help? Visit the support center!</a>
 
     </div><!-- /.block -->
 </section><!-- /.docs -->
@@ -247,13 +161,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section><!-- /.media -->
 
 
+
 <section class="proof  mission_parallax_big" data-parallax-bg-image="assets/i/parallax2-big.png" data-parallax-bg-size="auto" data-parallax-direction="up" data-parallax-bg-position="center center">
     <div class="proof__inner  mission_parallax_small" data-parallax-bg-image="assets/i/parallax2-small.png" data-parallax-bg-size="auto" data-parallax-speed="0.2" data-parallax-direction="down" data-parallax-bg-position="center center">
         <div class="block">
             <h3 class="block__title">The Wisdom of Crowds</h3>
 
             <div class="block__text">
-            <p>It's really important to understand how CryptoPolice works. The whole internet community can participate in the global fight against scam. Any online user can submit an application to CryptoPolice, pointing at any suspicious fact. Then, an Officer reviews the report and delivers a verdict, which will subsequently undergo a multi-level verification process by other Officers. The factual data that was verified and confirmed is stored in the archive, which forms the basis for the scam notification system “WatchDog”, helping protect users online.</p>
+                <p>It's really important to understand how CryptoPolice works. The whole internet community can participate in the global fight against scam. Any online user can submit an application to CryptoPolice, pointing at any suspicious fact. Then, an Officer reviews the report and delivers a verdict, which will subsequently undergo a multi-level verification process by other Officers. The factual data that was verified and confirmed is stored in the archive, which forms the basis for the scam notification system “WatchDog”, helping protect users online.</p>
             </div>
 
             <div class="scheme">
@@ -303,10 +218,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="scheme-mobile  show-md">
                 <img src="assets/i/scheme/scheme_mob.svg" alt="The Wisdom of Crowds">
             </div>
+        </div>
 
+        <div class="block">
+            <h3 class="block__title">The Wisdom of Crowds</h3>
+            <div class="block__text">
+                <p>It's really important to understand how CryptoPolice works. The whole internet community can participate in the global fight against scam. Any online user can submit an application to CryptoPolice, pointing at any suspicious fact. Then, an Officer reviews the report and delivers a verdict, which will subsequently undergo a multi-level verification process by other Officers. The factual data that was verified and confirmed is stored in the archive, which forms the basis for the scam notification system “WatchDog”, helping protect users online.</p>
+            </div>
+
+            <img class="img-blockchain" src="assets/i/crypto-blockchain.svg" alt="">
         </div>
     </div>
 </section>
+
 
 
 <section class="early-bird">
@@ -319,9 +243,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
-<!--->
 
-<section class="mission  mission_parallax_big" data-parallax-bg-image="assets/i/parallax2-big.png" data-parallax-bg-size="auto" data-parallax-direction="up" data-parallax-bg-position="center center">
+<section class="mission  mission_parallax_big" data-parallax-bg-image="assets/i/parallax2-big.png" data-parallax-bg-size="auto" data-parallax-direction="up" data-parallax-bg-position="center center" id="products">
     <div class="mission__inner  mission_parallax_small" data-parallax-bg-image="assets/i/parallax2-small.png" data-parallax-bg-size="auto" data-parallax-speed="0.2" data-parallax-direction="down" data-parallax-bg-position="center center">
         <div class="block">
 
@@ -384,12 +307,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
 
-
                 </div><!-- /.row -->
 
             </div><!-- /.benefits -->
 
-            <h3 class="block__title"> OUR KEY FEATURES</h3>
+            <h3 class="block__title">OUR KEY FEATURES</h3>
 
             <div class="benefits">
                 <div class="row mb-15">
@@ -461,264 +383,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section><!-- /.join -->
 
 
-
-<section class="officer officer_parallax_big" data-parallax-bg-image="assets/i/parallax-big.png" data-parallax-bg-size="auto" data-parallax-direction="down" data-parallax-bg-position="center center">
-    <div class="officer__inner officer_parallax_small" data-parallax-bg-image="assets/i/parallax-small.png" data-parallax-speed="0.5" data-parallax-bg-size="auto" data-parallax-direction="up" data-parallax-bg-position="center center">
-        <div class="block">
-
-            <div class="block__action">
-                <a class="block__action-title" href="#" data-scroll data-target="#token">
-                    Learn more about OFCR tokens
-                    <span class="m_scroll_arrows first"></span>
-                    <span class="m_scroll_arrows second"></span>
-                </a>
-            </div>
-
-            <h3 class="block__title" id="token">OfficerCoin tokens</h3>
-            <div class="block__text">
-                <p>The OfficerCoin (OFCR) is CryptoPolice's token, which is essential to the functioning of the platform. OFCR is an access token that enables CryptoPolice platform services. Tokens will also be used to reward platform users for reporting and verifying information. The total number of OfficerCoin Tokens (OFCR) is 1 billion.</p>
-            </div>
-
-            <div class="tabs" id="tabs1">
-                <div class="tabs__nav" data-tabs-for="#tabs1" role="tablist">
-                    <a class="tabs__nav-item  active" href="#general_info" role="tab">General Info</a>
-                    <a class="tabs__nav-item" href="#prices" role="tab">Prices</a>
-                    <a class="tabs__nav-item" href="#bounties" role="tab">Bounties &amp; referrals</a>
-                    <a class="tabs__nav-item" href="#airdrops" role="tab">Airdrops</a>
-                </div>
-                <div class="tabs__content">
-                    <div class="tabs__item  active" id="general_info" role="tabpanel">
-                        <div class="tabs__item-header">
-                            <div class="row">
-                                <div class="col-md-5">
-                                    <p><b>Token name:</b> OfficerCoin</p>
-                                    <p><b>Symbol:</b> OFCR</p>
-                                    <p><b>Total tokens:</b> 1,000,000,000 OFCR</p>
-                                    <p><b>Platform:</b> Etherium (ERC20)</p>
-                                </div>
-                                <div class="col-md-7">
-                                    <p><b>Type:</b> Utility Token</p>
-                                    <p><b>Transfarable:</b> Yes. After token sale</p>
-                                    <p><b>Adjustable:</b> Yes. All unsold tokens will be burned</p>
-                                    <p><b>Minimum goal:</b> 12,500,000 OFCR</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tabs__item-content">
-                            <div class="row">
-                                <div class="col-md-6">Total supply</div>
-                                <div class="col-md-6  text-right  text-left-sm">1,000,000,000 OFCR</div>
-                            </div>
-                            <div class="progress  progress--thin  progress--rounded" role="progressbar">
-                                <div class="progress__bar" style="width: 100%;"></div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6">Token sale</div>
-                                <div class="col-md-6  text-right  text-left-sm">510,000,000 OFCR</div>
-                            </div>
-                            <div class="progress  progress--thin  progress--rounded" role="progressbar">
-                                <div class="progress__bar" style="width: 51%;"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">Platform users rewards</div>
-                                <div class="col-md-6  text-right  text-left-sm"> 350,000,000 OFCR</div>
-                            </div>
-                            <div class="progress  progress--thin  progress--rounded" role="progressbar">
-                                <div class="progress__bar" style="width: 35%;"></div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6">Referrals and airdrops</div>
-                                <div class="col-md-6  text-right  text-left-sm">70,000,000 OFCR</div>
-                            </div>
-                            <div class="progress  progress--thin  progress--rounded" role="progressbar">
-                                <div class="progress__bar" style="width: 7%;"></div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6">Team, advisors and partners</div>
-                                <div class="col-md-6  text-right  text-left-sm">50,000,000 OFCR</div>
-                            </div>
-                            <div class="progress  progress--thin  progress--rounded" role="progressbar">
-                                <div class="progress__bar" style="width: 5%;"></div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6">Bounty campaigns</div>
-                                <div class="col-md-6  text-right  text-left-sm">20,000,000 OFCR</div>
-                            </div>
-                            <div class="progress  progress--thin  progress--rounded" role="progressbar">
-                                <div class="progress__bar" style="width: 2%;"></div>
-                            </div>
-
-
-                        </div><!-- /.tabs__item-content -->
-                    </div><!-- /.tabs__item -->
-
-                    <div class="tabs__item" id="prices" role="tabpanel">
-                        <div class="tabs__item-header">
-                            <div class="row  no-gutters  hidden-sm">
-                                <div class="col-md-7">
-                                    <div class="row  no-gutters">
-                                        <div class="col-md-6"><b>Date</b></div>
-                                        <div class="col-md-6"><b>Event title</b></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="row  no-gutters">
-                                        <div class="col-md-6"><b>Issued tokens</b></div>
-                                        <div class="col-md-6"><b>Price per 1 OFCR*</b></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tabs__item-content">
-                            <div class="row  no-gutters  mb-30">
-                                <div class="col-md-7">
-                                    <div class="row  no-gutters">
-                                        <div class="col-md-6"><b class="visible-sm-di">Date:</b> ........ - ........ </div>
-                                        <div class="col-md-6"><b class="visible-sm-di">Event title:</b> Closed / private pre-sale</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="row  no-gutters">
-                                        <div class="col-md-6"><b class="visible-sm-di">Issued tokens </b> .....</div>
-                                        <div class="col-md-6"><b class="visible-sm-di">Price per 1 OFCR*:</b> .....</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row  no-gutters  mb-30">
-                                <div class="col-md-7">
-                                    <div class="row  no-gutters">
-                                        <div class="col-md-6"><b class="visible-sm-di">Date:</b> ........  - ........ </div>
-                                        <div class="col-md-6"><b class="visible-sm-di">Event title:</b> Public pre-sale</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="row  no-gutters">
-                                        <div class="col-md-6"><b class="visible-sm-di">Issued tokens </b> .....</div>
-                                        <div class="col-md-6"><b class="visible-sm-di">Price per 1 OFCR*:</b> .....</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row  no-gutters  mb-30">
-                                <div class="col-md-7">
-                                    <div class="row  no-gutters">
-                                        <div class="col-md-6"><b class="visible-sm-di">Date:</b> ........  - ........ </div>
-                                        <div class="col-md-6"><b class="visible-sm-di">Event title:</b> Sale</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="row  no-gutters">
-                                        <div class="col-md-6"><b class="visible-sm-di">Issued tokens </b> .....</div>
-                                        <div class="col-md-6"><b class="visible-sm-di">Price per 1 OFCR*:</b> .....</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row  no-gutters  mb-80">
-                                <div class="col-md-7">
-                                    <div class="row  no-gutters">
-                                        <div class="col-md-6"><b class="visible-sm-di">Date:</b> ........  - ........ </div>
-                                        <div class="col-md-6"><b class="visible-sm-di">Event title:</b> Last chance</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="row  no-gutters">
-                                        <div class="col-md-6"><b class="visible-sm-di">Issued tokens </b> .....</div>
-                                        <div class="col-md-6"><b class="visible-sm-di">Price per 1 OFCR*:</b> .....</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <p><b>All information about token sale will be provided later</b></p>
-
-                        </div><!-- /.tabs__item-content -->
-                    </div><!-- /.tabs__item -->
-
-                    <div class="tabs__item" id="bounties" role="tabpanel">
-                        <div class="tabs__item-header"></div>
-
-                        <div class="tabs__item-content text-center">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="tabs__bounties">
-                                        <div class="tabs__bounties-ico">
-                                            <img src="assets/i/present-ico.png" width="69" height="77" alt="bounties">
-                                        </div>
-                                        <p><b class="text-upper">Bounty Campaigns</b></p>
-                                        <p>CryptoPolice will provide 9 different bounty campaigns with the total budget of 20,000,000 OFCR. Bounty campaign will be carried out within the framework of platform, that will provide convenience for the community. Stay tuned, soon we will provide more information!</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="tabs__bounties">
-                                        <div class="tabs__bounties-ico">
-                                            <img src="assets/i/hands-ico.png" width="92" height="61" alt="refferals">
-                                        </div>
-                                        <p><b class="text-upper">Referrals</b></p>
-                                        <p>Each participant will get its own Referral code to invite friends.</p>
-                                        <p>For this action participant will receive referral bounties.</p>
-                                        <p>Referral holder will receive 7% from the purchase amount of the user using his referral code, and user, that uses a referral code will get 5% of the purchase</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- /.tabs__item -->
-
-                    <div class="tabs__item" id="airdrops" role="tabpanel">
-                        <div class="tabs__item-header"></div>
-
-
-                        <div class="tabs__item-content text-center">
-                            <div class="row">
-                                <p>CryptoPolice will provide 2 airdrops. The goal of airdrop is to introduce the community with the new scam fighting force.</p>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="tabs__bounties">
-
-                                        <p><b class="text-upper">Victims AirDrop</b></p>
-                                        <p> The first airdrop will target the victims of recent scam activities. Thus, we want to introduce our readiness at early stages to support the victims and bring awareness to this issue.</p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="tabs__bounties">
-
-                                        <p><b class="text-upper">Community AirDrop</b></p>
-                                        <p>The second airdrop will be aimed at the audience of CryptoPolice as a gratitude for the faith in our project in the early stages. Airdrop releases will be announced really soon. </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div><!-- /.tabs__item -->
-
-                </div><!-- /.tabs__content -->
-            </div><!-- /.tab -->
-
-        </div><!-- /.block -->
-    </div><!-- /.officer__inner -->
-</section><!-- /.officer -->
-
-
-
-<section class="subscribe">
-    <div class="block" style="text-align: center">
-        <div class="block__text  gilroy  text-upper">
-            <p>SUBSCRIBE FOR MORE NEWS AND UPDATES</p>
-        </div>
-        <button style="margin-top: 2em" class="btn  btn--o-white  btn--ellipse  text-bold" type="submit" data-toggle="remodal" data-target="#subscribe_modal" title="Subscribe to CryptoPolice important updates">GET IN TOUCH</button>
-    </div>
-</section>
-
-
-
 <section class="watchdog  mission_parallax_big" data-parallax-bg-image="assets/i/parallax2-big.png" data-parallax-bg-size="auto" data-parallax-direction="up" data-parallax-bg-position="center center">
     <div class="watchdog__inner  mission_parallax_small" data-parallax-bg-image="assets/i/parallax2-small.png" data-parallax-bg-size="auto" data-parallax-speed="0.2" data-parallax-direction="down" data-parallax-bg-position="center center">
 
@@ -774,39 +438,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
-<section class="escrow  mission_parallax_big" data-parallax-bg-image="assets/i/parallax2-big.png" data-parallax-bg-size="auto" data-parallax-direction="up" data-parallax-bg-position="center center">
-    <div class="escrow__inner  mission_parallax_small" data-parallax-bg-image="assets/i/parallax2-small.png" data-parallax-bg-size="auto" data-parallax-speed="0.2" data-parallax-direction="down" data-parallax-bg-position="center center">
-        <div class="block">
-            <h3 class="block__title">Escrow</h3>
-            <div class="block__text">
-                <p>The CryptoPolice team will deliver the escrow smart contract that will enforce the funds transfer from ICOs to investors upon specified events.</p>
-            </div>
 
-            <div class="escrow__content">
-                <div class="escrow__item  escrow__item--1"><img class="wow  fadeIn" src="assets/i/esc_1.svg" alt="CryptoPolice Escrow service"></div>
-                <div class="escrow__item  escrow__item--2"><img class="wow  fadeInDown" data-wow-delay=".1s" src="assets/i/esc_2.svg" alt="CryptoPolice Escrow service"></div>
-                <div class="escrow__item  escrow__item--3"><img class="wow  fadeIn" data-wow-delay=".3s" src="assets/i/esc_3.svg" alt="CryptoPolice Escrow service"></div>
-                <div class="escrow__item  escrow__item--4"><img class="wow  fadeIn" data-wow-delay=".4s" src="assets/i/esc_4.svg" alt="CryptoPolice Escrow service"></div>
-                <div class="escrow__item  escrow__item--5"><img class="wow  fadeIn" data-wow-delay=".5s" src="assets/i/esc_5.svg" alt="CryptoPolice Escrow service"></div>
-                <div class="escrow__item  escrow__item--6"><img class="wow  fadeIn" data-wow-delay=".4s" src="assets/i/esc_6.svg" alt="CryptoPolice Escrow service"></div>
-                <div class="escrow__item  escrow__item--7"><img class="wow  fadeIn" data-wow-delay=".5s" src="assets/i/esc_7.svg" alt="CryptoPolice Escrow service"></div>
-            </div><!-- /.escrow__content -->
-            <img class="escrow__content--sm" src="assets/i/escrow_small.svg" width="700" alt="CryptoPolice Escrow service">
-        </div>
-    </div>
-</section><!-- /.escrow -->
-
-<section class="join">
-    <div class="block">
-
-        <h3 class="block__title text-upper">have questions?</h3>
-
-        <div class="text-center">
-            <a class="btn  btn--o-white  btn--o2x  btn--xl  btn--ellipse  text-upper  text-bold" href="https://support.cryptopolice.com/" target="_blank">VISIT THE SUPPORT CENTER</a>
-        </div>
-
-    </div><!-- /.block -->
-</section><!-- /.join -->
 
 <section class="escrow  mission_parallax_big" data-parallax-bg-image="assets/i/parallax2-big.png" data-parallax-bg-size="auto" data-parallax-direction="up" data-parallax-bg-position="center center">
     <div class="escrow__inner  mission_parallax_small" data-parallax-bg-image="assets/i/parallax2-small.png" data-parallax-bg-size="auto" data-parallax-speed="0.2" data-parallax-direction="down" data-parallax-bg-position="center center">
@@ -822,6 +454,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 </section><!-- /.escrow -->
+
+
 
 <section class="whitepaper">
     <div class="block">
@@ -848,7 +482,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
             <div class="monetization__earn_calc hidden-sm">
-                <img class="wow fadeInLeft" src="assets/i/reward_calc_example.svg" alt="Calculation example">
+                <img class="wow fadeInUp" src="assets/i/reward_calc_example.svg" alt="Calculation example">
             </div>
             <div class="monetization__disclaimer">
                <p>*User reward will be paid out in OfficerCoin tokens (OFCR), but the reward amount will be fixed in USD in order to protect rewards from fluctuations. </p>
@@ -887,35 +521,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </section><!-- /.monetization -->
 
-<section class="join">
-    <div class="block">
 
-        <h3 class="block__title text-upper">Follow our progress</h3>
 
-        <div class="text-center">
-            <a class="btn  btn--o-white  btn--o2x  btn--xl  btn--ellipse  text-upper  text-bold" href="https://medium.com/cryptopolice" target="_blank">Read our blog</a>
+<section class="subscribe">
+    <div class="block" style="text-align: center">
+        <div class="block__text  gilroy  text-upper">
+            <p>SUBSCRIBE FOR MORE NEWS AND UPDATES</p>
         </div>
-
-    </div><!-- /.block -->
-</section><!-- /.join -->
-
-<section class="monetization  mission_parallax_big" data-parallax-bg-image="assets/i/parallax2-big.png" data-parallax-bg-size="auto" data-parallax-direction="up" data-parallax-bg-position="center center">
-    <div class="mission_parallax_small" data-parallax-bg-image="assets/i/parallax2-small.png" data-parallax-bg-size="auto" data-parallax-speed="0.2" data-parallax-direction="down" data-parallax-bg-position="center center">
-        <div class="block">
-            <h3 class="block__title">Token Sale milestones</h3>
-            <div class="block__text">
-                <p></p>
-            </div>
-
-            <div class="monetization__scheme">
-                <img class="img center-block hidden-sm" src="assets/i/caps.svg" alt="CryptoPolice milestones">
-                <img class="img center-block visible-sm" src="assets/i/milestones_mob.svg" alt="CryptoPolice milestones" width="100%">
-            </div>
-        </div>
+        <button style="margin-top: 2em" class="btn  btn--o-white  btn--ellipse  text-bold" type="submit" data-toggle="remodal" data-target="#subscribe_modal" title="Subscribe to CryptoPolice important updates">GET IN TOUCH</button>
     </div>
-</section><!-- /.milestones -->
-
-
+</section>
 
 
 
@@ -930,16 +545,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li style="z-index: 3" data-idx="2"><img src="assets/i/team/maksims.png" alt=""></li>
             <li style="z-index: 4" data-idx="3"><img src="assets/i/team/igors.png" alt=""></li>
             <li style="z-index: 5" data-idx="4"><img src="assets/i/team/elvijs.png" alt=""></li>
-           <li style="z-index: 6" data-idx="5"><img src="assets/i/team/valerijs.png" alt=""></li>
+            <li style="z-index: 6" data-idx="5"><img src="assets/i/team/valerijs.png" alt=""></li>
             <li style="z-index: 7" data-idx="6"><img src="assets/i/team/karolina.png" alt=""></li>
-            <li style="z-index: 8" data-idx="7" class="front"><img src="assets/i/team/arturs.png" alt=""></li>
-            <li style="z-index: 7" data-idx="8"><img src="assets/i/team/agris.png" alt=""></li>
-            <li style="z-index: 6" data-idx="9"><img src="assets/i/team/oskars.png" alt=""></li>
-            <li style="z-index: 5" data-idx="10"><img src="assets/i/team/aleksandrs.png" alt=""></li>
-            <li style="z-index: 4" data-idx="11"><img src="assets/i/team/aivis.png" alt=""></li>
-            <li style="z-index: 3" data-idx="12"><img src="assets/i/team/artursB.png" alt=""></li>
-            <li style="z-index: 2" data-idx="13"><img src="assets/i/team/chalis.png" alt=""></li>
-            <li style="z-index: 1" data-idx="14"><img src="assets/i/team/dmitrijs.png" alt=""></li>
+            <li style="z-index: 8" data-idx="7"><img src="assets/i/team/agris.png" alt=""></li>
+            <li style="z-index: 9" data-idx="8" class="front"><img src="assets/i/team/arturs.png" alt=""></li>
+            <li style="z-index: 8" data-idx="9"><img src="assets/i/team/oskars.png" alt=""></li>
+            <li style="z-index: 7" data-idx="10"><img src="assets/i/team/aleksandrs.png" alt=""></li>
+            <li style="z-index: 6" data-idx="11"><img src="assets/i/team/aivis.png" alt=""></li>
+            <li style="z-index: 5" data-idx="12"><img src="assets/i/team/artursB.png" alt=""></li>
+            <li style="z-index: 4" data-idx="13"><img src="assets/i/team/chalis.png" alt=""></li>
+            <li style="z-index: 3" data-idx="14"><img src="assets/i/team/marija.png" alt=""></li>
+            <li style="z-index: 2" data-idx="15"><img src="assets/i/team/davis.png" alt=""></li>
+            <li style="z-index: 1" data-idx="16"><img src="assets/i/team/mikus.png" alt=""></li>
         </ul>
 
         <div class="team__slider" id="team_slider">
@@ -950,14 +567,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="slick-item"><img src="assets/i/team/elvijs.png" alt=""></div>
             <div class="slick-item"><img src="assets/i/team/valerijs.png" alt=""></div>
             <div class="slick-item"><img src="assets/i/team/karolina.png" alt=""></div>
-            <div class="slick-item"><img src="assets/i/team/arturs.png" alt=""></div>
             <div class="slick-item"><img src="assets/i/team/agris.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/arturs.png" alt=""></div>
             <div class="slick-item"><img src="assets/i/team/oskars.png" alt=""></div>
             <div class="slick-item"><img src="assets/i/team/aleksandrs.png" alt=""></div>
             <div class="slick-item"><img src="assets/i/team/aivis.png" alt=""></div>
             <div class="slick-item"><img src="assets/i/team/artursB.png" alt=""></div>
             <div class="slick-item"><img src="assets/i/team/chalis.png" alt=""></div>
-            <div class="slick-item"><img src="assets/i/team/dmitrijs.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/marija.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/davis.png" alt=""></div>
+            <div class="slick-item"><img src="assets/i/team/mikus.png" alt=""></div>
         </div>
     </div><!-- /.team__inner -->
 
@@ -969,7 +588,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Enthusiastic and dedicated professional with intensive experience who specializes in visual content creation. His background is in illustration and advertisement, and a focus on digital design development has helped many of his clients reach new heights of popularity not only in Latvia, but all over Europe.
                 <br><br>
                 Arturs has exceptional vision on a brand’s visual appearance and knows exactly how to increase interest in the brand by using his imagination and creative vision. He has consulted and edited over 50 videos and supervises all video recording and editing processes of CryptoPolice.
-
             </div>
         </div>
 
@@ -993,7 +611,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 From 2012, Maksim has specialized intax consulting working in a large energy holding company. He has experience in structuring international transactions, international taxation and developing risk management systems.
                 <br><br>
                 Recently, Maksim has become actively interested in blockchain technology and in providing private consulting in economic, finance and law aspects of the blockchain projects.
-
             </div>
         </div>
 
@@ -1004,7 +621,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Igors is a skilled web and blockchain developer and has seven years experience building technology for enterprises. He’s a highly skilled and adaptable system engineer.
                 <br><br>
                 Igors has extensive experience in building scalable and robust Backend technologies. A strong engineering professional with a Bachelor's Degree in Computer Engineering. As a full-stack developer who specializes in Node.js, PHP, Postgre/MySQL/MongoDB and many other related technologies, he regularly works on massive projects. For a long time, he has been involved in the development of software for Internet payment systems.
-
             </div>
         </div>
 
@@ -1017,7 +633,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Elvijs is lead developer on smart contracts and tokens that will be used in our ICO. He is a software Engineer with more than five years of experience in commercial development. Elvijs has strong experience in IT and in Technical Sciences. He has been involved in a variety of software projects dealing with payment processing, payment gateways, Bitcoin payments (bitpay integration)/blockchain and cryptocurrency integration.
                 <br><br>
                 Elvijs is a full-stack developer familiar with Solidity, C#, PHP 5-7, SQL, HTML, CSS, Javascript, OOP Design Patterns, .NET Core, ASP.NET Core, EF Core, Laravel 5, Git, SVN, C and PIC Microcontrollers and many more related technologies. Now Elvijs specializes in decentralized solutions using the Ethereum platform and web3 technologies to connect blockchain to the real world.
-
             </div>
         </div>
 
@@ -1046,7 +661,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 CCO and public relations specialist, Bachelor of Humanities in Finno-Ugric Studies. Karolina’s extensive experience in product branding and marketing, as well as her skills in project management, has helped many of her customers gain recognition and popularity all over the world. Now Karolina is working with clients from Latvia, Germany, Finland and Russia. She is a skilled SMM, SEM and email marketing specialist, has a creative mind and strong leadership skills.
                 <br><br>
                 As a marketing specialist, Karolina has developed and carried out various campaigns, helped gain recognition in social media networks and, with her knowledge of global trends in marketing and sales, she is capable of executing high quality marketing campaigns
-
             </div>
         </div>
 
@@ -1067,7 +681,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Skilled IT professional with over seven years of experience as network analyst and system administrator. He has a high level of expertise in cybersecurity. Agris is an expert in data security and processing. He’s a blockchain enthusiast and developer and senior system administrator in the Central Election Commission of Latvia.
                 <br><br>
                 All kinds of elections in Latvia are held under his supervision, including the Saeima elections, European Parliament elections and local elections. His experience and knowledge is the reason why CryptoPolice will have a well-designed security model and maintenance functions.
-
             </div>
         </div>
 
@@ -1080,7 +693,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Additionally, he has worked for a “Big Four” company as an IT auditor, risk assurance specialist and consultant. He specialisedin the fields of Cyber Security and Information Security, ISO/IEC 27001, risk management lifecycle, IT audit, process optimisations and GDPR.
                 <br><br>
                 He has been a passionate follower and believer in blockchain technology and cryptocurrencies for more than two years.
-
             </div>
         </div>
 
@@ -1091,7 +703,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Aleksandrs has more than five years experience of working in the IT industry, most of the time managing IT projects, analyzing systems and developing web projects. He specializes in exploring new methods of project management as well as developing best practices with clients. Aleksandrs graduated from Riga Tehnical university and is a Master of Science in Information Technology.
                 <br><br>
                 Under his supervision, more than 50 different projects have been carried out with excellence and many more are still in progress. His knowledge and experience in system analysis is crucial for the CryptoPolice development process, and scrum master abilities make Aleksandrs an excellent leader, who is able to work creatively and analytically in a problem-solving environment.
-
             </div>
         </div>
 
@@ -1102,7 +713,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 A creative web and graphic designer with over nine years experience in the IT industry. Participated in more than 70 projects, including startups. Professionally trained and competent in a wide range of design software.
                 <br><br>
                 A strong track record of creating impactful visual communications that build brand identity and engage customers. Detail oriented and always looking for new challenges.
-
             </div>
         </div>
 
@@ -1113,7 +723,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Artur is talented system administrator offering five years of experience in the Unix/Linux environment and specializes in several distributions of Linux including Red Hat, Centos and Ubuntu. He has a strong grasp of computer security, various operating systems, and numerous applications.
                 <br><br>
                 Arturs is an engineer in the field of cryptocurrency mining. He has three years of experience in mining software, cryptocurrency miner assembling, and miner monitoring. Arturs has an extensive knowledge on how to solve bugs that occur with mining software and hardware.
-
             </div>
         </div>
 
@@ -1124,11 +733,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Vladimir is a back-end developer with three years experience in web development. He is experienced in the research, design and development of client-server web applications. He has experience with all stages of the development life cycle in dynamic web projects. Excellent knowledge of networking protocols and hardware operating systems, developing web services and relational databases. Experience in common third-party APIs. Extensive knowledge of programming languages including PHP, C++ and JavaScript and technologies such as mySQL and Ajax. Solid knowledge of frameworks such as Laravel and Symfony. He always tries to carry out quality assurance tests to discover errors and optimize usability.
                 <br><br>
                 Vladimir has experience in Ethereum smart contract development. He's currently working as a blockchain developer, specializing in Ethereum technology, smart contracts security development and auditing outsourcing contracts.
-
             </div>
         </div>
 
         <div class="slider__info-item" data-idx="14">
+            <div class="team__name">Marija Rucevska <a href="#" target="_blank" rel="nofollow"><i class="fa fa-linkedin-square"></i></a></div>
+            <div class="team__job">Marketing specialist</div>
+            <div class="team__text" data-dots data-chars="125">
+                At CryptoPolice Marija is in charge of global outreach and partnerships. Furthermore she is the co-founder and a former CEO at TechChill Foundation , a startup community non-profit that hosts the leading Baltic Tech event every February and brings together hottest startups and innovators from across the region.
+                <br><br>
+                She is a passionate ambassador for Baltic tech, and works to help the region gain visibility in order to attract foreign talent, investment and media attention and build bridges between Nordics, Baltics and CEE. Previously she worked at Techhub Riga, the first and oldest community hub in Latvia that supports local startups.
+            </div>
+        </div>
+
+        <div class="slider__info-item" data-idx="15">
+            <div class="team__name">Dāvis Suneps <a href="#" target="_blank" rel="nofollow"><i class="fa fa-linkedin-square"></i></a></div>
+            <div class="team__job">Marketing specialist</div>
+            <div class="team__text" data-dots data-chars="125">
+                Davis is the jack of all trades if such a profession exists – a copywriter, communications specialist, event manager, and a millennial entrepreneur at his own projects – all in one!
+                <br><br>
+                Previously, Davis helped technology startup community grow at TechHub Riga and organized more than 100 tremendously attended meetups.
+            </div>
+        </div>
+
+        <div class="slider__info-item" data-idx="16">
+            <div class="team__name">Mikus Losāns <a href="#" target="_blank" rel="nofollow"><i class="fa fa-linkedin-square"></i></a></div>
+            <div class="team__job">Head of marketing department</div>
+            <div class="team__text" data-dots data-chars="125">
+                Mikus created profitable advertising business while he was 17. After starting studies in University of Latvia, he saw that there is no support for young entrepreneurs. So he came with an initiative to create a Business incubator of University of Latvia. Later in Business incubator he started Blockchain pre-accelerator that brings together best talent from the region to create startups that use the potential of Blockchain technology to transform industries. Incubator is helping young entrepreneurs already for 7 years, now one of the leading University incubators in Latvia.
+                <br><br>
+                Apart from that Mikus has created online and offline preacceleracion program for wantepreneurs, who want to start their business on Etsy.com.
+            </div>
+        </div>
+
+        <div class="slider__info-item hide">
             <div class="team__name">Dmitirjs Valaks <a href="https://www.linkedin.com/in/dmitrijs-valaks-62180610b/" target="_blank" rel="nofollow"><i class="fa fa-linkedin-square"></i></a></div>
             <div class="team__job">Senior Front-end Developer</div>
             <div class="team__text" data-dots data-chars="125">
@@ -1137,7 +775,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Dmitirjs has 10 years experience in web development, and during this time created about 100 projects and wrote thousands of lines of code. Specializes in front-end development, and also has knowledge in back-end development. Uses the latest technologies, such as preprocessors, frameworks, builders, package managers, etc. Likes beautiful and structured code.
                 <br><br>
                 In addition to development, he has engaged in teaching and training novice web developers. He is the author of his own teaching programs, and in over five years of teaching has taught more than 2,000 students.
-
             </div>
         </div>
     </div>
@@ -1293,6 +930,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div><!-- /.block -->
 </section><!-- /#advisors -->
+
+
+
+<section class="docs">
+    <div class="block">
+
+        <div class="block__action">
+            <a class="block__action-title" href="#" data-scroll data-target="#news">
+                Read our news
+                <span class="m_scroll_arrows first"></span>
+                <span class="m_scroll_arrows second"></span>
+            </a>
+        </div>
+
+        <div id="news">
+            <div class="news">
+                <div class="news__half hidden-sm">
+                    <a class="twitter-timeline" data-height="550" href="https://twitter.com/CryptoPolicecom?ref_src=twsrc%5Etfw">Tweets by CryptoPolice</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="news__half">
+                    <div class="news__medium">
+                        <div class="news__title">Our news feed</div>
+                        <ul class="news__list" id="medium_feed"></ul>
+                        <a class="news__see-all" href="https://medium.com/cryptopolice" target="_blank">See all articles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- /.block -->
+</section><!-- /.docs -->
+
 
 
 <section class="roadmap" id="roadmap">
@@ -1472,7 +1141,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
 
                 <div class="timeline__item">
-                    <div class="timeline__item-inner  wow  fadeInLeft">
+                    <div class="timeline__item-inner  wow  fadeInRight">
                         <div class="timeline__date">
                             <div class="timeline__day">RELEASE OF BLOODHOUND AI</div>
                             <div class="timeline__month">QUARTERS 3-4</div>
@@ -1487,7 +1156,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
 
                 <div class="timeline__item">
-                    <div class="timeline__item-inner  wow  fadeInRight">
+                    <div class="timeline__item-inner  wow  fadeInLeft">
                         <div class="timeline__date">
                             <div class="timeline__day">RELEASE OF STABLE VERSIONS</div>
                             <div class="timeline__month">QUARTER 1-2</div>
@@ -1502,7 +1171,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
 
                 <div class="timeline__item">
-                    <div class="timeline__item-inner  wow  fadeInLeft">
+                    <div class="timeline__item-inner  wow  fadeInRight">
                         <div class="timeline__date">
                             <div class="timeline__day">UPDATE AND SUPPORT</div>
                             <div class="timeline__month">QUARTER AND BEYOND</div>
@@ -1522,6 +1191,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div><!-- /.block -->
 </section><!-- /.roadmap -->
+
+
+
+<section class="early-bird">
+    <div class="block">
+        <h4 class="block__action-title  mb-25  mt-15">Whitelisting is LIVE!</h4>
+        <div class="text-center">
+            <a class="btn  btn--o-white  btn--o2x  btn--xl  btn--ellipse  text-upper  text-bold" href="#" data-toggle="remodal" data-target="#tokensale_whitelist_modal">Join Whitelist</a>
+        </div>
+    </div>
+</section>
 
 
 
