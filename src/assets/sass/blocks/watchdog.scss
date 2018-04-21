@@ -1,8 +1,12 @@
 .watchdog {
-    padding: 80px 15px;
+    padding: 80px 15px 0;
+
+    .block {
+        padding-bottom: 0;
+    }
 
     @media #{$media_sm} {
-        padding: 30px 15px;
+        padding: 30px 15px 0;
     }
 }
 
@@ -94,6 +98,73 @@
     }
 }
 
+
+.watchdog__example {
+    min-height: 450px;
+    padding-bottom: 40px;
+    background: url("#{$img}watchdog-example.png") right bottom no-repeat;
+    background-size: auto 100%;
+
+    @media (max-width: 900px) {
+        min-height: 300px;
+    }
+
+    @media (max-width: 767px) {
+        min-height: 0;
+        background: none;
+    }
+}
+
+.watchdog__example-list {
+    width: 100%;
+    max-width: 320px;
+    margin: 40px 0 0;
+    padding: 20px 0 0;
+
+    color: $white;
+    font-size: 14px;
+    list-style: none;
+
+    li {
+        margin-bottom: 10px;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            top: 6px;
+
+            width: 4px;
+            height: 4px;
+            margin-right: 10px;
+
+            background-color: $white;
+            border-radius: 50%;
+        }
+
+        &:first-child {
+            font-family: 'Gilroy', 'Roboto', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: $white;
+
+            &:before {
+                display: none;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @media (max-width: 767px) {
+        max-width: none;
+        text-align: center;
+    }
+}
 
 @keyframes pulse {
     0% {

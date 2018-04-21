@@ -48,10 +48,17 @@
     }
 }
 
+.nav__left {
+    text-align: left;
+}
+
 .nav__right {
     text-align: right;
+    white-space: nowrap;
 
     @media (max-width: 767px) {
+        white-space: normal;
+
         .nav__item {
             margin-bottom: 8px;
         }

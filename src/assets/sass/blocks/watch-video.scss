@@ -44,10 +44,11 @@
     order: 2;
 
     img {
+        display: block;
         height: 300px;
 
         position: relative;
-        bottom: 28px;
+        bottom: 31px;
         z-index: 1;
     }
 
