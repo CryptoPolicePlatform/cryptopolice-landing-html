@@ -1,10 +1,24 @@
+.partners__section {
+    background: #0052a4 url("#{$img}checkout/bg.jpg") 50% no-repeat;
+    background-size: auto 100%;
+}
+
 .partners {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     margin: 3rem 0;
 }
 
 .partners__item {
+    flex: 1;
     margin: 0 1rem;
+    text-align: center;
+}
+
+.partners__text {
+    margin-top: .5rem;
+
+    color: $white;
+    font-size: .9rem;
 }
