@@ -6,6 +6,7 @@
 .partners {
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 3rem 0;
 }
@@ -14,6 +15,17 @@
     flex: 1;
     margin: 0 1rem;
     text-align: center;
+
+    @media #{$media_md} {
+        flex: auto;
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .partners__text {
