@@ -356,7 +356,7 @@ html.remodal-is-locked {
 /* Media queries
    ========================================================================== */
 
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 800px) {
     .remodal {
         max-width: $modal-max-width;
     }
