@@ -5,7 +5,7 @@
 //= ../../../bower_components/slick-carousel/slick/slick.js
 //= ../../../bower_components/kbw-countdown/dist/js/jquery.plugin.js
 //= ../../../bower_components/kbw-countdown/dist/js/jquery.countdown.js
-//= ../../../bower_components/glio.js/glio.js
+//= vendor/glio.js
 
 //= ../../../node_modules/js-cookie/src/js.cookie.js
 

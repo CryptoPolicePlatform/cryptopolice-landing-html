@@ -17093,6 +17093,7 @@ $.countdown.UTCDate(-7, new Date(2013, 12-1, 25, 12, 0)) */
     statusBottomRight: "inactive",
     statusTop: "inactive",
     init: function ( ) {
+        glio.statusTop = 'inactive';
       // return a Array with the methods
       glio.methods = Array.prototype.slice.call(arguments);
       // get the direction and your correspondent callback
@@ -17118,7 +17119,7 @@ $.countdown.UTCDate(-7, new Date(2013, 12-1, 25, 12, 0)) */
         var pointX = event.clientX
           , pointY = event.clientY
         ;
-        
+
         if ( typeof glio.topLeftFn === "function" &&  glio.statusTopLeft === "inactive" ) {
           glio.callTopleft(pointX, pointY, glio.topLeftFn);
         }
@@ -17189,7 +17190,7 @@ $.countdown.UTCDate(-7, new Date(2013, 12-1, 25, 12, 0)) */
       if ( x > glio.getWidthRightValue() && y <= glio.config.heightTopRight ) {
         glio.statusTopRight = "active";
         callback();
-      };         
+      };
     },
     callBottomRight: function ( x, y, callback ) {
       if ( x >= glio.getWidthRightValue() && y >= glio.getBottomHeightValue() ) {
@@ -22428,6 +22429,7 @@ $(function() {
 
     var dont_miss_modal = $('#dont_miss_modal').remodal();
     var modalState = "closed";
+    var glioState;
 
     if ( ! dont_miss_modal) return;
 
@@ -22444,11 +22446,13 @@ $(function() {
     });
 
 
-    $(document).on('opened closed', '.remodal', function () {
+    $(document).on('opened closed', '.remodal:not(#dont_miss_modal)', function () {
         var currentModal = $(this).remodal();
         modalState = currentModal.getState();
 
-        exitInit(modalState);
+        if(glioState != "done") {
+            exitInit(modalState);
+        }
     });
 
 
@@ -22457,7 +22461,8 @@ $(function() {
         glio.init(
           [ 'top', function () {
               if(state != "opened" && ! suppress()) {
-                dont_miss_modal.open();
+                  dont_miss_modal.open();
+                  glioState = "done";
               }
             }
           ]

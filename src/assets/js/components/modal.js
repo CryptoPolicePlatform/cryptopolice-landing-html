@@ -15,6 +15,7 @@ $(function() {
 
     var dont_miss_modal = $('#dont_miss_modal').remodal();
     var modalState = "closed";
+    var glioState;
 
     if ( ! dont_miss_modal) return;
 
@@ -31,11 +32,13 @@ $(function() {
     });
 
 
-    $(document).on('opened closed', '.remodal', function () {
+    $(document).on('opened closed', '.remodal:not(#dont_miss_modal)', function () {
         var currentModal = $(this).remodal();
         modalState = currentModal.getState();
 
-        exitInit(modalState);
+        if(glioState != "done") {
+            exitInit(modalState);
+        }
     });
 
 
@@ -44,7 +47,8 @@ $(function() {
         glio.init(
           [ 'top', function () {
               if(state != "opened" && ! suppress()) {
-                dont_miss_modal.open();
+                  dont_miss_modal.open();
+                  glioState = "done";
               }
             }
           ]
