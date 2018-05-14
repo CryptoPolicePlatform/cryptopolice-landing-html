@@ -22431,6 +22431,7 @@ $(function() {
     if ( ! dont_miss_modal) return;
 
     var subscribe = $('#subscribe_modal').remodal();
+    var privateSale = $('#join_private_sale').remodal();
     var modalState = "closed";
 
 
@@ -22453,9 +22454,17 @@ $(function() {
         exitInit(modalState);
     });
 
+    $(document).on('opened closed', '#join_private_sale', function () {
+        modalState = privateSale.getState();
+
+        exitInit(modalState);
+    });
+
 
     exitInit();
     function exitInit(state) {
+        console.log(state);
+
         glio.init(
           [ 'top', function () {
               if(state != "opened" && ! suppress()) {
