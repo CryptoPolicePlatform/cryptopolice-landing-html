@@ -42,11 +42,10 @@
 .benefits__title {
     margin: $benefits-title-margin;
 
-    font-family: 'Gilroy', 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: $benefits-title-color;
-    font-size: $benefits-title-font-size;
+    font-size: 1.4rem;
     line-height: $benefits-title-line-height;
-    font-weight: 900;
 }
 
 .benefits__text {

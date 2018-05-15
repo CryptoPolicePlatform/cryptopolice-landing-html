@@ -4,7 +4,6 @@
 
     font-family: 'Gilroy', sans-serif;
     color: $white;
-    text-transform: uppercase;
 
     @media #{$media_md} {
         display: none;
@@ -15,6 +14,7 @@
     font-size: 21px;
     line-height: 1.2;
     font-weight: 900;
+    text-transform: uppercase;
 }
 
 .scheme__img {
@@ -184,7 +184,7 @@
 
 .scheme__text {
     margin: 5px 0;
-    font-size: 11px;
+    font-size: 16px;
 }
 
 .scheme-mobile {

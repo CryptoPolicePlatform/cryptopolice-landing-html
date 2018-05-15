@@ -171,7 +171,8 @@ html.remodal-is-locked {
     position: relative;
 
     border-radius: 10px;
-    background: linear-gradient(#4c48be 50%, #a14b8a 100%);
+    background: linear-gradient(lighten(#4c48be, 5%) 30%, lighten(#a14b8a, 5%) 100%);
+    //background: linear-gradient(#4c48be 50%, #a14b8a 100%);
 
     &:before {
         content: "";
@@ -244,6 +245,7 @@ html.remodal-is-locked {
 
     &:hover {
         opacity: .9;
+        text-decoration: none;
     }
 }
 
@@ -259,8 +261,8 @@ html.remodal-is-locked {
     border-radius: 50%;
 
     position: absolute;
-    bottom: -14px;
-    left: 50%;
+    top: -14px;
+    right: -29px;
     z-index: 1;
     transform: translateX(-50%);
 
