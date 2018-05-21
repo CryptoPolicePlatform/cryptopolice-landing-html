@@ -1,0 +1,23 @@
+Options All -ExecCGI -Indexes -Includes +FollowSymLinks
+
+AddDefaultCharset UTF-8
+
+<ifModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>
+
+<ifModule mod_headers.c>
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=86400"
+    </FilesMatch>
+    <FilesMatch "\.(js|css)$">
+        Header set Cache-Control "max-age=2592000"
+    </FilesMatch>
+    <FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png)$">
+        Header set Cache-Control "max-age=86400"
+    </FilesMatch>
+    #отключить кэширование
+    <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+        Header unset Cache-Control
+    </FilesMatch>
+</IfModule>
