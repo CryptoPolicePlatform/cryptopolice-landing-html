@@ -1,6 +1,61 @@
 .bitdefender {
-    padding: 0 15px 40px;
+    padding: 0 15px 30px;
 
     background: #a80608 url("#{$img}bitdefender-bg.jpg") center no-repeat;
     background-size: cover;
+}
+
+.bitdefender__list {
+    padding: 0;
+    margin: 0 0 3rem;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    li {
+        width: 50%;
+        padding: 0 3rem;
+        position: relative;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 100%;
+            background-color: $white;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        &:last-child:after {
+            display: none;
+        }
+
+        @media #{$media_sm} {
+            width: 80%;
+            padding: 1.5rem 0;
+            margin: 0 auto;
+
+            &:after {
+                width: 70%;
+                height: 1px;
+                top: auto;
+                left: 0;
+                margin: auto;
+                bottom: 0;
+            }
+        }
+    }
+
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 100%;
+        height: auto;
+    }
 }
