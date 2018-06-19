@@ -38,7 +38,7 @@ var path = {
         img: "src/assets/i/**/*.*",
         fonts: "src/assets/fonts/**/*.*",
         json: "src/assets/*.json",
-        static: "src/*.{txt,xml}"
+        static: ["src/*.{txt,xml}", ".htaccess"]
     },
     watch: {
         html: "src/**/*.{htm,html}",
